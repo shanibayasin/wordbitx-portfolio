@@ -338,7 +338,7 @@
       "createdAt": "2026-02-10T08:00:00.000Z",
       "passwordHash": "bade983a3afba233676c30a27668e2041b447b69b9d56049d9d708cf3e5cfeb0723ce76c86c15c61bc73e891e218a51e2460604df721e02ff198a1e615d00b60",
       "salt": "a4ba722cfc296165485356fd200d216e",
-      "lastLogin": "2026-10-07T19:44:56.526Z",
+      "lastLogin": "2026-10-07T20:28:16.423Z",
       "preferences": {
         "theme": "light",
         "density": "comfortable",

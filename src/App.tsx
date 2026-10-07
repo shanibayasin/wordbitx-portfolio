@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { NavigationProvider, useNavigation } from './context/NavigationContext';
 import { RouterProvider, useRouter } from './router/Router';
@@ -11,37 +11,43 @@ import { Footer } from './components/footer/Footer';
 import { CommandPalette } from './components/ui/CommandPalette';
 import { ExploreDemoModal } from './components/ui/ExploreDemoModal';
 
-// Public Marketing Pages
-import { HomePage } from './pages/HomePage';
-import { FeaturesPage } from './pages/FeaturesPage';
-import { SolutionsPage } from './pages/SolutionsPage';
-import { IntegrationsPage } from './pages/IntegrationsPage';
-import { PricingPage } from './pages/PricingPage';
-import { ResourcesPage } from './pages/ResourcesPage';
-import { AboutPage } from './pages/AboutPage';
-import { ContactPage } from './pages/ContactPage';
-import { DemoPage } from './pages/DemoPage';
-import { LoginPage } from './pages/LoginPage';
-import { SignupPage } from './pages/SignupPage';
-
-// CRM Workspace Pages & Layouts
+// CRM Workspace Layouts
 import { CrmLayout } from './layouts/CrmLayout';
 import { SuperAdminLayout } from './layouts/SuperAdminLayout';
-import { DashboardOverviewPage } from './pages/crm/DashboardOverviewPage';
-import { LeadsPage } from './pages/crm/LeadsPage';
-import { PipelinePage } from './pages/crm/PipelinePage';
-import { DealsPage } from './pages/crm/DealsPage';
-import { CustomersPage } from './pages/crm/CustomersPage';
-import { CompaniesPage } from './pages/crm/CompaniesPage';
-import { TasksPage } from './pages/crm/TasksPage';
-import { CallsPage } from './pages/crm/CallsPage';
-import { ActivitiesPage } from './pages/crm/ActivitiesPage';
-import { ReportsPage } from './pages/crm/ReportsPage';
-import { TeamPage } from './pages/crm/TeamPage';
-import { WorkflowsPage } from './pages/crm/WorkflowsPage';
-import { CrmIntegrationsPage } from './pages/crm/IntegrationsPage';
-import { SettingsPage } from './pages/crm/SettingsPage';
-import { SuperAdminPage } from './pages/crm/SuperAdminPage';
+
+// Load route pages only when a user visits them.
+const HomePage = lazy(() => import('./pages/HomePage').then((module) => ({default: module.HomePage})));
+const FeaturesPage = lazy(() => import('./pages/FeaturesPage').then((module) => ({default: module.FeaturesPage})));
+const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then((module) => ({default: module.SolutionsPage})));
+const IntegrationsPage = lazy(() => import('./pages/IntegrationsPage').then((module) => ({default: module.IntegrationsPage})));
+const PricingPage = lazy(() => import('./pages/PricingPage').then((module) => ({default: module.PricingPage})));
+const ResourcesPage = lazy(() => import('./pages/ResourcesPage').then((module) => ({default: module.ResourcesPage})));
+const AboutPage = lazy(() => import('./pages/AboutPage').then((module) => ({default: module.AboutPage})));
+const ContactPage = lazy(() => import('./pages/ContactPage').then((module) => ({default: module.ContactPage})));
+const DemoPage = lazy(() => import('./pages/DemoPage').then((module) => ({default: module.DemoPage})));
+const LoginPage = lazy(() => import('./pages/LoginPage').then((module) => ({default: module.LoginPage})));
+const SignupPage = lazy(() => import('./pages/SignupPage').then((module) => ({default: module.SignupPage})));
+const DashboardOverviewPage = lazy(() => import('./pages/crm/DashboardOverviewPage').then((module) => ({default: module.DashboardOverviewPage})));
+const LeadsPage = lazy(() => import('./pages/crm/LeadsPage').then((module) => ({default: module.LeadsPage})));
+const PipelinePage = lazy(() => import('./pages/crm/PipelinePage').then((module) => ({default: module.PipelinePage})));
+const DealsPage = lazy(() => import('./pages/crm/DealsPage').then((module) => ({default: module.DealsPage})));
+const CustomersPage = lazy(() => import('./pages/crm/CustomersPage').then((module) => ({default: module.CustomersPage})));
+const CompaniesPage = lazy(() => import('./pages/crm/CompaniesPage').then((module) => ({default: module.CompaniesPage})));
+const TasksPage = lazy(() => import('./pages/crm/TasksPage').then((module) => ({default: module.TasksPage})));
+const CallsPage = lazy(() => import('./pages/crm/CallsPage').then((module) => ({default: module.CallsPage})));
+const ActivitiesPage = lazy(() => import('./pages/crm/ActivitiesPage').then((module) => ({default: module.ActivitiesPage})));
+const ReportsPage = lazy(() => import('./pages/crm/ReportsPage').then((module) => ({default: module.ReportsPage})));
+const TeamPage = lazy(() => import('./pages/crm/TeamPage').then((module) => ({default: module.TeamPage})));
+const WorkflowsPage = lazy(() => import('./pages/crm/WorkflowsPage').then((module) => ({default: module.WorkflowsPage})));
+const CrmIntegrationsPage = lazy(() => import('./pages/crm/IntegrationsPage').then((module) => ({default: module.CrmIntegrationsPage})));
+const SettingsPage = lazy(() => import('./pages/crm/SettingsPage').then((module) => ({default: module.SettingsPage})));
+const SuperAdminPage = lazy(() => import('./pages/crm/SuperAdminPage').then((module) => ({default: module.SuperAdminPage})));
+
+const RouteLoading: React.FC = () => (
+  <div className="flex min-h-[40vh] items-center justify-center text-sm text-slate-500" role="status">
+    Loading page...
+  </div>
+);
 
 const AppContent: React.FC = () => {
   const { path } = useRouter();
@@ -54,7 +60,9 @@ const AppContent: React.FC = () => {
   if (activePath.startsWith('/super-admin')) {
     return (
       <SuperAdminLayout>
-        <SuperAdminPage />
+        <Suspense fallback={<RouteLoading />}>
+          <SuperAdminPage />
+        </Suspense>
       </SuperAdminLayout>
     );
   }
@@ -78,7 +86,11 @@ const AppContent: React.FC = () => {
       return <DashboardOverviewPage />;
     };
 
-    return <CrmLayout>{renderCrmPage()}</CrmLayout>;
+    return (
+      <CrmLayout>
+        <Suspense fallback={<RouteLoading />}>{renderCrmPage()}</Suspense>
+      </CrmLayout>
+    );
   }
 
   // 3. Auth Pages
@@ -116,7 +128,9 @@ const AppContent: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-[#f5f8f6] text-slate-900 dark:bg-[#071714] dark:text-slate-100 transition-colors selection:bg-indigo-200 selection:text-indigo-950">
       {!isAuthPage && <AnnouncementBar />}
       <Navbar />
-      <main className="flex-1 w-full">{renderPublicPage()}</main>
+      <main className="flex-1 w-full">
+        <Suspense fallback={<RouteLoading />}>{renderPublicPage()}</Suspense>
+      </main>
       {!isAuthPage && <Footer />}
       <CommandPalette />
       <ExploreDemoModal />
