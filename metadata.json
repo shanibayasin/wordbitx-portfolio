@@ -1,0 +1,7 @@
+{
+  "name": "WordbitX - Multi-Tenant SaaS CRM",
+  "description": "WordbitX is a production-grade multi-tenant SaaS CRM platform featuring sales pipeline management, leads, deals, contacts, activities, reports, workflows, and super admin oversight.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

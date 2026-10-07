@@ -1,0 +1,7727 @@
+{
+  "users": [
+    {
+      "id": "usr_admin",
+      "name": "WordbitX Super Admin",
+      "email": "admin@wordbitx.com",
+      "role": "SUPER_ADMIN",
+      "status": "ACTIVE",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "passwordHash": "16c2c2081077a6941a8b35a7cb2ae1d69e8a46ed00ad07bbcf8c245a1ea654c65235016e31a41a4ecfdb74366b3e147396e0b5bb4e0998feb000956f1d9fa409",
+      "salt": "146a4b1f2ac9ed3ee19fd3d77d796e5c",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "displayName": "WordbitX Super Admin",
+      "department": "Executive",
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_admin",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_admin",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_admin",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T14:45:44.851Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_admin",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T14:45:44.851Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_admin",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T14:45:44.851Z",
+          "success": true
+        }
+      ]
+    },
+    {
+      "id": "usr_shaniba",
+      "name": "Shaniba Yasin",
+      "email": "shaniba@abctechnologies.com",
+      "role": "ORGANIZATION_OWNER",
+      "organizationId": "org_abc",
+      "status": "ACTIVE",
+      "title": "Founder & Chief Executive",
+      "createdAt": "2026-02-01T08:00:00.000Z",
+      "passwordHash": "b0f27c26d890b39a1801c3efcf18a5c9eaab09b42b799c2934b89ab57aef10eac627f78123efbf816d0f1c37d9d97e60687c3c344fb4efb6e1448a424e011ec0",
+      "salt": "db527315cee42317d1c9e7e2a6e1552e",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "displayName": "Shaniba Y.",
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_shaniba",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_shaniba",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_shaniba",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T14:45:44.851Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_shaniba",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T14:45:44.851Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_shaniba",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T14:45:44.851Z",
+          "success": true
+        }
+      ],
+      "lastLogin": "2026-10-07T14:46:32.797Z",
+      "department": "Executive"
+    },
+    {
+      "id": "usr_sara",
+      "name": "Sara Khan",
+      "email": "sara@alphatech.com",
+      "role": "ORGANIZATION_ADMIN",
+      "organizationId": "org_abc",
+      "status": "ACTIVE",
+      "title": "Head of Sales",
+      "phone": "+92 300 1234567",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "passwordHash": "b0f27c26d890b39a1801c3efcf18a5c9eaab09b42b799c2934b89ab57aef10eac627f78123efbf816d0f1c37d9d97e60687c3c344fb4efb6e1448a424e011ec0",
+      "salt": "db527315cee42317d1c9e7e2a6e1552e",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "displayName": "Sara Khan",
+      "department": "Executive",
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_sara",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_sara",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_sara",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T14:45:44.851Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_sara",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T14:45:44.851Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_sara",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T14:45:44.851Z",
+          "success": true
+        }
+      ],
+      "lastLogin": "2026-10-07T15:07:27.886Z"
+    },
+    {
+      "id": "usr_ahmed",
+      "name": "Ahmed Malik",
+      "email": "ahmed@alphatech.com",
+      "role": "SALES_AGENT",
+      "organizationId": "org_abc",
+      "status": "ACTIVE",
+      "title": "Senior Account Executive",
+      "phone": "+92 321 3456789",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      "createdAt": "2026-02-12T08:00:00.000Z",
+      "passwordHash": "b0f27c26d890b39a1801c3efcf18a5c9eaab09b42b799c2934b89ab57aef10eac627f78123efbf816d0f1c37d9d97e60687c3c344fb4efb6e1448a424e011ec0",
+      "salt": "db527315cee42317d1c9e7e2a6e1552e",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "displayName": "Ahmed Malik",
+      "department": "Sales",
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_ahmed",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_ahmed",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_ahmed",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T14:45:44.851Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_ahmed",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T14:45:44.851Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_ahmed",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T14:45:44.851Z",
+          "success": true
+        }
+      ]
+    },
+    {
+      "id": "usr_owner_6ac2a411ceac76195538b01f",
+      "name": "Shaniba Yasin",
+      "email": "shaniba@wordbitx.com",
+      "role": "ORGANIZATION_OWNER",
+      "organizationId": "6ac2a411ceac76195538b01f",
+      "status": "ACTIVE",
+      "title": "Owner & Founder",
+      "phone": "+92 300 1234567",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "passwordHash": "bade983a3afba233676c30a27668e2041b447b69b9d56049d9d708cf3e5cfeb0723ce76c86c15c61bc73e891e218a51e2460604df721e02ff198a1e615d00b60",
+      "salt": "a4ba722cfc296165485356fd200d216e",
+      "lastLogin": "2026-10-07T19:44:56.526Z",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "displayName": "Shaniba Yasin",
+      "department": "Executive",
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_owner_6ac2a411ceac76195538b01f",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_owner_6ac2a411ceac76195538b01f",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_owner_6ac2a411ceac76195538b01f",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T19:44:43.978Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_owner_6ac2a411ceac76195538b01f",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_owner_6ac2a411ceac76195538b01f",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T19:44:43.979Z",
+          "success": true
+        }
+      ]
+    },
+    {
+      "id": "usr_owner_org_nova",
+      "name": "Sara Khan",
+      "displayName": "Sara Khan",
+      "email": "sara@novatech.com",
+      "role": "ORGANIZATION_OWNER",
+      "organizationId": "org_nova",
+      "status": "ACTIVE",
+      "title": "Owner & Founder",
+      "department": "Executive",
+      "phone": "+92 300 1234567",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "passwordHash": "10edaca4ba9cf594abfd1b800e510442d46653a1d8baf0e29ccbfc1d489fe794fbabbd029440bb41e5455998e0ca4bf90ad2e6ab8b11121a35683d84ce1ae34b",
+      "salt": "cbc205d53d6d09023074a8e62a014746",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_owner_org_nova",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_owner_org_nova",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_owner_org_nova",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_owner_org_nova",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_owner_org_nova",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T19:44:43.979Z",
+          "success": true
+        }
+      ]
+    },
+    {
+      "id": "usr_owner_org_prime",
+      "name": "Ahmed Malik",
+      "displayName": "Ahmed Malik",
+      "email": "ahmed@primeestates.com",
+      "role": "ORGANIZATION_OWNER",
+      "organizationId": "org_prime",
+      "status": "ACTIVE",
+      "title": "Owner & Founder",
+      "department": "Executive",
+      "phone": "+92 300 1234567",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "passwordHash": "10edaca4ba9cf594abfd1b800e510442d46653a1d8baf0e29ccbfc1d489fe794fbabbd029440bb41e5455998e0ca4bf90ad2e6ab8b11121a35683d84ce1ae34b",
+      "salt": "cbc205d53d6d09023074a8e62a014746",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_owner_org_prime",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_owner_org_prime",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_owner_org_prime",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_owner_org_prime",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_owner_org_prime",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T19:44:43.979Z",
+          "success": true
+        }
+      ]
+    },
+    {
+      "id": "usr_owner_org_bright",
+      "name": "Hira Ahmed",
+      "displayName": "Hira Ahmed",
+      "email": "hira@brightdental.com",
+      "role": "ORGANIZATION_OWNER",
+      "organizationId": "org_bright",
+      "status": "ACTIVE",
+      "title": "Owner & Founder",
+      "department": "Executive",
+      "phone": "+92 300 1234567",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "passwordHash": "10edaca4ba9cf594abfd1b800e510442d46653a1d8baf0e29ccbfc1d489fe794fbabbd029440bb41e5455998e0ca4bf90ad2e6ab8b11121a35683d84ce1ae34b",
+      "salt": "cbc205d53d6d09023074a8e62a014746",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_owner_org_bright",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_owner_org_bright",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_owner_org_bright",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_owner_org_bright",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_owner_org_bright",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T19:44:43.979Z",
+          "success": true
+        }
+      ]
+    },
+    {
+      "id": "usr_owner_org_techvision",
+      "name": "Usman Tariq",
+      "displayName": "Usman Tariq",
+      "email": "usman@techvision.com",
+      "role": "ORGANIZATION_OWNER",
+      "organizationId": "org_techvision",
+      "status": "ACTIVE",
+      "title": "Owner & Founder",
+      "department": "Executive",
+      "phone": "+92 300 1234567",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "passwordHash": "10edaca4ba9cf594abfd1b800e510442d46653a1d8baf0e29ccbfc1d489fe794fbabbd029440bb41e5455998e0ca4bf90ad2e6ab8b11121a35683d84ce1ae34b",
+      "salt": "cbc205d53d6d09023074a8e62a014746",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_owner_org_techvision",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_owner_org_techvision",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_owner_org_techvision",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_owner_org_techvision",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_owner_org_techvision",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T19:44:43.979Z",
+          "success": true
+        }
+      ]
+    },
+    {
+      "id": "usr_owner_org_glow",
+      "name": "Ayesha Noor",
+      "displayName": "Ayesha Noor",
+      "email": "ayesha@glowclinic.com",
+      "role": "ORGANIZATION_OWNER",
+      "organizationId": "org_glow",
+      "status": "ACTIVE",
+      "title": "Owner & Founder",
+      "department": "Executive",
+      "phone": "+92 300 1234567",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "passwordHash": "10edaca4ba9cf594abfd1b800e510442d46653a1d8baf0e29ccbfc1d489fe794fbabbd029440bb41e5455998e0ca4bf90ad2e6ab8b11121a35683d84ce1ae34b",
+      "salt": "cbc205d53d6d09023074a8e62a014746",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_owner_org_glow",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_owner_org_glow",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_owner_org_glow",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_owner_org_glow",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_owner_org_glow",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T19:44:43.979Z",
+          "success": true
+        }
+      ]
+    },
+    {
+      "id": "usr_owner_org_solarpro",
+      "name": "Hamza Ali",
+      "displayName": "Hamza Ali",
+      "email": "hamza@solarpro.com",
+      "role": "ORGANIZATION_OWNER",
+      "organizationId": "org_solarpro",
+      "status": "ACTIVE",
+      "title": "Owner & Founder",
+      "department": "Executive",
+      "phone": "+92 300 1234567",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "passwordHash": "10edaca4ba9cf594abfd1b800e510442d46653a1d8baf0e29ccbfc1d489fe794fbabbd029440bb41e5455998e0ca4bf90ad2e6ab8b11121a35683d84ce1ae34b",
+      "salt": "cbc205d53d6d09023074a8e62a014746",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_owner_org_solarpro",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_owner_org_solarpro",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_owner_org_solarpro",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_owner_org_solarpro",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_owner_org_solarpro",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T19:44:43.979Z",
+          "success": true
+        }
+      ]
+    },
+    {
+      "id": "usr_owner_org_urban",
+      "name": "Fatima Shah",
+      "displayName": "Fatima Shah",
+      "email": "fatima@urbanhomes.com",
+      "role": "ORGANIZATION_OWNER",
+      "organizationId": "org_urban",
+      "status": "ACTIVE",
+      "title": "Owner & Founder",
+      "department": "Executive",
+      "phone": "+92 300 1234567",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "passwordHash": "10edaca4ba9cf594abfd1b800e510442d46653a1d8baf0e29ccbfc1d489fe794fbabbd029440bb41e5455998e0ca4bf90ad2e6ab8b11121a35683d84ce1ae34b",
+      "salt": "cbc205d53d6d09023074a8e62a014746",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_owner_org_urban",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_owner_org_urban",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_owner_org_urban",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_owner_org_urban",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_owner_org_urban",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T19:44:43.979Z",
+          "success": true
+        }
+      ]
+    },
+    {
+      "id": "usr_owner_org_apex",
+      "name": "Kamran Akram",
+      "displayName": "Kamran Akram",
+      "email": "kamran@apexdynamics.com",
+      "role": "ORGANIZATION_OWNER",
+      "organizationId": "org_apex",
+      "status": "ACTIVE",
+      "title": "Owner & Founder",
+      "department": "Executive",
+      "phone": "+92 300 1234567",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "passwordHash": "10edaca4ba9cf594abfd1b800e510442d46653a1d8baf0e29ccbfc1d489fe794fbabbd029440bb41e5455998e0ca4bf90ad2e6ab8b11121a35683d84ce1ae34b",
+      "salt": "cbc205d53d6d09023074a8e62a014746",
+      "preferences": {
+        "theme": "light",
+        "density": "comfortable",
+        "sidebarCollapsed": false,
+        "defaultDashboard": "overview",
+        "language": "en",
+        "timezone": "Asia/Karachi",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      },
+      "notifications": {
+        "emailNotifications": true,
+        "taskReminders": true,
+        "leadAssignments": true,
+        "dealUpdates": true,
+        "mentions": true,
+        "workflowNotifications": true,
+        "dailySummary": false,
+        "browserNotifications": false
+      },
+      "activeSessions": [
+        {
+          "id": "sess_curr_usr_owner_org_apex",
+          "device": "Desktop Chrome 128 / macOS Sequoia",
+          "browser": "Chrome 128.0",
+          "ip": "192.168.1.10",
+          "location": "Karachi, Pakistan",
+          "lastActive": "Active Now",
+          "current": true
+        },
+        {
+          "id": "sess_mob_usr_owner_org_apex",
+          "device": "iPhone 15 Pro / Safari iOS 18.0",
+          "browser": "Mobile Safari",
+          "ip": "182.185.24.12",
+          "location": "Karachi, Pakistan",
+          "lastActive": "2 hours ago",
+          "current": false
+        }
+      ],
+      "loginHistory": [
+        {
+          "id": "log_1_usr_owner_org_apex",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-07T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_2_usr_owner_org_apex",
+          "ip": "192.168.1.10",
+          "browser": "Chrome 128 / macOS",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-06T19:44:43.979Z",
+          "success": true
+        },
+        {
+          "id": "log_3_usr_owner_org_apex",
+          "ip": "182.185.24.12",
+          "browser": "Safari iOS 18.0",
+          "location": "Karachi, Pakistan",
+          "timestamp": "2026-10-05T19:44:43.979Z",
+          "success": true
+        }
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "id": "6ac2a411ceac76195538b01f",
+      "name": "WordbitX Technologies (ABC Tech)",
+      "code": "wordbitx",
+      "industry": "Software & Technology",
+      "size": "10-50",
+      "country": "Pakistan",
+      "timezone": "Asia/Karachi",
+      "plan": "PROFESSIONAL",
+      "status": "ACTIVE",
+      "ownerId": "usr_owner_6ac2a411ceac76195538b01f",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "updatedAt": "2026-02-10T08:00:00.000Z",
+      "legalName": "WordbitX Technologies (ABC Tech)",
+      "displayName": "WordbitX Technologies (ABC Tech)",
+      "tradingName": "WordbitX Technologies (ABC Tech)",
+      "currency": "USD",
+      "dateFormat": "MM/DD/YYYY",
+      "fiscalYear": "January - December",
+      "website": "https://wordbitx.com",
+      "phone": "+92 300 1234567",
+      "email": "contact@wordbitx.com",
+      "city": "Karachi",
+      "state": "Sindh",
+      "address": "Suite 400, Commercial Business District",
+      "webhookSecret": "whsec_b40a54b640d2383cfe52cbd4da5a74c6",
+      "apiKeys": [
+        {
+          "id": "key_6ac2a411ceac76195538b01f_1",
+          "name": "Production Inbound Webhook Key",
+          "keyPrefix": "wbx_live_pk_8f49...",
+          "scopes": [
+            "leads:write",
+            "deals:read",
+            "webhooks:dispatch"
+          ],
+          "lastUsed": "Today, 04:12 AM",
+          "createdAt": "2026-03-01T00:00:00.000Z"
+        }
+      ],
+      "rolePermissions": {
+        "ORGANIZATION_OWNER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        },
+        "ORGANIZATION_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "settings": [
+            "view",
+            "edit"
+          ]
+        },
+        "SALES_MANAGER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "export"
+          ],
+          "reports": [
+            "view",
+            "export"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [
+            "view"
+          ],
+          "integrations": [
+            "view"
+          ],
+          "settings": [
+            "view"
+          ]
+        },
+        "SALES_AGENT": {
+          "leads": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "activities": [
+            "view",
+            "create"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "VIEWER": {
+          "leads": [
+            "view"
+          ],
+          "pipeline": [
+            "view"
+          ],
+          "deals": [
+            "view"
+          ],
+          "customers": [
+            "view"
+          ],
+          "companies": [
+            "view"
+          ],
+          "tasks": [
+            "view"
+          ],
+          "calls": [
+            "view"
+          ],
+          "activities": [
+            "view"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "SUPER_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        }
+      }
+    },
+    {
+      "id": "org_abc",
+      "name": "ABC Technologies",
+      "code": "abc-tech",
+      "industry": "Software & Technology",
+      "size": "10-50",
+      "country": "Pakistan",
+      "timezone": "Asia/Karachi",
+      "plan": "PROFESSIONAL",
+      "status": "ACTIVE",
+      "ownerId": "usr_shaniba",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "updatedAt": "2026-02-10T08:00:00.000Z",
+      "legalName": "ABC Technologies",
+      "displayName": "ABC Technologies",
+      "tradingName": "ABC Technologies",
+      "currency": "USD",
+      "dateFormat": "MM/DD/YYYY",
+      "fiscalYear": "January - December",
+      "website": "https://abc-tech.com",
+      "phone": "+92 300 1234567",
+      "email": "contact@abc-tech.com",
+      "city": "Karachi",
+      "state": "Sindh",
+      "address": "Suite 400, Commercial Business District",
+      "webhookSecret": "whsec_59f62a24b6aadd3b5cc2a11fed68919b",
+      "apiKeys": [
+        {
+          "id": "key_org_abc_1",
+          "name": "Production Inbound Webhook Key",
+          "keyPrefix": "wbx_live_pk_8f49...",
+          "scopes": [
+            "leads:write",
+            "deals:read",
+            "webhooks:dispatch"
+          ],
+          "lastUsed": "Today, 04:12 AM",
+          "createdAt": "2026-03-01T00:00:00.000Z"
+        }
+      ],
+      "rolePermissions": {
+        "ORGANIZATION_OWNER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        },
+        "ORGANIZATION_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "settings": [
+            "view",
+            "edit"
+          ]
+        },
+        "SALES_MANAGER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "export"
+          ],
+          "reports": [
+            "view",
+            "export"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [
+            "view"
+          ],
+          "integrations": [
+            "view"
+          ],
+          "settings": [
+            "view"
+          ]
+        },
+        "SALES_AGENT": {
+          "leads": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "activities": [
+            "view",
+            "create"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "VIEWER": {
+          "leads": [
+            "view"
+          ],
+          "pipeline": [
+            "view"
+          ],
+          "deals": [
+            "view"
+          ],
+          "customers": [
+            "view"
+          ],
+          "companies": [
+            "view"
+          ],
+          "tasks": [
+            "view"
+          ],
+          "calls": [
+            "view"
+          ],
+          "activities": [
+            "view"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "SUPER_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        }
+      }
+    },
+    {
+      "id": "org_apex",
+      "name": "Apex Dynamics",
+      "code": "apex-dyn",
+      "industry": "Manufacturing & Logistics",
+      "size": "50-100",
+      "country": "United States",
+      "timezone": "America/New_York",
+      "plan": "STARTER",
+      "status": "ACTIVE",
+      "ownerId": "usr_kamran",
+      "createdAt": "2026-03-01T08:00:00.000Z",
+      "updatedAt": "2026-03-01T08:00:00.000Z",
+      "legalName": "Apex Dynamics",
+      "displayName": "Apex Dynamics",
+      "tradingName": "Apex Dynamics",
+      "currency": "USD",
+      "dateFormat": "MM/DD/YYYY",
+      "fiscalYear": "January - December",
+      "website": "https://apex-dyn.com",
+      "phone": "+92 300 1234567",
+      "email": "contact@apex-dyn.com",
+      "city": "New York",
+      "state": "NY",
+      "address": "Suite 400, Commercial Business District",
+      "webhookSecret": "whsec_1d67f9b60f72b0d73eba1dd10dc128de",
+      "apiKeys": [
+        {
+          "id": "key_org_apex_1",
+          "name": "Production Inbound Webhook Key",
+          "keyPrefix": "wbx_live_pk_8f49...",
+          "scopes": [
+            "leads:write",
+            "deals:read",
+            "webhooks:dispatch"
+          ],
+          "lastUsed": "Today, 04:12 AM",
+          "createdAt": "2026-03-01T00:00:00.000Z"
+        }
+      ],
+      "rolePermissions": {
+        "ORGANIZATION_OWNER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        },
+        "ORGANIZATION_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "settings": [
+            "view",
+            "edit"
+          ]
+        },
+        "SALES_MANAGER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "export"
+          ],
+          "reports": [
+            "view",
+            "export"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [
+            "view"
+          ],
+          "integrations": [
+            "view"
+          ],
+          "settings": [
+            "view"
+          ]
+        },
+        "SALES_AGENT": {
+          "leads": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "activities": [
+            "view",
+            "create"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "VIEWER": {
+          "leads": [
+            "view"
+          ],
+          "pipeline": [
+            "view"
+          ],
+          "deals": [
+            "view"
+          ],
+          "customers": [
+            "view"
+          ],
+          "companies": [
+            "view"
+          ],
+          "tasks": [
+            "view"
+          ],
+          "calls": [
+            "view"
+          ],
+          "activities": [
+            "view"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "SUPER_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        }
+      }
+    },
+    {
+      "id": "org_nova",
+      "name": "Nova Tech",
+      "legalName": "Nova Tech",
+      "displayName": "Nova Tech",
+      "tradingName": "Nova Tech",
+      "code": "nova-tech",
+      "industry": "Technology & AI",
+      "size": "10-50",
+      "country": "United States",
+      "timezone": "Asia/Karachi",
+      "plan": "STARTER",
+      "status": "ACTIVE",
+      "ownerId": "usr_owner_org_nova",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "updatedAt": "2026-02-10T08:00:00.000Z",
+      "currency": "USD",
+      "dateFormat": "MM/DD/YYYY",
+      "fiscalYear": "January - December",
+      "website": "https://nova-tech.com",
+      "phone": "+92 300 1234567",
+      "email": "contact@nova-tech.com",
+      "city": "New York",
+      "state": "NY",
+      "address": "Suite 400, Commercial Business District",
+      "webhookSecret": "whsec_94c18614fb4ab2cf4cb58fed4215f2d7",
+      "apiKeys": [
+        {
+          "id": "key_org_nova_1",
+          "name": "Production Inbound Webhook Key",
+          "keyPrefix": "wbx_live_pk_8f49...",
+          "scopes": [
+            "leads:write",
+            "deals:read",
+            "webhooks:dispatch"
+          ],
+          "lastUsed": "Today, 04:12 AM",
+          "createdAt": "2026-03-01T00:00:00.000Z"
+        }
+      ],
+      "rolePermissions": {
+        "ORGANIZATION_OWNER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        },
+        "ORGANIZATION_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "settings": [
+            "view",
+            "edit"
+          ]
+        },
+        "SALES_MANAGER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "export"
+          ],
+          "reports": [
+            "view",
+            "export"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [
+            "view"
+          ],
+          "integrations": [
+            "view"
+          ],
+          "settings": [
+            "view"
+          ]
+        },
+        "SALES_AGENT": {
+          "leads": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "activities": [
+            "view",
+            "create"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "VIEWER": {
+          "leads": [
+            "view"
+          ],
+          "pipeline": [
+            "view"
+          ],
+          "deals": [
+            "view"
+          ],
+          "customers": [
+            "view"
+          ],
+          "companies": [
+            "view"
+          ],
+          "tasks": [
+            "view"
+          ],
+          "calls": [
+            "view"
+          ],
+          "activities": [
+            "view"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "SUPER_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        }
+      }
+    },
+    {
+      "id": "org_prime",
+      "name": "Prime Estates",
+      "legalName": "Prime Estates",
+      "displayName": "Prime Estates",
+      "tradingName": "Prime Estates",
+      "code": "prime-est",
+      "industry": "Real Estate & Brokerage",
+      "size": "25-50",
+      "country": "United Arab Emirates",
+      "timezone": "Asia/Karachi",
+      "plan": "PROFESSIONAL",
+      "status": "ACTIVE",
+      "ownerId": "usr_owner_org_prime",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "updatedAt": "2026-02-10T08:00:00.000Z",
+      "currency": "USD",
+      "dateFormat": "MM/DD/YYYY",
+      "fiscalYear": "January - December",
+      "website": "https://prime-est.com",
+      "phone": "+92 300 1234567",
+      "email": "contact@prime-est.com",
+      "city": "New York",
+      "state": "NY",
+      "address": "Suite 400, Commercial Business District",
+      "webhookSecret": "whsec_8716816b23c01e08c01cea4ebdafda82",
+      "apiKeys": [
+        {
+          "id": "key_org_prime_1",
+          "name": "Production Inbound Webhook Key",
+          "keyPrefix": "wbx_live_pk_8f49...",
+          "scopes": [
+            "leads:write",
+            "deals:read",
+            "webhooks:dispatch"
+          ],
+          "lastUsed": "Today, 04:12 AM",
+          "createdAt": "2026-03-01T00:00:00.000Z"
+        }
+      ],
+      "rolePermissions": {
+        "ORGANIZATION_OWNER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        },
+        "ORGANIZATION_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "settings": [
+            "view",
+            "edit"
+          ]
+        },
+        "SALES_MANAGER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "export"
+          ],
+          "reports": [
+            "view",
+            "export"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [
+            "view"
+          ],
+          "integrations": [
+            "view"
+          ],
+          "settings": [
+            "view"
+          ]
+        },
+        "SALES_AGENT": {
+          "leads": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "activities": [
+            "view",
+            "create"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "VIEWER": {
+          "leads": [
+            "view"
+          ],
+          "pipeline": [
+            "view"
+          ],
+          "deals": [
+            "view"
+          ],
+          "customers": [
+            "view"
+          ],
+          "companies": [
+            "view"
+          ],
+          "tasks": [
+            "view"
+          ],
+          "calls": [
+            "view"
+          ],
+          "activities": [
+            "view"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "SUPER_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        }
+      }
+    },
+    {
+      "id": "org_bright",
+      "name": "Bright Dental",
+      "legalName": "Bright Dental",
+      "displayName": "Bright Dental",
+      "tradingName": "Bright Dental",
+      "code": "bright-dent",
+      "industry": "Healthcare & Dental",
+      "size": "10-25",
+      "country": "United Kingdom",
+      "timezone": "Asia/Karachi",
+      "plan": "STARTER",
+      "status": "ACTIVE",
+      "ownerId": "usr_owner_org_bright",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "updatedAt": "2026-02-10T08:00:00.000Z",
+      "currency": "USD",
+      "dateFormat": "MM/DD/YYYY",
+      "fiscalYear": "January - December",
+      "website": "https://bright-dent.com",
+      "phone": "+92 300 1234567",
+      "email": "contact@bright-dent.com",
+      "city": "New York",
+      "state": "NY",
+      "address": "Suite 400, Commercial Business District",
+      "webhookSecret": "whsec_d96ee9a8f6a2401a7d0240d9c466a820",
+      "apiKeys": [
+        {
+          "id": "key_org_bright_1",
+          "name": "Production Inbound Webhook Key",
+          "keyPrefix": "wbx_live_pk_8f49...",
+          "scopes": [
+            "leads:write",
+            "deals:read",
+            "webhooks:dispatch"
+          ],
+          "lastUsed": "Today, 04:12 AM",
+          "createdAt": "2026-03-01T00:00:00.000Z"
+        }
+      ],
+      "rolePermissions": {
+        "ORGANIZATION_OWNER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        },
+        "ORGANIZATION_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "settings": [
+            "view",
+            "edit"
+          ]
+        },
+        "SALES_MANAGER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "export"
+          ],
+          "reports": [
+            "view",
+            "export"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [
+            "view"
+          ],
+          "integrations": [
+            "view"
+          ],
+          "settings": [
+            "view"
+          ]
+        },
+        "SALES_AGENT": {
+          "leads": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "activities": [
+            "view",
+            "create"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "VIEWER": {
+          "leads": [
+            "view"
+          ],
+          "pipeline": [
+            "view"
+          ],
+          "deals": [
+            "view"
+          ],
+          "customers": [
+            "view"
+          ],
+          "companies": [
+            "view"
+          ],
+          "tasks": [
+            "view"
+          ],
+          "calls": [
+            "view"
+          ],
+          "activities": [
+            "view"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "SUPER_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        }
+      }
+    },
+    {
+      "id": "org_techvision",
+      "name": "Tech Vision",
+      "legalName": "Tech Vision",
+      "displayName": "Tech Vision",
+      "tradingName": "Tech Vision",
+      "code": "tech-vision",
+      "industry": "Cloud & IT Services",
+      "size": "50-100",
+      "country": "Canada",
+      "timezone": "Asia/Karachi",
+      "plan": "PROFESSIONAL",
+      "status": "ACTIVE",
+      "ownerId": "usr_owner_org_techvision",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "updatedAt": "2026-02-10T08:00:00.000Z",
+      "currency": "USD",
+      "dateFormat": "MM/DD/YYYY",
+      "fiscalYear": "January - December",
+      "website": "https://tech-vision.com",
+      "phone": "+92 300 1234567",
+      "email": "contact@tech-vision.com",
+      "city": "New York",
+      "state": "NY",
+      "address": "Suite 400, Commercial Business District",
+      "webhookSecret": "whsec_37609fcb93ccdc2334c0b62495c65737",
+      "apiKeys": [
+        {
+          "id": "key_org_techvision_1",
+          "name": "Production Inbound Webhook Key",
+          "keyPrefix": "wbx_live_pk_8f49...",
+          "scopes": [
+            "leads:write",
+            "deals:read",
+            "webhooks:dispatch"
+          ],
+          "lastUsed": "Today, 04:12 AM",
+          "createdAt": "2026-03-01T00:00:00.000Z"
+        }
+      ],
+      "rolePermissions": {
+        "ORGANIZATION_OWNER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        },
+        "ORGANIZATION_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "settings": [
+            "view",
+            "edit"
+          ]
+        },
+        "SALES_MANAGER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "export"
+          ],
+          "reports": [
+            "view",
+            "export"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [
+            "view"
+          ],
+          "integrations": [
+            "view"
+          ],
+          "settings": [
+            "view"
+          ]
+        },
+        "SALES_AGENT": {
+          "leads": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "activities": [
+            "view",
+            "create"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "VIEWER": {
+          "leads": [
+            "view"
+          ],
+          "pipeline": [
+            "view"
+          ],
+          "deals": [
+            "view"
+          ],
+          "customers": [
+            "view"
+          ],
+          "companies": [
+            "view"
+          ],
+          "tasks": [
+            "view"
+          ],
+          "calls": [
+            "view"
+          ],
+          "activities": [
+            "view"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "SUPER_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        }
+      }
+    },
+    {
+      "id": "org_glow",
+      "name": "Glow Clinic",
+      "legalName": "Glow Clinic",
+      "displayName": "Glow Clinic",
+      "tradingName": "Glow Clinic",
+      "code": "glow-clinic",
+      "industry": "Aesthetic Dermatology",
+      "size": "10-20",
+      "country": "Pakistan",
+      "timezone": "Asia/Karachi",
+      "plan": "STARTER",
+      "status": "ACTIVE",
+      "ownerId": "usr_owner_org_glow",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "updatedAt": "2026-02-10T08:00:00.000Z",
+      "currency": "USD",
+      "dateFormat": "MM/DD/YYYY",
+      "fiscalYear": "January - December",
+      "website": "https://glow-clinic.com",
+      "phone": "+92 300 1234567",
+      "email": "contact@glow-clinic.com",
+      "city": "Karachi",
+      "state": "Sindh",
+      "address": "Suite 400, Commercial Business District",
+      "webhookSecret": "whsec_a0d0fbdc2fcc79f5d6a0b07dca36e3b4",
+      "apiKeys": [
+        {
+          "id": "key_org_glow_1",
+          "name": "Production Inbound Webhook Key",
+          "keyPrefix": "wbx_live_pk_8f49...",
+          "scopes": [
+            "leads:write",
+            "deals:read",
+            "webhooks:dispatch"
+          ],
+          "lastUsed": "Today, 04:12 AM",
+          "createdAt": "2026-03-01T00:00:00.000Z"
+        }
+      ],
+      "rolePermissions": {
+        "ORGANIZATION_OWNER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        },
+        "ORGANIZATION_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "settings": [
+            "view",
+            "edit"
+          ]
+        },
+        "SALES_MANAGER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "export"
+          ],
+          "reports": [
+            "view",
+            "export"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [
+            "view"
+          ],
+          "integrations": [
+            "view"
+          ],
+          "settings": [
+            "view"
+          ]
+        },
+        "SALES_AGENT": {
+          "leads": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "activities": [
+            "view",
+            "create"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "VIEWER": {
+          "leads": [
+            "view"
+          ],
+          "pipeline": [
+            "view"
+          ],
+          "deals": [
+            "view"
+          ],
+          "customers": [
+            "view"
+          ],
+          "companies": [
+            "view"
+          ],
+          "tasks": [
+            "view"
+          ],
+          "calls": [
+            "view"
+          ],
+          "activities": [
+            "view"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "SUPER_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        }
+      }
+    },
+    {
+      "id": "org_solarpro",
+      "name": "SolarPro",
+      "legalName": "SolarPro",
+      "displayName": "SolarPro",
+      "tradingName": "SolarPro",
+      "code": "solar-pro",
+      "industry": "Renewable Energy",
+      "size": "25-50",
+      "country": "Australia",
+      "timezone": "Asia/Karachi",
+      "plan": "PROFESSIONAL",
+      "status": "ACTIVE",
+      "ownerId": "usr_owner_org_solarpro",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "updatedAt": "2026-02-10T08:00:00.000Z",
+      "currency": "USD",
+      "dateFormat": "MM/DD/YYYY",
+      "fiscalYear": "January - December",
+      "website": "https://solar-pro.com",
+      "phone": "+92 300 1234567",
+      "email": "contact@solar-pro.com",
+      "city": "New York",
+      "state": "NY",
+      "address": "Suite 400, Commercial Business District",
+      "webhookSecret": "whsec_5f6d8aaccdad650d4423c6394c85fe46",
+      "apiKeys": [
+        {
+          "id": "key_org_solarpro_1",
+          "name": "Production Inbound Webhook Key",
+          "keyPrefix": "wbx_live_pk_8f49...",
+          "scopes": [
+            "leads:write",
+            "deals:read",
+            "webhooks:dispatch"
+          ],
+          "lastUsed": "Today, 04:12 AM",
+          "createdAt": "2026-03-01T00:00:00.000Z"
+        }
+      ],
+      "rolePermissions": {
+        "ORGANIZATION_OWNER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        },
+        "ORGANIZATION_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "settings": [
+            "view",
+            "edit"
+          ]
+        },
+        "SALES_MANAGER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "export"
+          ],
+          "reports": [
+            "view",
+            "export"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [
+            "view"
+          ],
+          "integrations": [
+            "view"
+          ],
+          "settings": [
+            "view"
+          ]
+        },
+        "SALES_AGENT": {
+          "leads": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "activities": [
+            "view",
+            "create"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "VIEWER": {
+          "leads": [
+            "view"
+          ],
+          "pipeline": [
+            "view"
+          ],
+          "deals": [
+            "view"
+          ],
+          "customers": [
+            "view"
+          ],
+          "companies": [
+            "view"
+          ],
+          "tasks": [
+            "view"
+          ],
+          "calls": [
+            "view"
+          ],
+          "activities": [
+            "view"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "SUPER_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        }
+      }
+    },
+    {
+      "id": "org_urban",
+      "name": "Urban Homes",
+      "legalName": "Urban Homes",
+      "displayName": "Urban Homes",
+      "tradingName": "Urban Homes",
+      "code": "urban-homes",
+      "industry": "Architecture & Construction",
+      "size": "50-100",
+      "country": "United States",
+      "timezone": "Asia/Karachi",
+      "plan": "ENTERPRISE",
+      "status": "ACTIVE",
+      "ownerId": "usr_owner_org_urban",
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "updatedAt": "2026-02-10T08:00:00.000Z",
+      "currency": "USD",
+      "dateFormat": "MM/DD/YYYY",
+      "fiscalYear": "January - December",
+      "website": "https://urban-homes.com",
+      "phone": "+92 300 1234567",
+      "email": "contact@urban-homes.com",
+      "city": "New York",
+      "state": "NY",
+      "address": "Suite 400, Commercial Business District",
+      "webhookSecret": "whsec_225f86a1b616b9179ad9a5ba7caf516b",
+      "apiKeys": [
+        {
+          "id": "key_org_urban_1",
+          "name": "Production Inbound Webhook Key",
+          "keyPrefix": "wbx_live_pk_8f49...",
+          "scopes": [
+            "leads:write",
+            "deals:read",
+            "webhooks:dispatch"
+          ],
+          "lastUsed": "Today, 04:12 AM",
+          "createdAt": "2026-03-01T00:00:00.000Z"
+        }
+      ],
+      "rolePermissions": {
+        "ORGANIZATION_OWNER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        },
+        "ORGANIZATION_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "settings": [
+            "view",
+            "edit"
+          ]
+        },
+        "SALES_MANAGER": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "export"
+          ],
+          "reports": [
+            "view",
+            "export"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [
+            "view"
+          ],
+          "integrations": [
+            "view"
+          ],
+          "settings": [
+            "view"
+          ]
+        },
+        "SALES_AGENT": {
+          "leads": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit"
+          ],
+          "activities": [
+            "view",
+            "create"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "VIEWER": {
+          "leads": [
+            "view"
+          ],
+          "pipeline": [
+            "view"
+          ],
+          "deals": [
+            "view"
+          ],
+          "customers": [
+            "view"
+          ],
+          "companies": [
+            "view"
+          ],
+          "tasks": [
+            "view"
+          ],
+          "calls": [
+            "view"
+          ],
+          "activities": [
+            "view"
+          ],
+          "reports": [
+            "view"
+          ],
+          "team": [
+            "view"
+          ],
+          "workflows": [],
+          "integrations": [],
+          "settings": []
+        },
+        "SUPER_ADMIN": {
+          "leads": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "pipeline": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "deals": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "customers": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "companies": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "tasks": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "calls": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "activities": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "reports": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "team": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "workflows": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "integrations": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ],
+          "settings": [
+            "view",
+            "create",
+            "edit",
+            "delete",
+            "export",
+            "manage"
+          ]
+        }
+      }
+    }
+  ],
+  "memberships": [
+    {
+      "id": "mem_0",
+      "userId": "usr_shaniba",
+      "organizationId": "org_abc",
+      "role": "ORGANIZATION_OWNER",
+      "status": "ACTIVE",
+      "joinedAt": "2026-02-01T08:00:00.000Z"
+    },
+    {
+      "id": "mem_1",
+      "userId": "usr_sara",
+      "organizationId": "org_abc",
+      "role": "ORGANIZATION_ADMIN",
+      "status": "ACTIVE",
+      "joinedAt": "2026-02-10T08:00:00.000Z"
+    },
+    {
+      "id": "mem_2",
+      "userId": "usr_ahmed",
+      "organizationId": "org_abc",
+      "role": "SALES_AGENT",
+      "status": "ACTIVE",
+      "joinedAt": "2026-02-12T08:00:00.000Z"
+    }
+  ],
+  "leads": [
+    {
+      "id": "lead_1",
+      "organizationId": "org_abc",
+      "name": "Ali Raza",
+      "company": "Alpha Solutions",
+      "email": "ali@alphasolutions.com",
+      "phone": "0300-1234567",
+      "source": "Website",
+      "status": "New",
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "value": 600,
+      "lastContact": "2 hours ago",
+      "nextFollowUp": "Oct 14, 2026",
+      "notes": "High intent prospect interested in CRM pipeline setup.",
+      "createdAt": "2026-10-06T10:30:00.000Z",
+      "updatedAt": "2026-10-06T10:30:00.000Z"
+    },
+    {
+      "id": "lead_2",
+      "organizationId": "org_abc",
+      "name": "Sara Khan",
+      "company": "Nova Tech",
+      "email": "sara@novatech.com",
+      "phone": "0311-2345678",
+      "source": "Contact Form",
+      "status": "Contacted",
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "value": 800,
+      "lastContact": "4 hours ago",
+      "nextFollowUp": "Oct 15, 2026",
+      "notes": "Requested custom workflow demo.",
+      "createdAt": "2026-10-06T08:15:00.000Z",
+      "updatedAt": "2026-10-06T09:00:00.000Z"
+    },
+    {
+      "id": "lead_3",
+      "organizationId": "org_abc",
+      "name": "Ahmed Malik",
+      "company": "Prime Estates",
+      "email": "ahmed@primeestates.com",
+      "phone": "0321-3456789",
+      "source": "Website",
+      "status": "Qualified",
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "value": 2000,
+      "lastContact": "6 hours ago",
+      "nextFollowUp": "Oct 16, 2026",
+      "notes": "Budget confirmed ($2k/mo). Ready for deal review.",
+      "createdAt": "2026-10-05T14:20:00.000Z",
+      "updatedAt": "2026-10-06T07:10:00.000Z"
+    },
+    {
+      "id": "lead_4",
+      "organizationId": "org_abc",
+      "name": "Hira Ahmed",
+      "company": "Bright Dental",
+      "email": "hira@brightdental.com",
+      "phone": "0333-4567890",
+      "source": "Referral",
+      "status": "Qualified",
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "value": 8500,
+      "lastContact": "8 hours ago",
+      "nextFollowUp": "Oct 18, 2026",
+      "notes": "Multi-clinic CRM installation.",
+      "createdAt": "2026-10-05T11:00:00.000Z",
+      "updatedAt": "2026-10-06T06:00:00.000Z"
+    },
+    {
+      "id": "lead_5",
+      "organizationId": "org_abc",
+      "name": "Usman Tariq",
+      "company": "Tech Vision",
+      "email": "usman@techvision.com",
+      "phone": "0345-5678901",
+      "source": "LinkedIn",
+      "status": "New",
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "value": 700,
+      "lastContact": "10 hours ago",
+      "nextFollowUp": "Oct 19, 2026",
+      "notes": "Inquired about Google Workspace and telephony sync.",
+      "createdAt": "2026-10-05T09:40:00.000Z",
+      "updatedAt": "2026-10-05T09:40:00.000Z"
+    },
+    {
+      "id": "lead_6",
+      "organizationId": "org_abc",
+      "name": "Ayesha Noor",
+      "company": "Glow Clinic",
+      "email": "ayesha@glowclinic.com",
+      "phone": "0301-6789012",
+      "source": "Google",
+      "status": "Contacted",
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "value": 1500,
+      "lastContact": "12 hours ago",
+      "nextFollowUp": "Oct 20, 2026",
+      "notes": "Evaluating WordbitX vs Salesforce.",
+      "createdAt": "2026-10-04T16:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "lead_7",
+      "organizationId": "org_abc",
+      "name": "Hamza Ali",
+      "company": "SolarPro",
+      "email": "hamza@solarpro.com",
+      "phone": "0310-7890123",
+      "source": "Website",
+      "status": "Qualified",
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "value": 3500,
+      "lastContact": "14 hours ago",
+      "nextFollowUp": "Oct 21, 2026",
+      "notes": "Solar equipment installer team of 40 agents.",
+      "createdAt": "2026-10-04T10:15:00.000Z",
+      "updatedAt": "2026-10-05T08:30:00.000Z"
+    },
+    {
+      "id": "lead_8",
+      "organizationId": "org_abc",
+      "name": "Fatima Shah",
+      "company": "Urban Homes",
+      "email": "fatima@urbanhomes.com",
+      "phone": "0320-8901234",
+      "source": "LinkedIn",
+      "status": "Proposal",
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "value": 4200,
+      "lastContact": "1 day ago",
+      "nextFollowUp": "Oct 22, 2026",
+      "notes": "Formal RFP submitted; contract under legal review.",
+      "createdAt": "2026-10-03T15:30:00.000Z",
+      "updatedAt": "2026-10-05T17:00:00.000Z"
+    },
+    {
+      "id": "lead_9",
+      "organizationId": "org_abc",
+      "name": "Bilal Ahmed",
+      "company": "CodeCraft",
+      "email": "bilal@codecraft.com",
+      "phone": "0314-9012345",
+      "source": "Referral",
+      "status": "New",
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "value": 1200,
+      "lastContact": "1 day ago",
+      "nextFollowUp": "Oct 23, 2026",
+      "notes": "Dev agency looking for centralized client pipeline.",
+      "createdAt": "2026-10-03T09:10:00.000Z",
+      "updatedAt": "2026-10-03T09:10:00.000Z"
+    },
+    {
+      "id": "lead_10",
+      "organizationId": "org_abc",
+      "name": "Zainab Iqbal",
+      "company": "Smart Retail",
+      "email": "zainab@smartretail.com",
+      "phone": "0346-0123456",
+      "source": "Website",
+      "status": "Contacted",
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "value": 1000,
+      "lastContact": "1 day ago",
+      "nextFollowUp": "Oct 24, 2026",
+      "notes": "Omnichannel retail store chain.",
+      "createdAt": "2026-10-02T13:45:00.000Z",
+      "updatedAt": "2026-10-04T10:20:00.000Z"
+    }
+  ],
+  "deals": [
+    {
+      "id": "deal_1",
+      "organizationId": "org_abc",
+      "name": "Alpha Solutions CRM Rollout",
+      "company": "Alpha Solutions",
+      "value": 600,
+      "stage": "New",
+      "probability": 20,
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "expectedClose": "2026-10-25",
+      "priority": "Medium",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-06T10:30:00.000Z",
+      "updatedAt": "2026-10-06T10:30:00.000Z"
+    },
+    {
+      "id": "deal_2",
+      "organizationId": "org_abc",
+      "name": "Tech Vision Enterprise Suite",
+      "company": "Tech Vision",
+      "value": 700,
+      "stage": "New",
+      "probability": 25,
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "expectedClose": "2026-10-30",
+      "priority": "Low",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-05T09:40:00.000Z",
+      "updatedAt": "2026-10-05T09:40:00.000Z"
+    },
+    {
+      "id": "deal_3",
+      "organizationId": "org_abc",
+      "name": "CodeCraft Agency License",
+      "company": "CodeCraft",
+      "value": 1200,
+      "stage": "New",
+      "probability": 30,
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "expectedClose": "2026-11-05",
+      "priority": "Medium",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-03T09:10:00.000Z",
+      "updatedAt": "2026-10-03T09:10:00.000Z"
+    },
+    {
+      "id": "deal_4",
+      "organizationId": "org_abc",
+      "name": "Nova Tech Sales Pipeline",
+      "company": "Nova Tech",
+      "value": 800,
+      "stage": "Contacted",
+      "probability": 40,
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "expectedClose": "2026-10-28",
+      "priority": "Medium",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-06T08:15:00.000Z",
+      "updatedAt": "2026-10-06T09:00:00.000Z"
+    },
+    {
+      "id": "deal_5",
+      "organizationId": "org_abc",
+      "name": "Glow Clinic Multi-Branch",
+      "company": "Glow Clinic",
+      "value": 1500,
+      "stage": "Contacted",
+      "probability": 45,
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "expectedClose": "2026-11-10",
+      "priority": "High",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-04T16:00:00.000Z",
+      "updatedAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "deal_6",
+      "organizationId": "org_abc",
+      "name": "Smart Retail Automation Hub",
+      "company": "Smart Retail",
+      "value": 1000,
+      "stage": "Contacted",
+      "probability": 40,
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "expectedClose": "2026-11-02",
+      "priority": "Low",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-02T13:45:00.000Z",
+      "updatedAt": "2026-10-04T10:20:00.000Z"
+    },
+    {
+      "id": "deal_7",
+      "organizationId": "org_abc",
+      "name": "Prime Estates Global Portal",
+      "company": "Prime Estates",
+      "value": 2000,
+      "stage": "Qualified",
+      "probability": 60,
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "expectedClose": "2026-10-22",
+      "priority": "High",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-05T14:20:00.000Z",
+      "updatedAt": "2026-10-06T07:10:00.000Z"
+    },
+    {
+      "id": "deal_8",
+      "organizationId": "org_abc",
+      "name": "SolarPro Dispatch System",
+      "company": "SolarPro",
+      "value": 3500,
+      "stage": "Qualified",
+      "probability": 65,
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "expectedClose": "2026-11-15",
+      "priority": "High",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-04T10:15:00.000Z",
+      "updatedAt": "2026-10-05T08:30:00.000Z"
+    },
+    {
+      "id": "deal_9",
+      "organizationId": "org_abc",
+      "name": "Urban Homes Architectural CRM",
+      "company": "Urban Homes",
+      "value": 4200,
+      "stage": "Proposal",
+      "probability": 75,
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "expectedClose": "2026-10-20",
+      "priority": "High",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-03T15:30:00.000Z",
+      "updatedAt": "2026-10-05T17:00:00.000Z"
+    },
+    {
+      "id": "deal_10",
+      "organizationId": "org_abc",
+      "name": "Bright Dental Group Integration",
+      "company": "Bright Dental",
+      "value": 8500,
+      "stage": "Negotiation",
+      "probability": 85,
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "expectedClose": "2026-10-18",
+      "priority": "High",
+      "status": "ACTIVE",
+      "createdAt": "2026-10-05T11:00:00.000Z",
+      "updatedAt": "2026-10-06T06:00:00.000Z"
+    },
+    {
+      "id": "deal_11",
+      "organizationId": "org_abc",
+      "name": "ABC Technologies Platform Contract",
+      "company": "ABC Technologies",
+      "value": 24000,
+      "stage": "Won",
+      "probability": 100,
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "expectedClose": "2026-09-28",
+      "priority": "High",
+      "status": "WON",
+      "createdAt": "2026-09-15T10:00:00.000Z",
+      "updatedAt": "2026-09-28T16:00:00.000Z"
+    },
+    {
+      "id": "deal_12",
+      "organizationId": "org_abc",
+      "name": "Nova Tech Add-on Package",
+      "company": "Nova Tech",
+      "value": 12000,
+      "stage": "Won",
+      "probability": 100,
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "expectedClose": "2026-09-30",
+      "priority": "Medium",
+      "status": "WON",
+      "createdAt": "2026-09-10T12:00:00.000Z",
+      "updatedAt": "2026-09-30T15:30:00.000Z"
+    }
+  ],
+  "customers": [
+    {
+      "id": "cust_1",
+      "organizationId": "org_abc",
+      "name": "ABC Technologies",
+      "company": "ABC Technologies",
+      "email": "billing@abctechnologies.com",
+      "phone": "+92 300 1234567",
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "revenue": 24000,
+      "lastActivity": "Dec 10, 10:00 AM",
+      "status": "Active",
+      "createdAt": "2026-03-01T10:00:00.000Z",
+      "updatedAt": "2026-09-28T16:00:00.000Z"
+    },
+    {
+      "id": "cust_2",
+      "organizationId": "org_abc",
+      "name": "Nova Tech",
+      "company": "Nova Tech",
+      "email": "contact@novatech.com",
+      "phone": "+92 311 2345678",
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "revenue": 12000,
+      "lastActivity": "Dec 8, 02:00 PM",
+      "status": "Active",
+      "createdAt": "2026-04-05T10:00:00.000Z",
+      "updatedAt": "2026-09-30T15:30:00.000Z"
+    }
+  ],
+  "companies": [
+    {
+      "id": "comp_1",
+      "organizationId": "org_abc",
+      "name": "ABC Technologies",
+      "industry": "Software & Cloud Services",
+      "employees": "100-250",
+      "contactsCount": 8,
+      "dealsCount": 4,
+      "revenue": 24000,
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "status": "Active",
+      "website": "https://abctechnologies.com",
+      "createdAt": "2026-02-15T10:00:00.000Z",
+      "updatedAt": "2026-09-28T16:00:00.000Z"
+    },
+    {
+      "id": "comp_2",
+      "organizationId": "org_abc",
+      "name": "Nova Tech",
+      "industry": "Software & Mobile",
+      "employees": "50-100",
+      "contactsCount": 5,
+      "dealsCount": 2,
+      "revenue": 12000,
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "status": "Active",
+      "website": "https://novatech.com",
+      "createdAt": "2026-03-01T10:00:00.000Z",
+      "updatedAt": "2026-09-30T15:30:00.000Z"
+    },
+    {
+      "id": "comp_3",
+      "organizationId": "org_abc",
+      "name": "Prime Estates",
+      "industry": "Real Estate & Properties",
+      "employees": "25-50",
+      "contactsCount": 3,
+      "dealsCount": 1,
+      "revenue": 15000,
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "status": "Active",
+      "website": "https://primeestates.com",
+      "createdAt": "2026-04-10T10:00:00.000Z",
+      "updatedAt": "2026-10-05T14:20:00.000Z"
+    },
+    {
+      "id": "comp_4",
+      "organizationId": "org_abc",
+      "name": "Bright Dental",
+      "industry": "Healthcare & Clinics",
+      "employees": "15-30",
+      "contactsCount": 2,
+      "dealsCount": 1,
+      "revenue": 8500,
+      "ownerId": "usr_ahmed",
+      "ownerName": "Ahmed Malik",
+      "status": "Prospect",
+      "website": "https://brightdental.com",
+      "createdAt": "2026-05-12T10:00:00.000Z",
+      "updatedAt": "2026-10-05T11:00:00.000Z"
+    },
+    {
+      "id": "comp_5",
+      "organizationId": "org_abc",
+      "name": "SolarPro",
+      "industry": "Renewable Energy",
+      "employees": "40-80",
+      "contactsCount": 4,
+      "dealsCount": 1,
+      "revenue": 0,
+      "ownerId": "usr_sara",
+      "ownerName": "Sara Khan",
+      "status": "Prospect",
+      "website": "https://solarpro.com",
+      "createdAt": "2026-06-01T10:00:00.000Z",
+      "updatedAt": "2026-10-04T10:15:00.000Z"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "cont_1",
+      "organizationId": "org_abc",
+      "companyId": "comp_2",
+      "name": "Sara Khan",
+      "email": "sara@novatech.com",
+      "phone": "0311-2345678",
+      "title": "CTO",
+      "isPrimary": true,
+      "createdAt": "2026-03-01T10:00:00.000Z"
+    },
+    {
+      "id": "cont_2",
+      "organizationId": "org_abc",
+      "companyId": "comp_2",
+      "name": "Ahmed Ali",
+      "email": "ahmed@novatech.com",
+      "phone": "0311-9876543",
+      "title": "Head of Operations",
+      "createdAt": "2026-03-05T10:00:00.000Z"
+    },
+    {
+      "id": "cont_3",
+      "organizationId": "org_abc",
+      "companyId": "comp_1",
+      "name": "Zeeshan Baig",
+      "email": "zeeshan@abctechnologies.com",
+      "phone": "0300-8889999",
+      "title": "VP of Technology",
+      "isPrimary": true,
+      "createdAt": "2026-02-20T10:00:00.000Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task_1",
+      "organizationId": "org_abc",
+      "title": "Follow up with Ali Raza",
+      "description": "Verify requirements for CRM deployment and pipeline custom stages.",
+      "assignedUserId": "usr_sara",
+      "assignedUserName": "Sara Khan",
+      "relatedType": "Lead",
+      "relatedId": "lead_1",
+      "relatedName": "Ali Raza",
+      "dueDate": "Today, 10:00 AM",
+      "priority": "High",
+      "status": "Pending",
+      "type": "Follow-up",
+      "createdAt": "2026-10-06T08:00:00.000Z"
+    },
+    {
+      "id": "task_2",
+      "organizationId": "org_abc",
+      "title": "Demo call with Sara Khan",
+      "description": "Walk through workflow automation and custom permissions.",
+      "assignedUserId": "usr_ahmed",
+      "assignedUserName": "Ahmed Malik",
+      "relatedType": "Lead",
+      "relatedId": "lead_2",
+      "relatedName": "Sara Khan (Nova Tech)",
+      "dueDate": "Today, 02:00 PM",
+      "priority": "Medium",
+      "status": "Pending",
+      "type": "Call",
+      "createdAt": "2026-10-06T08:30:00.000Z"
+    },
+    {
+      "id": "task_3",
+      "organizationId": "org_abc",
+      "title": "Send proposal to Fatima Shah",
+      "description": "Deliver updated multi-tier enterprise contract.",
+      "assignedUserId": "usr_ahmed",
+      "assignedUserName": "Ahmed Malik",
+      "relatedType": "Lead",
+      "relatedId": "lead_8",
+      "relatedName": "Fatima Shah (Urban Homes)",
+      "dueDate": "Tomorrow, 11:00 AM",
+      "priority": "Medium",
+      "status": "Pending",
+      "type": "Email",
+      "createdAt": "2026-10-05T17:00:00.000Z"
+    },
+    {
+      "id": "task_4",
+      "organizationId": "org_abc",
+      "title": "Call Hamza Ali",
+      "description": "Check feedback on SolarPro pilot integration.",
+      "assignedUserId": "usr_sara",
+      "assignedUserName": "Sara Khan",
+      "relatedType": "Lead",
+      "relatedId": "lead_7",
+      "relatedName": "Hamza Ali (SolarPro)",
+      "dueDate": "Tomorrow, 04:00 PM",
+      "priority": "Low",
+      "status": "Pending",
+      "type": "Call",
+      "createdAt": "2026-10-05T12:00:00.000Z"
+    },
+    {
+      "id": "task_5",
+      "organizationId": "org_abc",
+      "title": "Meeting with Urban Homes",
+      "description": "Final executive review with legal & procurement.",
+      "assignedUserId": "usr_ahmed",
+      "assignedUserName": "Ahmed Malik",
+      "relatedType": "Company",
+      "relatedId": "comp_1",
+      "relatedName": "Urban Homes",
+      "dueDate": "Dec 12, 11:00 AM",
+      "priority": "High",
+      "status": "Pending",
+      "type": "Meeting",
+      "createdAt": "2026-10-04T11:00:00.000Z"
+    }
+  ],
+  "calls": [
+    {
+      "id": "call_1",
+      "organizationId": "org_abc",
+      "caller": "+92 300 1234567",
+      "recipient": "Sara Khan (WordbitX)",
+      "direction": "Incoming",
+      "durationSeconds": 174,
+      "agentId": "usr_sara",
+      "agentName": "Sara Khan",
+      "relatedType": "Lead",
+      "relatedId": "lead_1",
+      "relatedName": "Ali Raza",
+      "notes": "Discussed onboarding timeline and agent seating.",
+      "status": "Completed",
+      "createdAt": "2026-10-07T05:24:00.000Z"
+    },
+    {
+      "id": "call_2",
+      "organizationId": "org_abc",
+      "caller": "Ahmed Malik (WordbitX)",
+      "recipient": "+92 311 2345678",
+      "direction": "Outgoing",
+      "durationSeconds": 312,
+      "agentId": "usr_ahmed",
+      "agentName": "Ahmed Malik",
+      "relatedType": "Lead",
+      "relatedId": "lead_2",
+      "relatedName": "Sara Khan (Nova Tech)",
+      "notes": "Confirmed demo presentation agenda.",
+      "status": "Completed",
+      "createdAt": "2026-10-07T04:15:00.000Z"
+    },
+    {
+      "id": "call_3",
+      "organizationId": "org_abc",
+      "caller": "+92 322 3456789",
+      "recipient": "Sales Team Desk",
+      "direction": "Missed",
+      "durationSeconds": 0,
+      "agentId": "usr_ahmed",
+      "agentName": "Ahmed Malik",
+      "relatedType": "Lead",
+      "relatedId": "lead_3",
+      "relatedName": "Prime Estates",
+      "notes": "Customer left voicemail requesting return call before noon.",
+      "status": "Missed",
+      "createdAt": "2026-10-06T11:00:00.000Z"
+    },
+    {
+      "id": "call_4",
+      "organizationId": "org_abc",
+      "caller": "+92 333 4567800",
+      "recipient": "Ahmed Malik",
+      "direction": "Incoming",
+      "durationSeconds": 225,
+      "agentId": "usr_ahmed",
+      "agentName": "Ahmed Malik",
+      "relatedType": "Lead",
+      "relatedId": "lead_4",
+      "relatedName": "Bright Dental",
+      "notes": "Requested security documentation and SLA guidelines.",
+      "status": "Completed",
+      "createdAt": "2026-10-06T09:45:00.000Z"
+    },
+    {
+      "id": "call_5",
+      "organizationId": "org_abc",
+      "caller": "Sara Khan (WordbitX)",
+      "recipient": "+92 345 5678901",
+      "direction": "Outgoing",
+      "durationSeconds": 441,
+      "agentId": "usr_sara",
+      "agentName": "Sara Khan",
+      "relatedType": "Lead",
+      "relatedId": "lead_5",
+      "relatedName": "Tech Vision",
+      "notes": "Follow-up on pricing proposal.",
+      "status": "Completed",
+      "createdAt": "2026-10-05T14:21:00.000Z"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act_1",
+      "organizationId": "org_abc",
+      "userId": "usr_sara",
+      "userName": "Sara Khan",
+      "type": "Call",
+      "description": "Called Ali Raza (Alpha Solutions)",
+      "relatedType": "Lead",
+      "relatedId": "lead_1",
+      "relatedName": "Ali Raza",
+      "createdAt": "2026-10-07T05:30:00.000Z"
+    },
+    {
+      "id": "act_2",
+      "organizationId": "org_abc",
+      "userId": "usr_ahmed",
+      "userName": "Ahmed Malik",
+      "type": "Note",
+      "description": "Added note to Sara Khan: Needs custom fields configuration",
+      "relatedType": "Lead",
+      "relatedId": "lead_2",
+      "relatedName": "Sara Khan",
+      "createdAt": "2026-10-07T06:20:00.000Z"
+    },
+    {
+      "id": "act_3",
+      "organizationId": "org_abc",
+      "userId": "usr_sara",
+      "userName": "Sara Khan",
+      "type": "Email",
+      "description": "Sent email to Ahmed Malik with updated pipeline forecast",
+      "relatedType": "Lead",
+      "relatedId": "lead_3",
+      "relatedName": "Ahmed Malik",
+      "createdAt": "2026-10-07T08:00:00.000Z"
+    },
+    {
+      "id": "act_4",
+      "organizationId": "org_abc",
+      "userId": "usr_ahmed",
+      "userName": "Ahmed Malik",
+      "type": "Meeting",
+      "description": "Held discovery meeting with Fatima Shah",
+      "relatedType": "Lead",
+      "relatedId": "lead_8",
+      "relatedName": "Fatima Shah",
+      "createdAt": "2026-10-07T10:30:00.000Z"
+    },
+    {
+      "id": "act_5",
+      "organizationId": "org_abc",
+      "userId": "usr_sara",
+      "userName": "Sara Khan",
+      "type": "Status Change",
+      "description": "Moved Hamza Ali from Contacted to Qualified",
+      "relatedType": "Lead",
+      "relatedId": "lead_7",
+      "relatedName": "Hamza Ali",
+      "createdAt": "2026-10-06T15:20:00.000Z"
+    }
+  ],
+  "notes": [
+    {
+      "id": "note_1",
+      "organizationId": "org_abc",
+      "userId": "usr_sara",
+      "userName": "Sara Khan",
+      "relatedType": "Lead",
+      "relatedId": "lead_1",
+      "content": "Decision maker has authorized budget for Q4 CRM migration. Wants kickoff call next Tuesday.",
+      "createdAt": "2026-10-06T11:00:00.000Z"
+    },
+    {
+      "id": "note_2",
+      "organizationId": "org_abc",
+      "userId": "usr_ahmed",
+      "userName": "Ahmed Malik",
+      "relatedType": "Lead",
+      "relatedId": "lead_2",
+      "content": "Evaluating integration with their internal ERP database.",
+      "createdAt": "2026-10-06T09:30:00.000Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1",
+      "organizationId": "org_abc",
+      "userId": "usr_sara",
+      "title": "New Lead Assigned",
+      "message": "Ali Raza has been assigned to you from Website contact form.",
+      "type": "INFO",
+      "read": false,
+      "link": "/app/leads/lead_1",
+      "createdAt": "2026-10-06T10:30:00.000Z"
+    },
+    {
+      "id": "notif_2",
+      "organizationId": "org_abc",
+      "userId": "usr_ahmed",
+      "title": "Task Due Soon",
+      "message": "Demo call with Sara Khan is scheduled for 02:00 PM today.",
+      "type": "WARNING",
+      "read": false,
+      "link": "/app/tasks/task_2",
+      "createdAt": "2026-10-07T08:00:00.000Z"
+    },
+    {
+      "id": "notif_3",
+      "organizationId": "org_abc",
+      "userId": "usr_sara",
+      "title": "Deal Won!",
+      "message": "ABC Technologies Platform Contract ($24,000) was marked as Won.",
+      "type": "SUCCESS",
+      "read": true,
+      "link": "/app/deals/deal_11",
+      "createdAt": "2026-09-28T16:00:00.000Z"
+    }
+  ],
+  "workflows": [
+    {
+      "id": "wf_1",
+      "organizationId": "org_abc",
+      "name": "Auto-Assign Inbound Leads",
+      "trigger": "LEAD_CREATED",
+      "conditions": "Source is Website or Contact Form",
+      "actions": "Assign available Sales Agent & create Follow-up task within 24h",
+      "enabled": true,
+      "createdAt": "2026-03-01T08:00:00.000Z"
+    },
+    {
+      "id": "wf_2",
+      "organizationId": "org_abc",
+      "name": "Deal Won Customer Provisioning",
+      "trigger": "DEAL_WON",
+      "conditions": "Deal Value > $5,000",
+      "actions": "Create Customer record, update revenue metrics, notify Manager",
+      "enabled": true,
+      "createdAt": "2026-03-05T08:00:00.000Z"
+    },
+    {
+      "id": "wf_3",
+      "organizationId": "org_abc",
+      "name": "Overdue Task Alert",
+      "trigger": "TASK_OVERDUE",
+      "conditions": "Task priority is High",
+      "actions": "Send high-priority email notification to Organization Admin",
+      "enabled": false,
+      "createdAt": "2026-03-10T08:00:00.000Z"
+    }
+  ],
+  "integrations": [
+    {
+      "id": "int_1",
+      "organizationId": "org_abc",
+      "provider": "google",
+      "name": "Google Workspace",
+      "status": "NOT_CONNECTED"
+    },
+    {
+      "id": "int_2",
+      "organizationId": "org_abc",
+      "provider": "microsoft",
+      "name": "Microsoft 365",
+      "status": "NOT_CONNECTED"
+    },
+    {
+      "id": "int_3",
+      "organizationId": "org_abc",
+      "provider": "email",
+      "name": "SMTP / Email Relay",
+      "status": "CONNECTED",
+      "config": {
+        "host": "mail.alphatech.com",
+        "port": 587
+      },
+      "lastSynced": "2026-10-07T05:00:00.000Z"
+    },
+    {
+      "id": "int_4",
+      "organizationId": "org_abc",
+      "provider": "calendar",
+      "name": "Calendar Sync",
+      "status": "NOT_CONNECTED"
+    },
+    {
+      "id": "int_5",
+      "organizationId": "org_abc",
+      "provider": "telephony",
+      "name": "Cloud Telephony (Twilio/VoIP)",
+      "status": "NOT_CONNECTED"
+    },
+    {
+      "id": "int_6",
+      "organizationId": "org_abc",
+      "provider": "webhooks",
+      "name": "Inbound Webhooks",
+      "status": "CONNECTED",
+      "config": {
+        "endpoint": "https://api.wordbitx.com/wh/alpha_tech"
+      },
+      "lastSynced": "2026-10-06T12:00:00.000Z"
+    },
+    {
+      "id": "int_7",
+      "organizationId": "org_abc",
+      "provider": "api",
+      "name": "REST API Access",
+      "status": "CONNECTED",
+      "config": {
+        "keyPrefix": "wbx_live_sec_..."
+      }
+    }
+  ],
+  "demoRequests": [
+    {
+      "id": "demo_1",
+      "name": "Ali Raza",
+      "workEmail": "ali@abctechnologies.com",
+      "company": "ABC Technologies",
+      "phone": "+92 300 1234567",
+      "companySize": "50-100",
+      "interestedIn": "CRM",
+      "preferredDate": "Oct 12, 2026",
+      "message": "Looking for a comprehensive sales pipeline solution for our 30-person sales team.",
+      "status": "NEW",
+      "createdAt": "2026-10-06T10:00:00.000Z"
+    },
+    {
+      "id": "demo_2",
+      "name": "Sara Khan",
+      "workEmail": "sara@novatech.com",
+      "company": "Nova Tech",
+      "phone": "+92 311 2345678",
+      "companySize": "10-50",
+      "interestedIn": "Sales Pipeline",
+      "preferredDate": "Oct 15, 2026",
+      "message": "Need Kanban board view with custom stage probability weighting.",
+      "status": "CONTACTED",
+      "createdAt": "2026-10-05T09:00:00.000Z"
+    },
+    {
+      "id": "demo_3",
+      "name": "Ahmed Malik",
+      "workEmail": "ahmed@primeestates.com",
+      "company": "Prime Estates",
+      "phone": "+92 321 3456789",
+      "companySize": "25-50",
+      "interestedIn": "CRM",
+      "preferredDate": "Oct 18, 2026",
+      "message": "Interested in property agent commission tracking and lead stages.",
+      "status": "SCHEDULED",
+      "createdAt": "2026-10-04T14:30:00.000Z"
+    },
+    {
+      "id": "demo_4",
+      "name": "Hira Ahmed",
+      "workEmail": "hira@brightdental.com",
+      "company": "Bright Dental",
+      "phone": "+92 333 4567890",
+      "companySize": "10-25",
+      "interestedIn": "Call Center",
+      "preferredDate": "Oct 20, 2026",
+      "message": "Telephony integration and patient call log recording.",
+      "status": "NEW",
+      "createdAt": "2026-10-04T11:00:00.000Z"
+    },
+    {
+      "id": "demo_5",
+      "name": "Usman Tariq",
+      "workEmail": "usman@techvision.com",
+      "company": "Tech Vision",
+      "phone": "+92 345 5678901",
+      "companySize": "100-250",
+      "interestedIn": "CRM",
+      "preferredDate": "Oct 22, 2026",
+      "message": "Enterprise migration with role-based team management.",
+      "status": "COMPLETED",
+      "createdAt": "2026-10-02T08:00:00.000Z"
+    },
+    {
+      "id": "demo_6",
+      "name": "Ayesha Noor",
+      "workEmail": "ayesha@glowclinic.com",
+      "company": "Glow Clinic",
+      "phone": "+92 301 6789012",
+      "companySize": "10-50",
+      "interestedIn": "AI Solutions",
+      "preferredDate": "Oct 25, 2026",
+      "message": "Automatic lead qualification scoring.",
+      "status": "CONTACTED",
+      "createdAt": "2026-10-01T15:00:00.000Z"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "sub_1",
+      "organizationId": "org_abc",
+      "organizationName": "Alpha Tech Solutions",
+      "plan": "Professional",
+      "status": "Active",
+      "billingCycle": "Monthly",
+      "mrr": 79,
+      "renewalDate": "2026-11-10",
+      "paymentGatewayConnected": false,
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "invoices": [
+        {
+          "id": "inv_1_sub_1",
+          "number": "INV-2026-003",
+          "date": "Oct 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        },
+        {
+          "id": "inv_2_sub_1",
+          "number": "INV-2026-002",
+          "date": "Sep 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        },
+        {
+          "id": "inv_3_sub_1",
+          "number": "INV-2026-001",
+          "date": "Aug 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        }
+      ],
+      "paymentMethod": {
+        "type": "Credit Card",
+        "brand": "Visa",
+        "last4": "4242",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    },
+    {
+      "id": "sub_2",
+      "organizationId": "org_apex",
+      "organizationName": "Apex Dynamics",
+      "plan": "Starter",
+      "status": "Active",
+      "billingCycle": "Monthly",
+      "mrr": 29,
+      "renewalDate": "2026-11-01",
+      "paymentGatewayConnected": false,
+      "createdAt": "2026-03-01T08:00:00.000Z",
+      "invoices": [
+        {
+          "id": "inv_1_sub_2",
+          "number": "INV-2026-003",
+          "date": "Oct 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        },
+        {
+          "id": "inv_2_sub_2",
+          "number": "INV-2026-002",
+          "date": "Sep 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        },
+        {
+          "id": "inv_3_sub_2",
+          "number": "INV-2026-001",
+          "date": "Aug 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        }
+      ],
+      "paymentMethod": {
+        "type": "Credit Card",
+        "brand": "Visa",
+        "last4": "4242",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    },
+    {
+      "id": "sub_6ac2a411ceac76195538b01f",
+      "organizationId": "6ac2a411ceac76195538b01f",
+      "organizationName": "WordbitX Technologies (ABC Tech)",
+      "plan": "Professional",
+      "status": "Active",
+      "billingCycle": "Monthly",
+      "mrr": 79,
+      "renewalDate": "2026-11-01",
+      "paymentGatewayConnected": false,
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "invoices": [
+        {
+          "id": "inv_1_sub_6ac2a411ceac76195538b01f",
+          "number": "INV-2026-003",
+          "date": "Oct 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        },
+        {
+          "id": "inv_2_sub_6ac2a411ceac76195538b01f",
+          "number": "INV-2026-002",
+          "date": "Sep 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        },
+        {
+          "id": "inv_3_sub_6ac2a411ceac76195538b01f",
+          "number": "INV-2026-001",
+          "date": "Aug 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        }
+      ],
+      "paymentMethod": {
+        "type": "Credit Card",
+        "brand": "Visa",
+        "last4": "4242",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    },
+    {
+      "id": "sub_org_nova",
+      "organizationId": "org_nova",
+      "organizationName": "Nova Tech",
+      "plan": "Starter",
+      "status": "Active",
+      "billingCycle": "Monthly",
+      "mrr": 29,
+      "renewalDate": "2026-11-01",
+      "paymentGatewayConnected": false,
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "invoices": [
+        {
+          "id": "inv_1_sub_org_nova",
+          "number": "INV-2026-003",
+          "date": "Oct 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        },
+        {
+          "id": "inv_2_sub_org_nova",
+          "number": "INV-2026-002",
+          "date": "Sep 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        },
+        {
+          "id": "inv_3_sub_org_nova",
+          "number": "INV-2026-001",
+          "date": "Aug 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        }
+      ],
+      "paymentMethod": {
+        "type": "Credit Card",
+        "brand": "Visa",
+        "last4": "4242",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    },
+    {
+      "id": "sub_org_prime",
+      "organizationId": "org_prime",
+      "organizationName": "Prime Estates",
+      "plan": "Professional",
+      "status": "Active",
+      "billingCycle": "Monthly",
+      "mrr": 79,
+      "renewalDate": "2026-11-01",
+      "paymentGatewayConnected": false,
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "invoices": [
+        {
+          "id": "inv_1_sub_org_prime",
+          "number": "INV-2026-003",
+          "date": "Oct 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        },
+        {
+          "id": "inv_2_sub_org_prime",
+          "number": "INV-2026-002",
+          "date": "Sep 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        },
+        {
+          "id": "inv_3_sub_org_prime",
+          "number": "INV-2026-001",
+          "date": "Aug 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        }
+      ],
+      "paymentMethod": {
+        "type": "Credit Card",
+        "brand": "Visa",
+        "last4": "4242",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    },
+    {
+      "id": "sub_org_bright",
+      "organizationId": "org_bright",
+      "organizationName": "Bright Dental",
+      "plan": "Starter",
+      "status": "Active",
+      "billingCycle": "Monthly",
+      "mrr": 29,
+      "renewalDate": "2026-11-01",
+      "paymentGatewayConnected": false,
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "invoices": [
+        {
+          "id": "inv_1_sub_org_bright",
+          "number": "INV-2026-003",
+          "date": "Oct 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        },
+        {
+          "id": "inv_2_sub_org_bright",
+          "number": "INV-2026-002",
+          "date": "Sep 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        },
+        {
+          "id": "inv_3_sub_org_bright",
+          "number": "INV-2026-001",
+          "date": "Aug 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        }
+      ],
+      "paymentMethod": {
+        "type": "Credit Card",
+        "brand": "Visa",
+        "last4": "4242",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    },
+    {
+      "id": "sub_org_techvision",
+      "organizationId": "org_techvision",
+      "organizationName": "Tech Vision",
+      "plan": "Professional",
+      "status": "Active",
+      "billingCycle": "Monthly",
+      "mrr": 79,
+      "renewalDate": "2026-11-01",
+      "paymentGatewayConnected": false,
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "invoices": [
+        {
+          "id": "inv_1_sub_org_techvision",
+          "number": "INV-2026-003",
+          "date": "Oct 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        },
+        {
+          "id": "inv_2_sub_org_techvision",
+          "number": "INV-2026-002",
+          "date": "Sep 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        },
+        {
+          "id": "inv_3_sub_org_techvision",
+          "number": "INV-2026-001",
+          "date": "Aug 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        }
+      ],
+      "paymentMethod": {
+        "type": "Credit Card",
+        "brand": "Visa",
+        "last4": "4242",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    },
+    {
+      "id": "sub_org_glow",
+      "organizationId": "org_glow",
+      "organizationName": "Glow Clinic",
+      "plan": "Starter",
+      "status": "Active",
+      "billingCycle": "Monthly",
+      "mrr": 29,
+      "renewalDate": "2026-11-01",
+      "paymentGatewayConnected": false,
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "invoices": [
+        {
+          "id": "inv_1_sub_org_glow",
+          "number": "INV-2026-003",
+          "date": "Oct 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        },
+        {
+          "id": "inv_2_sub_org_glow",
+          "number": "INV-2026-002",
+          "date": "Sep 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        },
+        {
+          "id": "inv_3_sub_org_glow",
+          "number": "INV-2026-001",
+          "date": "Aug 01, 2026",
+          "amount": 29,
+          "status": "PAID",
+          "planName": "Starter"
+        }
+      ],
+      "paymentMethod": {
+        "type": "Credit Card",
+        "brand": "Visa",
+        "last4": "4242",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    },
+    {
+      "id": "sub_org_solarpro",
+      "organizationId": "org_solarpro",
+      "organizationName": "SolarPro",
+      "plan": "Professional",
+      "status": "Active",
+      "billingCycle": "Monthly",
+      "mrr": 79,
+      "renewalDate": "2026-11-01",
+      "paymentGatewayConnected": false,
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "invoices": [
+        {
+          "id": "inv_1_sub_org_solarpro",
+          "number": "INV-2026-003",
+          "date": "Oct 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        },
+        {
+          "id": "inv_2_sub_org_solarpro",
+          "number": "INV-2026-002",
+          "date": "Sep 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        },
+        {
+          "id": "inv_3_sub_org_solarpro",
+          "number": "INV-2026-001",
+          "date": "Aug 01, 2026",
+          "amount": 79,
+          "status": "PAID",
+          "planName": "Professional"
+        }
+      ],
+      "paymentMethod": {
+        "type": "Credit Card",
+        "brand": "Visa",
+        "last4": "4242",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    },
+    {
+      "id": "sub_org_urban",
+      "organizationId": "org_urban",
+      "organizationName": "Urban Homes",
+      "plan": "Enterprise",
+      "status": "Active",
+      "billingCycle": "Monthly",
+      "mrr": 199,
+      "renewalDate": "2026-11-01",
+      "paymentGatewayConnected": false,
+      "createdAt": "2026-02-10T08:00:00.000Z",
+      "invoices": [
+        {
+          "id": "inv_1_sub_org_urban",
+          "number": "INV-2026-003",
+          "date": "Oct 01, 2026",
+          "amount": 199,
+          "status": "PAID",
+          "planName": "Enterprise"
+        },
+        {
+          "id": "inv_2_sub_org_urban",
+          "number": "INV-2026-002",
+          "date": "Sep 01, 2026",
+          "amount": 199,
+          "status": "PAID",
+          "planName": "Enterprise"
+        },
+        {
+          "id": "inv_3_sub_org_urban",
+          "number": "INV-2026-001",
+          "date": "Aug 01, 2026",
+          "amount": 199,
+          "status": "PAID",
+          "planName": "Enterprise"
+        }
+      ],
+      "paymentMethod": {
+        "type": "Credit Card",
+        "brand": "Visa",
+        "last4": "4242",
+        "expMonth": 12,
+        "expYear": 2028
+      }
+    }
+  ],
+  "plans": [
+    {
+      "id": "plan_free",
+      "name": "Free",
+      "priceMonthly": 0,
+      "priceAnnual": 0,
+      "userLimit": 2,
+      "leadLimit": 100,
+      "features": [
+        "Up to 2 users",
+        "100 Leads",
+        "Basic Kanban Pipeline",
+        "Community Support"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "id": "plan_starter",
+      "name": "Starter",
+      "priceMonthly": 29,
+      "priceAnnual": 290,
+      "userLimit": 5,
+      "leadLimit": 1000,
+      "features": [
+        "Up to 5 users",
+        "1,000 Leads",
+        "Custom Pipeline Stages",
+        "Task Automation",
+        "Email Support"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "id": "plan_pro",
+      "name": "Professional",
+      "priceMonthly": 79,
+      "priceAnnual": 790,
+      "userLimit": 20,
+      "leadLimit": 10000,
+      "features": [
+        "Up to 20 users",
+        "10,000 Leads",
+        "Multi-Pipeline Management",
+        "Workflow Automations",
+        "Advanced Analytics",
+        "Priority Support"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "id": "plan_enterprise",
+      "name": "Enterprise",
+      "priceMonthly": 199,
+      "priceAnnual": 1990,
+      "userLimit": 100,
+      "leadLimit": 100000,
+      "features": [
+        "Unlimited users",
+        "Unlimited Leads",
+        "Dedicated Account Manager",
+        "Custom Workflows",
+        "Audit Logs & RBAC",
+        "99.9% SLA"
+      ],
+      "status": "ACTIVE"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit_1",
+      "userId": "usr_sara",
+      "userName": "Sara Khan",
+      "organizationId": "org_abc",
+      "organizationName": "ABC Technologies",
+      "action": "Created Lead",
+      "resource": "Lead",
+      "resourceId": "lead_1",
+      "details": "Created lead Ali Raza (Alpha Solutions)",
+      "ipAddress": "192.168.1.10",
+      "createdAt": "2026-10-06T10:30:00.000Z"
+    },
+    {
+      "id": "audit_2",
+      "userId": "usr_ahmed",
+      "userName": "Ahmed Malik",
+      "organizationId": "org_abc",
+      "organizationName": "ABC Technologies",
+      "action": "Changed Deal Stage",
+      "resource": "Deal",
+      "resourceId": "deal_10",
+      "details": "Moved Bright Dental Group to Negotiation",
+      "ipAddress": "192.168.1.14",
+      "createdAt": "2026-10-06T06:00:00.000Z"
+    },
+    {
+      "id": "audit_3",
+      "userId": "usr_admin",
+      "userName": "WordbitX Super Admin",
+      "organizationName": "Platform System",
+      "action": "Updated Demo Request",
+      "resource": "DemoRequest",
+      "resourceId": "demo_2",
+      "details": "Marked Sara Khan request as Contacted",
+      "ipAddress": "127.0.0.1",
+      "createdAt": "2026-10-05T09:00:00.000Z"
+    }
+  ]
+}
