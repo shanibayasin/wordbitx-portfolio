@@ -16,7 +16,6 @@ import {
   ChevronRight,
   Headphones,
   CheckSquare,
-  ArrowRight
 } from 'lucide-react';
 import { useNavigation } from '../../context/NavigationContext';
 
@@ -89,14 +88,6 @@ export const HeroDashboardPreview: React.FC = () => {
           </button>
         </div>
 
-        {/* Right: Quick Action to open live CRM app */}
-        <button
-          onClick={() => navigate('/app/dashboard')}
-          className="hidden md:inline-flex items-center gap-1.5 text-xs font-bold text-indigo-700 dark:text-indigo-400 hover:text-indigo-600 hover:underline cursor-pointer"
-        >
-          <span>Launch live workspace</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </button>
       </div>
 
       {/* Main View Area based on Active Tab */}

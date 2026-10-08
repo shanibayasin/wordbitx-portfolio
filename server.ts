@@ -1,42 +1,26 @@
 import 'dotenv/config';
 import express from 'express';
+import { createServer } from 'node:http';
 import { createServer as createViteServer } from 'vite';
 import path from 'path';
-import net from 'net';
 import { fileURLToPath } from 'url';
 import { apiRouter } from './src/server/api.js';
+import { DEV_HOST, DEV_PORT } from './src/server/devConfig.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-async function getAvailablePort(startPort: number): Promise<number> {
-  for (let port = startPort; port < startPort + 20; port += 1) {
-    const isAvailable = await new Promise<boolean>((resolve) => {
-      const tester = net.createServer();
-      tester.once('error', () => resolve(false));
-      tester.once('listening', () => {
-        tester.close(() => resolve(true));
-      });
-      tester.listen(port, '0.0.0.0');
-    });
-
-    if (isAvailable) {
-      return port;
-    }
-  }
-
-  return startPort;
-}
-
 async function startServer() {
   const app = express();
-  const preferredPort = Number(process.env.PORT) || 3000;
-  const PORT = await getAvailablePort(preferredPort);
+  const httpServer = createServer(app);
+  const isProduction = process.env.NODE_ENV === 'production';
+  const port = isProduction ? Number(process.env.PORT ?? DEV_PORT) : DEV_PORT;
+  const host = process.env.HOST || DEV_HOST;
 
   // CORS and origin handling
   app.use((req, res, next) => {
     const origin = req.headers.origin;
-    const allowed = (process.env.PUBLIC_LEAD_ALLOWED_ORIGINS || 'http://localhost:3000,http://localhost:3001')
+    const allowed = (process.env.PUBLIC_LEAD_ALLOWED_ORIGINS || 'http://localhost:3000,http://127.0.0.1:3000')
       .split(',')
       .map((s) => s.trim());
     if (origin && (allowed.includes(origin) || allowed.includes('*'))) {
@@ -69,8 +53,6 @@ async function startServer() {
     });
   });
 
-  const isProduction = process.env.NODE_ENV === 'production';
-
   if (isProduction) {
     const distPath = path.resolve(__dirname, 'dist');
     app.use(express.static(distPath));
@@ -82,17 +64,32 @@ async function startServer() {
     const vite = await createViteServer({
       server: {
         middlewareMode: true,
-        host: '0.0.0.0',
-        port: PORT,
+        host: DEV_HOST,
+        port: DEV_PORT,
+        strictPort: true,
+        hmr: { server: httpServer },
       },
       appType: 'spa',
     });
     app.use(vite.middlewares);
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`WordbitX CRM server running at http://0.0.0.0:${PORT}`);
+  await new Promise<void>((resolve, reject) => {
+    const onError = (error: Error) => {
+      httpServer.removeListener('listening', onListening);
+      reject(error);
+    };
+    const onListening = () => {
+      httpServer.removeListener('error', onError);
+      resolve();
+    };
+
+    httpServer.once('error', onError);
+    httpServer.once('listening', onListening);
+    httpServer.listen(port, host);
   });
+
+  console.log(`WordbitX CRM server running at http://localhost:${port}`);
 }
 
 startServer().catch((err) => {

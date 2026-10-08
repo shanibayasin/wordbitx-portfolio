@@ -18,3 +18,7 @@ View your app in AI Studio: https://ai.studio/apps/8c1f0619-f8ab-4412-a3bc-6e292
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+The development server is available at `http://localhost:3000`. If port `3000`
+is already in use, the server reports the conflict instead of silently switching
+to another port; stop the existing WordbitX dev server before starting another.

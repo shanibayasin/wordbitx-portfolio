@@ -49,14 +49,6 @@ export const HeroSection: React.FC = () => {
             >
               Book a Demo
             </Button>
-            <Button
-              variant="secondary"
-              size="lg"
-              onClick={() => navigate('/app/dashboard')}
-              className="w-full sm:w-auto bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 border-indigo-200/80 dark:border-indigo-800/80 hover:bg-indigo-100 font-bold"
-            >
-              Explore Live CRM App
-            </Button>
           </div>
 
           {/* Trust reassurance text */}
