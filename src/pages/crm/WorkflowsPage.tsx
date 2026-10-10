@@ -45,7 +45,7 @@ export const WorkflowsPage: React.FC = () => {
             <div key={wf.id} className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs space-y-4">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
                     <Zap className="w-4 h-4" />
                   </div>
                   <h3 className="font-bold text-xs text-slate-900 leading-tight">{wf.name}</h3>
@@ -53,7 +53,7 @@ export const WorkflowsPage: React.FC = () => {
                 <button
                   onClick={() => handleToggle(wf.id, wf.status || (wf.enabled ? 'ACTIVE' : 'PAUSED'))}
                   className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${
-                    isActive ? 'bg-indigo-600' : 'bg-slate-300'
+                    isActive ? 'bg-emerald-600' : 'bg-slate-300'
                   }`}
                 >
                   <span
@@ -91,7 +91,7 @@ export const WorkflowsPage: React.FC = () => {
                   <ul className="space-y-1">
                     {actions.map((act: string, i: number) => (
                       <li key={i} className="text-[11px] text-slate-600 flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                         {act}
                       </li>
                     ))}

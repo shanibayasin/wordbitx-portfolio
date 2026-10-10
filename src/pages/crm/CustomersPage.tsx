@@ -50,7 +50,7 @@ export const CustomersPage: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 flex-wrap">
             <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Active Customers</h1>
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200/70">
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/70">
               {customers.length} Accounts
             </span>
           </div>
@@ -61,7 +61,7 @@ export const CustomersPage: React.FC = () => {
 
         <button
           onClick={() => setShowAddModal(true)}
-          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#5046e5] hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition self-start sm:self-auto"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#123c32] hover:bg-[#1c5547] text-white text-xs font-semibold shadow-xs transition self-start sm:self-auto"
         >
           <Plus className="w-3.5 h-3.5" />
           <span>Add Customer</span>
@@ -121,7 +121,7 @@ export const CustomersPage: React.FC = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="e.g. Acme Corporation"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -133,7 +133,7 @@ export const CustomersPage: React.FC = () => {
                   value={company}
                   onChange={(e) => setCompany(e.target.value)}
                   placeholder="e.g. Acme Global Inc."
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -144,7 +144,7 @@ export const CustomersPage: React.FC = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="billing@acme.com"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -154,7 +154,7 @@ export const CustomersPage: React.FC = () => {
                   type="number"
                   value={revenue}
                   onChange={(e) => setRevenue(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -168,7 +168,7 @@ export const CustomersPage: React.FC = () => {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold"
+                  className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-[#1c5547] text-white font-semibold"
                 >
                   Save Customer
                 </button>

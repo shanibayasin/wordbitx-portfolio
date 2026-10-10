@@ -185,11 +185,11 @@ export const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
               onClick={() => fileInputRef.current?.click()}
               className={`border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition flex flex-col items-center justify-center gap-3 ${
                 dragOver
-                  ? 'border-indigo-500 bg-indigo-50/40'
-                  : 'border-slate-200 hover:border-indigo-400 hover:bg-slate-50/60'
+                  ? 'border-emerald-500 bg-emerald-50/40'
+                  : 'border-slate-200 hover:border-emerald-400 hover:bg-slate-50/60'
               }`}
             >
-              <div className="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 shadow-2xs">
+              <div className="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 shadow-2xs">
                 <Upload className="w-6 h-6" />
               </div>
               <div>
@@ -211,7 +211,7 @@ export const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
             <div className="space-y-4">
               <div className="flex items-center justify-center bg-slate-100/80 rounded-xl p-4 border border-slate-200 overflow-hidden relative">
                 <div
-                  className={`w-48 h-48 overflow-hidden relative border-2 border-indigo-500 shadow-md ${
+                  className={`w-48 h-48 overflow-hidden relative border-2 border-emerald-500 shadow-md ${
                     shape === 'circle' ? 'rounded-full' : 'rounded-xl'
                   }`}
                 >
@@ -245,7 +245,7 @@ export const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
                     step="0.05"
                     value={zoom}
                     onChange={(e) => setZoom(parseFloat(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
                   />
                   <ZoomIn className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                 </div>
@@ -264,7 +264,7 @@ export const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
                       setZoom(1);
                       setRotation(0);
                     }}
-                    className="text-xs text-indigo-600 hover:text-indigo-800 font-medium"
+                    className="text-xs text-emerald-600 hover:text-emerald-800 font-medium"
                   >
                     Choose different file
                   </button>
@@ -302,7 +302,7 @@ export const ImageUploadModal: React.FC<ImageUploadModalProps> = ({
                 type="button"
                 onClick={handleApplyCrop}
                 disabled={loading}
-                className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-semibold shadow-2xs transition disabled:opacity-50"
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-emerald-600 hover:bg-[#1c5547] text-white rounded-lg text-xs font-semibold shadow-2xs transition disabled:opacity-50"
               >
                 <Check className="w-3.5 h-3.5" />
                 {loading ? 'Processing...' : 'Apply & Save'}

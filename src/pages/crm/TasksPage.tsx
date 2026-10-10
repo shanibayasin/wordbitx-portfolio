@@ -62,7 +62,7 @@ export const TasksPage: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 flex-wrap">
             <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">Tasks & Follow-Ups</h1>
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200/70">
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/70">
               {tasks.length} Total
             </span>
           </div>
@@ -73,7 +73,7 @@ export const TasksPage: React.FC = () => {
 
         <button
           onClick={() => setShowAddModal(true)}
-          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#5046e5] hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition self-start sm:self-auto"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#123c32] hover:bg-[#1c5547] text-white text-xs font-semibold shadow-xs transition self-start sm:self-auto"
         >
           <Plus className="w-3.5 h-3.5" />
           <span>New Task</span>
@@ -86,7 +86,7 @@ export const TasksPage: React.FC = () => {
             key={st}
             onClick={() => setFilter(st)}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap cursor-pointer ${
-              filter === st ? 'bg-indigo-600 text-white shadow-xs' : 'bg-white border border-slate-200 text-slate-600'
+              filter === st ? 'bg-emerald-600 text-white shadow-xs' : 'bg-white border border-slate-200 text-slate-600'
             }`}
           >
             {st === 'all' ? `All (${tasks.length})` : `${st} (${tasks.filter((t) => t.status === st).length})`}
@@ -107,7 +107,7 @@ export const TasksPage: React.FC = () => {
                 type="checkbox"
                 checked={t.status === 'Completed'}
                 onChange={() => handleToggle(t.id)}
-                className="mt-0.5 sm:mt-1 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer"
+                className="mt-0.5 sm:mt-1 rounded text-emerald-600 focus:ring-emerald-500 cursor-pointer"
               />
               <div className="flex-1 min-w-0">
                 <p className={`text-xs font-bold ${t.status === 'Completed' ? 'line-through text-slate-400' : 'text-slate-900'}`}>
@@ -119,7 +119,7 @@ export const TasksPage: React.FC = () => {
                     <Calendar className="w-3 h-3" /> {t.dueDate}
                   </span>
                   <span>Assigned to {t.assignedUserName}</span>
-                  {t.relatedName && <span className="text-indigo-600">Re: {t.relatedName}</span>}
+                  {t.relatedName && <span className="text-emerald-600">Re: {t.relatedName}</span>}
                 </div>
               </div>
             </div>
@@ -158,7 +158,7 @@ export const TasksPage: React.FC = () => {
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                   placeholder="e.g. Call Ali Raza regarding deployment"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -169,7 +169,7 @@ export const TasksPage: React.FC = () => {
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   placeholder="Additional context or checklist items..."
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 ></textarea>
               </div>
 
@@ -181,7 +181,7 @@ export const TasksPage: React.FC = () => {
                     value={dueDate}
                     onChange={(e) => setDueDate(e.target.value)}
                     placeholder="Tomorrow, 02:00 PM"
-                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                   />
                 </div>
                 <div>
@@ -189,7 +189,7 @@ export const TasksPage: React.FC = () => {
                   <select
                     value={priority}
                     onChange={(e) => setPriority(e.target.value as any)}
-                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                   >
                     <option value="Low">Low</option>
                     <option value="Medium">Medium</option>
@@ -208,7 +208,7 @@ export const TasksPage: React.FC = () => {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold"
+                  className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-[#1c5547] text-white font-semibold"
                 >
                   Create Task
                 </button>

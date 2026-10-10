@@ -74,7 +74,7 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
   ];
 
   return (
-    <div className="min-h-screen bg-[#f4f6fa] text-slate-800 flex flex-col font-sans antialiased">
+    <div className="min-h-screen bg-[#f5f8f7] text-slate-800 flex flex-col font-sans antialiased">
       <div className="flex flex-1 flex-col lg:flex-row min-h-0">
         {/* Mobile Backdrop Overlay */}
         {mobileMenuOpen && (
@@ -86,7 +86,7 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
         )}
 
         {/* Mobile Top Header */}
-        <header className="lg:hidden bg-[#131226] text-white px-4 py-3 flex items-center justify-between sticky top-0 z-30 border-b border-[#1e1c3b] shadow-md">
+        <header className="lg:hidden bg-[#101a18] text-white px-4 py-3 flex items-center justify-between sticky top-0 z-30 border-b border-[#263a33] shadow-md">
           <div className="flex items-center gap-2.5">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -99,17 +99,17 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
               onClick={() => navigate('/super-admin')}
               className="flex items-center gap-2 font-bold text-base cursor-pointer"
             >
-              <div className="w-6 h-6 rounded bg-[#5046e5] flex items-center justify-center font-bold text-xs text-white">
+              <div className="w-6 h-6 rounded bg-emerald-400 flex items-center justify-center font-bold text-xs text-[#10231e]">
                 W
               </div>
               <span>WordbitX</span>
-              <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-[#5046e5] text-white">AI Ready</span>
+              <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-400 text-[#10231e]">AI Ready</span>
             </div>
           </div>
           <div className="flex items-center gap-2">
             <button
               onClick={() => navigate('/app/dashboard')}
-              className="px-2 py-1 rounded bg-white/10 hover:bg-white/20 text-indigo-300 text-[11px] font-medium transition"
+              className="px-2 py-1 rounded bg-white/10 hover:bg-white/20 text-emerald-300 text-[11px] font-medium transition"
             >
               CRM
             </button>
@@ -119,20 +119,20 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
                 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150'
               }
               alt="Admin"
-              className="w-7 h-7 rounded-full object-cover border border-purple-500/50"
+              className="w-7 h-7 rounded-full object-cover border border-emerald-500/50"
             />
           </div>
         </header>
 
         {/* Super Admin Sidebar - Deep Navy/Midnight Violet matching image.png */}
         <aside
-          className={`fixed inset-y-0 left-0 z-40 w-64 bg-[#131226] border-r border-[#1e1c3b] flex flex-col justify-between transition-transform duration-300 ease-in-out lg:translate-x-0 ${
+          className={`fixed inset-y-0 left-0 z-40 w-64 bg-[#101a18] border-r border-[#263a33] flex flex-col justify-between transition-transform duration-300 ease-in-out lg:translate-x-0 ${
             mobileMenuOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'
           } lg:static lg:h-screen lg:shrink-0`}
         >
           <div className="flex flex-col flex-1 overflow-y-auto">
             {/* Header Branding */}
-            <div className="p-4 border-b border-[#1e1c3b]">
+            <div className="p-4 border-b border-[#263a33]">
               <div className="flex items-center justify-between">
                 <div
                   onClick={() => {
@@ -141,11 +141,11 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
                   }}
                   className="flex items-center gap-2 cursor-pointer font-bold text-lg tracking-tight text-white"
                 >
-                  <div className="w-7 h-7 rounded-lg bg-[#5046e5] flex items-center justify-center font-black text-xs text-white shadow-md shadow-indigo-600/30">
+                  <div className="w-7 h-7 rounded-lg bg-emerald-400 flex items-center justify-center font-black text-xs text-[#10231e] shadow-md shadow-emerald-600/30">
                     W
                   </div>
                   <span>WordbitX</span>
-                  <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-[#5046e5] text-white tracking-wide">
+                  <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-400 text-[#10231e] tracking-wide">
                     AI Ready
                   </span>
                 </div>
@@ -179,7 +179,7 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
                           }}
                           className={`w-full flex items-center gap-2.5 px-3 py-1.5 rounded-lg transition text-left text-xs ${
                             isActive
-                              ? 'bg-[#5046e5] text-white font-medium shadow-xs'
+                              ? 'bg-[#123c32] text-white font-medium shadow-xs'
                               : 'text-slate-400 hover:text-white hover:bg-white/5'
                           }`}
                         >
@@ -195,7 +195,7 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
           </div>
 
           {/* Bottom Switcher & Profile */}
-          <div className="p-3 border-t border-[#1e1c3b] bg-[#0e0d1c] space-y-2">
+          <div className="p-3 border-t border-[#263a33] bg-[#0b1512] space-y-2">
             <button
               onClick={() => {
                 navigate('/app/dashboard');
@@ -204,7 +204,7 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
               className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-md bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10 text-xs transition"
             >
               <span className="flex items-center gap-1.5">
-                <ArrowLeft className="w-3.5 h-3.5 text-indigo-400" /> Switch to CRM
+                <ArrowLeft className="w-3.5 h-3.5 text-emerald-400" /> Switch to CRM
               </span>
               <span className="text-[10px] text-slate-400">Org view</span>
             </button>
@@ -212,7 +212,7 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
             <div className="relative">
               <div
                 onClick={() => setProfileDropdown(!profileDropdown)}
-                className="flex items-center justify-between p-2 rounded-lg bg-[#16142a] hover:bg-[#1e1b38] cursor-pointer border border-[#232042] transition"
+                className="flex items-center justify-between p-2 rounded-lg bg-[#14231f] hover:bg-[#1d332c] cursor-pointer border border-[#29483d] transition"
               >
                 <div className="flex items-center gap-2 min-w-0">
                   <img
@@ -221,20 +221,20 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
                       'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150'
                     }
                     alt={user?.name || 'Admin'}
-                    className="w-7 h-7 rounded-full object-cover border border-purple-500/50 shrink-0"
+                    className="w-7 h-7 rounded-full object-cover border border-emerald-500/50 shrink-0"
                   />
                   <div className="min-w-0">
                     <div className="text-xs font-semibold text-white truncate">
                       Shaniba Yasin / Super Admin
                     </div>
-                    <div className="text-[10px] text-purple-300 truncate">Platform Administrator</div>
+                    <div className="text-[10px] text-emerald-300 truncate">Platform Administrator</div>
                   </div>
                 </div>
                 <ChevronDown className="w-3.5 h-3.5 text-slate-400 shrink-0" />
               </div>
 
               {profileDropdown && (
-                <div className="absolute bottom-full left-0 w-full mb-1 bg-[#16142a] border border-[#28254b] rounded-lg shadow-xl p-1 text-xs text-slate-300 space-y-0.5 z-50">
+                <div className="absolute bottom-full left-0 w-full mb-1 bg-[#14231f] border border-[#29483d] rounded-lg shadow-xl p-1 text-xs text-slate-300 space-y-0.5 z-50">
                   <button
                     onClick={() => {
                       logout();
@@ -255,7 +255,7 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
           {/* Top Header - Desktop Only */}
           <header className="hidden lg:flex bg-white border-b border-slate-200/90 px-6 py-3 items-center justify-between sticky top-0 z-20">
             <div className="flex-1 max-w-sm">
-              <div className="w-full flex items-center gap-2 px-3 py-1.5 bg-[#f8fafc] border border-slate-200 rounded-lg text-xs text-slate-400">
+              <div className="w-full flex items-center gap-2 px-3 py-1.5 bg-[#f5f8f7] border border-slate-200 rounded-lg text-xs text-slate-400">
                 <Search className="w-3.5 h-3.5 text-slate-400" />
                 <span>Search anything...</span>
               </div>
@@ -263,7 +263,7 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
             <div className="flex items-center gap-3">
               <button className="relative p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition">
                 <Bell className="w-4 h-4 text-slate-600" />
-                <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-[#5046e5] rounded-full" />
+                <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-[#34d399] rounded-full" />
               </button>
               <div className="flex items-center gap-2.5 pl-3 border-l border-slate-200">
                 <img
@@ -283,20 +283,20 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
             </div>
           </header>
 
-          <main className="p-3.5 sm:p-5 md:p-6 lg:p-8 flex-1 bg-[#f4f6fa] max-w-7xl w-full mx-auto">
+          <main className="p-3.5 sm:p-5 md:p-6 lg:p-8 flex-1 bg-[#f5f8f7] max-w-7xl w-full mx-auto">
             {children}
           </main>
         </div>
       </div>
 
       {/* Bottom Footer Banner */}
-      <footer className="w-full bg-[#131226] text-white px-6 py-2.5 flex flex-wrap items-center justify-between border-t border-[#1e1c3b] text-xs">
+      <footer className="w-full bg-[#101a18] text-white px-6 py-2.5 flex flex-wrap items-center justify-between border-t border-[#263a33] text-xs">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5 font-bold text-sm tracking-tight">
-            <div className="w-5 h-5 rounded bg-[#5046e5] flex items-center justify-center text-[10px] font-black text-white">
+            <div className="w-5 h-5 rounded bg-emerald-400 flex items-center justify-center text-[10px] font-black text-[#10231e]">
               W
             </div>
-            <span>Wordbit<span className="text-indigo-400">X</span></span>
+            <span>Wordbit<span className="text-emerald-400">X</span></span>
           </div>
           <span className="text-slate-500 hidden sm:inline">|</span>
           <span className="text-slate-400 text-[11px] hidden sm:inline">

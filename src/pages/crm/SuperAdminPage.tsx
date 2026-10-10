@@ -53,13 +53,13 @@ export const SuperAdminPage: React.FC = () => {
 
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
           <span className="text-xs text-slate-500 font-medium">Total Registered Users</span>
-          <span className="text-2xl font-bold text-indigo-700 block mt-1">{data.totalUsers} users</span>
+          <span className="text-2xl font-bold text-emerald-700 block mt-1">{data.totalUsers} users</span>
           <span className="text-[11px] text-slate-400 mt-1 block">Across all workspaces</span>
         </div>
 
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
           <span className="text-xs text-slate-500 font-medium">API Requests (Today)</span>
-          <span className="text-2xl font-bold text-purple-700 block mt-1">
+          <span className="text-2xl font-bold text-emerald-700 block mt-1">
             {(data.apiRequestsToday || 124500).toLocaleString()}
           </span>
           <span className="text-[11px] text-slate-400 mt-1 block">Avg latency: 42ms</span>
@@ -89,7 +89,7 @@ export const SuperAdminPage: React.FC = () => {
                   <td className="py-3 px-4 font-bold text-slate-900">{org.name}</td>
                   <td className="py-3 px-4 text-slate-600">{org.industry}</td>
                   <td className="py-3 px-4">
-                    <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-50 text-indigo-700">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700">
                       {org.plan}
                     </span>
                   </td>
@@ -102,7 +102,7 @@ export const SuperAdminPage: React.FC = () => {
                   <td className="py-3 px-4 text-right">
                     <button
                       onClick={() => handleSwitch(org.id)}
-                      className="px-2.5 py-1 rounded bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold text-[11px] transition cursor-pointer"
+                      className="px-2.5 py-1 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-[11px] transition cursor-pointer"
                     >
                       Enter Workspace →
                     </button>

@@ -10,9 +10,9 @@ interface AvatarProps {
 }
 
 const COLOR_PALETTES = [
-  'bg-indigo-600 text-white',
   'bg-emerald-600 text-white',
-  'bg-violet-600 text-white',
+  'bg-emerald-600 text-white',
+  'bg-emerald-600 text-white',
   'bg-blue-600 text-white',
   'bg-amber-600 text-white',
   'bg-rose-600 text-white',

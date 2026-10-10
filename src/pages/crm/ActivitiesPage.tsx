@@ -28,7 +28,7 @@ export const ActivitiesPage: React.FC = () => {
       case 'Call':
         return <PhoneCall className="w-4 h-4 text-emerald-600" />;
       case 'Deal':
-        return <DollarSign className="w-4 h-4 text-indigo-600" />;
+        return <DollarSign className="w-4 h-4 text-emerald-600" />;
       case 'Lead':
         return <UserPlus className="w-4 h-4 text-blue-600" />;
       case 'Task':
@@ -55,7 +55,7 @@ export const ActivitiesPage: React.FC = () => {
             key={t}
             onClick={() => setSelectedType(t)}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
-              selectedType === t ? 'bg-indigo-600 text-white shadow-xs' : 'bg-white border border-slate-200 text-slate-600'
+              selectedType === t ? 'bg-emerald-600 text-white shadow-xs' : 'bg-white border border-slate-200 text-slate-600'
             }`}
           >
             {t === 'all' ? 'All Activities' : `${t}s`}
@@ -82,7 +82,7 @@ export const ActivitiesPage: React.FC = () => {
                 </div>
                 <p className="text-xs text-slate-700">{act.description}</p>
                 {act.relatedName && (
-                  <span className="inline-block text-[11px] font-medium text-indigo-600 bg-indigo-50/60 px-2 py-0.5 rounded mt-1">
+                  <span className="inline-block text-[11px] font-medium text-emerald-600 bg-emerald-50/60 px-2 py-0.5 rounded mt-1">
                     Re: {act.relatedName}
                   </span>
                 )}

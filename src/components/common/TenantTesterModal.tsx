@@ -50,15 +50,15 @@ export const TenantTesterModal: React.FC<TenantTesterModalProps> = ({ isOpen, on
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Multi-Tenant Isolation Security Audit" maxWidth="lg">
       <div className="space-y-4">
-        <div className="flex items-start gap-3 p-3.5 bg-indigo-50 border border-indigo-200 rounded-lg text-sm text-indigo-950">
-          <Lock className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+        <div className="flex items-start gap-3 p-3.5 bg-emerald-50 border border-emerald-200 rounded-lg text-sm text-emerald-950">
+          <Lock className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
           <div>
-            <p className="font-semibold text-indigo-900">Tenant Isolation Verification Tool</p>
-            <p className="text-xs text-indigo-700 mt-1">
+            <p className="font-semibold text-emerald-900">Tenant Isolation Verification Tool</p>
+            <p className="text-xs text-emerald-700 mt-1">
               Current Session: <span className="font-medium">{user?.name}</span> ({user?.role}) from{' '}
               <span className="font-medium">{organization?.name}</span> ({organization?.id}).
             </p>
-            <p className="text-xs text-indigo-600 mt-1">
+            <p className="text-xs text-emerald-600 mt-1">
               This test sends a direct raw HTTP request to access Org B's confidential lead record (<code>lead_apex_1</code>). The server must reject this with HTTP 404/403.
             </p>
           </div>
@@ -67,7 +67,7 @@ export const TenantTesterModal: React.FC<TenantTesterModalProps> = ({ isOpen, on
         <button
           onClick={runTenantSecurityTest}
           disabled={testing}
-          className="w-full py-2.5 px-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium text-sm flex items-center justify-center gap-2 transition disabled:opacity-50"
+          className="w-full py-2.5 px-4 bg-emerald-600 hover:bg-[#1c5547] text-white rounded-lg font-medium text-sm flex items-center justify-center gap-2 transition disabled:opacity-50"
         >
           {testing ? <RefreshCw className="w-4 h-4 animate-spin" /> : <ShieldAlert className="w-4 h-4" />}
           Execute Live Cross-Tenant Access Attack

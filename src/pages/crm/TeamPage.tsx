@@ -47,7 +47,7 @@ export const TeamPage: React.FC = () => {
       case 'ORGANIZATION_OWNER':
         return 'bg-purple-100 text-purple-800 border-purple-200';
       case 'ORGANIZATION_ADMIN':
-        return 'bg-indigo-100 text-indigo-800 border-indigo-200';
+        return 'bg-emerald-100 text-emerald-800 border-emerald-200';
       case 'SALES_MANAGER':
         return 'bg-blue-100 text-blue-800 border-blue-200';
       case 'SUPER_ADMIN':
@@ -69,7 +69,7 @@ export const TeamPage: React.FC = () => {
 
         <button
           onClick={() => setShowInviteModal(true)}
-          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#5046e5] hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm transition"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#123c32] hover:bg-[#1c5547] text-white text-xs font-semibold shadow-sm transition"
         >
           <Plus className="w-3.5 h-3.5" />
           <span>Invite Member</span>
@@ -83,7 +83,7 @@ export const TeamPage: React.FC = () => {
               {user.avatar ? (
                 <img src={user.avatar} alt={user.name} className="w-10 h-10 rounded-full object-cover" />
               ) : (
-                <div className="w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-sm">
+                <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-sm">
                   {user.name.charAt(0)}
                 </div>
               )}
@@ -123,7 +123,7 @@ export const TeamPage: React.FC = () => {
                   value={inviteName}
                   onChange={(e) => setInviteName(e.target.value)}
                   placeholder="e.g. Zainab Malik"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -135,7 +135,7 @@ export const TeamPage: React.FC = () => {
                   value={inviteEmail}
                   onChange={(e) => setInviteEmail(e.target.value)}
                   placeholder="zainab@company.com"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -145,7 +145,7 @@ export const TeamPage: React.FC = () => {
                   <select
                     value={inviteRole}
                     onChange={(e) => setInviteRole(e.target.value as any)}
-                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                   >
                     <option value="SALES_AGENT">Sales Agent</option>
                     <option value="SALES_MANAGER">Sales Manager</option>
@@ -159,7 +159,7 @@ export const TeamPage: React.FC = () => {
                     value={inviteTitle}
                     onChange={(e) => setInviteTitle(e.target.value)}
                     placeholder="Account Executive"
-                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                   />
                 </div>
               </div>
@@ -174,7 +174,7 @@ export const TeamPage: React.FC = () => {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold"
+                  className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-[#1c5547] text-white font-semibold"
                 >
                   Send Invitation
                 </button>

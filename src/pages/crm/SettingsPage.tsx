@@ -36,7 +36,7 @@ export const SettingsPage: React.FC = () => {
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -46,7 +46,7 @@ export const SettingsPage: React.FC = () => {
                   type="text"
                   value={industry}
                   onChange={(e) => setIndustry(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -56,7 +56,7 @@ export const SettingsPage: React.FC = () => {
                   type="text"
                   value={timezone}
                   onChange={(e) => setTimezone(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -66,7 +66,7 @@ export const SettingsPage: React.FC = () => {
                   type="text"
                   value={currency}
                   onChange={(e) => setCurrency(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
             </div>
@@ -78,7 +78,7 @@ export const SettingsPage: React.FC = () => {
             </span>
             <button
               type="submit"
-              className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition"
+              className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-[#1c5547] text-white font-semibold transition"
             >
               Save Changes
             </button>
@@ -91,7 +91,7 @@ export const SettingsPage: React.FC = () => {
         <h2 className="text-sm font-bold text-slate-900">Current Plan & Subscription</h2>
         <div className="flex items-center justify-between p-4 rounded-xl bg-slate-50 border border-slate-200">
           <div>
-            <span className="text-xs font-bold text-indigo-700 block">PROFESSIONAL PLAN</span>
+            <span className="text-xs font-bold text-emerald-700 block">PROFESSIONAL PLAN</span>
             <span className="text-xs text-slate-500">15 Active Seats • Unlimited Pipelines • Twilio Add-on</span>
           </div>
           <span className="text-sm font-bold text-slate-900">$79 / seat / mo</span>

@@ -19,7 +19,7 @@ import type { Deal, DealStage } from '../../types/crm';
 const PIPELINE_STAGES: { id: DealStage; label: string; color: string }[] = [
   { id: 'New', label: 'New Deals', color: 'border-slate-300 bg-slate-50' },
   { id: 'Contacted', label: 'Contacted', color: 'border-blue-300 bg-blue-50/40' },
-  { id: 'Qualified', label: 'Qualified', color: 'border-indigo-300 bg-indigo-50/40' },
+  { id: 'Qualified', label: 'Qualified', color: 'border-emerald-300 bg-emerald-50/40' },
   { id: 'Proposal', label: 'Proposal Sent', color: 'border-purple-300 bg-purple-50/40' },
   { id: 'Negotiation', label: 'Negotiation', color: 'border-amber-300 bg-amber-50/40' },
   { id: 'Won', label: 'Closed Won', color: 'border-emerald-400 bg-emerald-50/50' },
@@ -117,7 +117,7 @@ export const PipelinePage: React.FC = () => {
             setTargetStage('New');
             setShowAddModal(true);
           }}
-          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#5046e5] hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition cursor-pointer self-start sm:self-auto"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#123c32] hover:bg-[#1c5547] text-white text-xs font-semibold shadow-xs transition cursor-pointer self-start sm:self-auto"
         >
           <Plus className="w-3.5 h-3.5" />
           <span>Add Deal</span>
@@ -130,7 +130,7 @@ export const PipelinePage: React.FC = () => {
           onClick={() => setActiveMobileStage('all')}
           className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition cursor-pointer ${
             activeMobileStage === 'all'
-              ? 'bg-indigo-600 text-white shadow-xs'
+              ? 'bg-emerald-600 text-white shadow-xs'
               : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
           }`}
         >
@@ -144,7 +144,7 @@ export const PipelinePage: React.FC = () => {
               onClick={() => setActiveMobileStage(col.id)}
               className={`px-2.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition cursor-pointer flex items-center gap-1.5 ${
                 activeMobileStage === col.id
-                  ? 'bg-indigo-600 text-white shadow-xs'
+                  ? 'bg-emerald-600 text-white shadow-xs'
                   : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
               }`}
             >
@@ -197,7 +197,7 @@ export const PipelinePage: React.FC = () => {
                         <span className="font-semibold text-xs text-slate-900 leading-tight">
                           {deal.name}
                         </span>
-                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 shrink-0">
+                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 shrink-0">
                           {deal.probability}%
                         </span>
                       </div>
@@ -230,7 +230,7 @@ export const PipelinePage: React.FC = () => {
                         <button
                           disabled={col.id === 'Won' || col.id === 'Lost'}
                           onClick={() => handleStageMove(deal.id, deal.stage, 'forward')}
-                          className="p-1 rounded text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 disabled:opacity-30 disabled:pointer-events-none"
+                          className="p-1 rounded text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 disabled:opacity-30 disabled:pointer-events-none"
                           title="Advance to next stage"
                         >
                           <ChevronRight className="w-3.5 h-3.5" />
@@ -252,7 +252,7 @@ export const PipelinePage: React.FC = () => {
                     setTargetStage(col.id);
                     setShowAddModal(true);
                   }}
-                  className="mt-2 w-full py-1.5 rounded-lg border border-dashed border-slate-300 hover:border-indigo-400 text-slate-500 hover:text-indigo-600 text-xs font-semibold flex items-center justify-center gap-1 transition"
+                  className="mt-2 w-full py-1.5 rounded-lg border border-dashed border-slate-300 hover:border-emerald-400 text-slate-500 hover:text-emerald-600 text-xs font-semibold flex items-center justify-center gap-1 transition"
                 >
                   <Plus className="w-3 h-3" /> Add Deal
                 </button>
@@ -278,7 +278,7 @@ export const PipelinePage: React.FC = () => {
                   value={dealName}
                   onChange={(e) => setDealName(e.target.value)}
                   placeholder="e.g. Enterprise License Contract"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -290,7 +290,7 @@ export const PipelinePage: React.FC = () => {
                   value={company}
                   onChange={(e) => setCompany(e.target.value)}
                   placeholder="e.g. Nova Tech"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -301,7 +301,7 @@ export const PipelinePage: React.FC = () => {
                     type="number"
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                   />
                 </div>
                 <div>
@@ -312,7 +312,7 @@ export const PipelinePage: React.FC = () => {
                     onChange={(e) => setProbability(e.target.value)}
                     min={0}
                     max={100}
-                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                   />
                 </div>
               </div>
@@ -327,7 +327,7 @@ export const PipelinePage: React.FC = () => {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold"
+                  className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-[#1c5547] text-white font-semibold"
                 >
                   Create Deal
                 </button>

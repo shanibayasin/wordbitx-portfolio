@@ -64,7 +64,7 @@ export const ReportsPage: React.FC = () => {
 
         <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
           <span className="text-xs text-slate-500 font-medium">Win Rate Ratio</span>
-          <span className="text-xl sm:text-2xl font-bold text-indigo-700 block mt-1">{reports.winRate}%</span>
+          <span className="text-xl sm:text-2xl font-bold text-emerald-700 block mt-1">{reports.winRate}%</span>
           <span className="text-[11px] text-emerald-600 font-semibold mt-1 block">+6.2% vs last quarter</span>
         </div>
 
@@ -93,7 +93,7 @@ export const ReportsPage: React.FC = () => {
                 <span className="text-[10px] sm:text-xs font-bold text-slate-800">${(m.revenue / 1000).toFixed(0)}k</span>
                 <div className="w-full bg-slate-100 rounded-t-lg h-28 sm:h-36 flex items-end p-0.5 sm:p-1">
                   <div
-                    className="w-full bg-indigo-600 rounded-t-md transition-all duration-500"
+                    className="w-full bg-emerald-600 rounded-t-md transition-all duration-500"
                     style={{ height: `${heightPercent}%` }}
                   ></div>
                 </div>
@@ -123,7 +123,7 @@ export const ReportsPage: React.FC = () => {
               {(reports.reps || []).map((rep: any, idx: number) => (
                 <tr key={rep.name} className="hover:bg-slate-50/70 transition">
                   <td className="py-3 px-4 font-semibold text-slate-900 flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-[10px] font-bold shrink-0">
+                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold shrink-0">
                       {idx + 1}
                     </span>
                     <span className="truncate">{rep.name}</span>
@@ -133,7 +133,7 @@ export const ReportsPage: React.FC = () => {
                   <td className="py-3 px-4">
                     <div className="flex items-center gap-2">
                       <div className="w-16 sm:w-20 bg-slate-100 h-2 rounded-full overflow-hidden">
-                        <div className="bg-indigo-600 h-full rounded-full" style={{ width: `${rep.conversionRate}%` }}></div>
+                        <div className="bg-emerald-600 h-full rounded-full" style={{ width: `${rep.conversionRate}%` }}></div>
                       </div>
                       <span className="font-semibold text-slate-600 text-[11px]">{rep.conversionRate}%</span>
                     </div>

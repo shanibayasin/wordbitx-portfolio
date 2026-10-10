@@ -124,14 +124,26 @@ const AppContent: React.FC = () => {
     }
   };
 
+  if (isAuthPage) {
+    return (
+      <div className="min-h-dvh bg-[#f5f8f7] text-slate-900 dark:bg-[#071714] dark:text-slate-100 transition-colors">
+        <main className="min-h-dvh w-full">
+          <Suspense fallback={<RouteLoading />}>{renderPublicPage()}</Suspense>
+        </main>
+        <CommandPalette />
+        <ExploreDemoModal />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-wbx-canvas text-slate-900 dark:bg-wbx-dark-surface dark:text-slate-100 transition-colors selection:bg-indigo-200 selection:text-indigo-950">
-      {!isAuthPage && activePath !== '/' && <AnnouncementBar />}
+      {activePath !== '/' && <AnnouncementBar />}
       <Navbar />
       <main className="flex-1 w-full">
         <Suspense fallback={<RouteLoading />}>{renderPublicPage()}</Suspense>
       </main>
-      {!isAuthPage && <Footer />}
+      <Footer />
       <CommandPalette />
       <ExploreDemoModal />
     </div>

@@ -162,7 +162,7 @@ export const DashboardOverviewPage: React.FC = () => {
               setLoading(true);
               loadData();
             }}
-            className="mt-4 inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-3 py-2 text-sm font-semibold text-white hover:bg-indigo-700"
+            className="mt-4 inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-[#1c5547]"
           >
             <RotateCcw className="h-4 w-4" />
             Try again
@@ -178,7 +178,7 @@ export const DashboardOverviewPage: React.FC = () => {
       value: metric('totalLeads', metrics.totalLeads) ?? 0,
       sub: `${totalLeads.toLocaleString()} in workspace`,
       icon: Users,
-      color: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+      color: 'bg-emerald-50 text-emerald-700 border-emerald-200',
     },
     {
       label: 'Active deals',
@@ -192,14 +192,14 @@ export const DashboardOverviewPage: React.FC = () => {
       value: `${metric('winRate', metrics.winRate) ?? 0}%`,
       sub: 'Closed deals in selected period',
       icon: TrendingUp,
-      color: 'bg-indigo-50 text-indigo-600 border-indigo-200',
+      color: 'bg-emerald-50 text-emerald-600 border-emerald-200',
     },
     {
       label: 'Won revenue',
       value: formatCurrency(metric('wonRevenue', metrics.totalWonRevenue) ?? 0),
       sub: 'Closed won in selected period',
       icon: DollarSign,
-      color: 'bg-violet-50 text-violet-700 border-violet-200',
+      color: 'bg-emerald-50 text-emerald-700 border-emerald-200',
     },
     {
       label: 'Overdue follow-ups',
@@ -217,7 +217,7 @@ export const DashboardOverviewPage: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 flex-wrap">
             <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">CRM overview</h1>
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200/70">
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/70">
               {metrics.isDemo ? 'Sample data' : 'Workspace data'}
             </span>
           </div>
@@ -236,7 +236,7 @@ export const DashboardOverviewPage: React.FC = () => {
                 onClick={() => setTimeRange(r)}
                 aria-pressed={timeRange === r}
                 className={`px-2.5 sm:px-3 py-1.5 rounded-md font-medium transition text-xs ${
-                  timeRange === r ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                  timeRange === r ? 'bg-emerald-600 text-white shadow-xs' : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 {r.replace('Last ', '')}
@@ -246,7 +246,7 @@ export const DashboardOverviewPage: React.FC = () => {
 
           <button
             onClick={() => setShowAddLeadModal(true)}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg bg-[#5046e5] hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm shadow-indigo-600/20 transition cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg bg-[#123c32] hover:bg-[#1c5547] text-white text-xs font-semibold shadow-sm shadow-emerald-600/20 transition cursor-pointer"
           >
             <Plus className="w-3.5 h-3.5" />
             <span>New Lead</span>
@@ -255,7 +255,7 @@ export const DashboardOverviewPage: React.FC = () => {
       </div>
 
       {loading && (
-        <p className="text-xs font-medium text-indigo-700" role="status">
+        <p className="text-xs font-medium text-emerald-700" role="status">
           Refreshing workspace data…
         </p>
       )}
@@ -293,7 +293,7 @@ export const DashboardOverviewPage: React.FC = () => {
           </div>
           <button
             onClick={() => navigate('/app/pipeline')}
-            className="text-xs font-semibold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 self-start sm:self-auto"
+            className="text-xs font-semibold text-emerald-600 hover:text-emerald-800 flex items-center gap-1 self-start sm:self-auto"
           >
             Open Kanban Board <ArrowRight className="w-3.5 h-3.5" />
           </button>
@@ -337,7 +337,7 @@ export const DashboardOverviewPage: React.FC = () => {
               </div>
               <button
                 onClick={() => navigate('/app/leads')}
-                className="text-xs font-semibold text-indigo-600 hover:text-indigo-800 flex items-center gap-1"
+                className="text-xs font-semibold text-emerald-600 hover:text-emerald-800 flex items-center gap-1"
               >
                 View all ({totalLeads}) <ArrowRight className="w-3.5 h-3.5" />
               </button>
@@ -374,7 +374,7 @@ export const DashboardOverviewPage: React.FC = () => {
                     </span>
                     <button
                       onClick={() => handleConvertLead(lead.id)}
-                      className="px-2.5 py-1 rounded bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold text-[11px] transition"
+                      className="px-2.5 py-1 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-[11px] transition"
                     >
                       Convert to Deal
                     </button>
@@ -431,7 +431,7 @@ export const DashboardOverviewPage: React.FC = () => {
                       <td className="py-3 px-4 text-right">
                         <button
                           onClick={() => handleConvertLead(lead.id)}
-                          className="px-2 py-1 rounded bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold text-[11px] transition"
+                          className="px-2 py-1 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-[11px] transition"
                         >
                           Convert
                         </button>
@@ -457,7 +457,7 @@ export const DashboardOverviewPage: React.FC = () => {
               </div>
               <button
                 onClick={() => navigate('/app/deals')}
-                className="text-xs font-semibold text-indigo-600 hover:text-indigo-800 flex items-center gap-1"
+                className="text-xs font-semibold text-emerald-600 hover:text-emerald-800 flex items-center gap-1"
               >
                 View all ({metrics.totals?.allDealsCount ?? metrics.totalDeals ?? 0}) <ArrowRight className="w-3.5 h-3.5" />
               </button>
@@ -472,7 +472,7 @@ export const DashboardOverviewPage: React.FC = () => {
                       <div className="font-semibold text-slate-900 text-xs">{deal.name}</div>
                       <div className="text-[11px] text-slate-500">Close: {deal.expectedClose}</div>
                     </div>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-50 text-indigo-700 shrink-0">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 shrink-0">
                       {deal.stage}
                     </span>
                   </div>
@@ -483,7 +483,7 @@ export const DashboardOverviewPage: React.FC = () => {
                     <div className="flex items-center gap-1.5">
                       <div className="w-12 h-1.5 bg-slate-100 rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-indigo-600 rounded-full"
+                          className="h-full bg-emerald-600 rounded-full"
                           style={{ width: `${deal.probability ?? 0}%` }}
                         />
                       </div>
@@ -517,7 +517,7 @@ export const DashboardOverviewPage: React.FC = () => {
                         {formatCurrency(deal.value || 0)}
                       </td>
                       <td className="py-3 px-4">
-                        <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-50 text-indigo-700">
+                        <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700">
                           {deal.stage}
                         </span>
                       </td>
@@ -525,7 +525,7 @@ export const DashboardOverviewPage: React.FC = () => {
                         <div className="flex items-center gap-2">
                           <div className="w-16 h-2 bg-slate-100 rounded-full overflow-hidden">
                             <div
-                              className="h-full bg-indigo-600 rounded-full"
+                              className="h-full bg-emerald-600 rounded-full"
                               style={{ width: `${deal.probability ?? 0}%` }}
                             ></div>
                           </div>
@@ -552,12 +552,12 @@ export const DashboardOverviewPage: React.FC = () => {
           <div className="bg-white rounded-xl border border-slate-200/90 shadow-xs p-5">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
-                <CheckSquare className="w-4 h-4 text-indigo-600" />
+                <CheckSquare className="w-4 h-4 text-emerald-600" />
                 <h3 className="text-sm font-bold text-slate-900">Upcoming Tasks</h3>
               </div>
               <button
                 onClick={() => navigate('/app/tasks')}
-                className="text-xs text-indigo-600 font-semibold hover:underline"
+                className="text-xs text-emerald-600 font-semibold hover:underline"
               >
                 All tasks
               </button>
@@ -570,7 +570,7 @@ export const DashboardOverviewPage: React.FC = () => {
                   className={`p-3 rounded-lg border transition cursor-pointer flex items-start gap-3 ${
                     t.status === 'Completed'
                       ? 'bg-slate-50/80 border-slate-200 opacity-60'
-                      : 'bg-white border-slate-200/80 hover:border-indigo-300'
+                      : 'bg-white border-slate-200/80 hover:border-emerald-300'
                   }`}
                 >
                   <input
@@ -578,7 +578,7 @@ export const DashboardOverviewPage: React.FC = () => {
                     checked={t.status === 'Completed'}
                     onChange={() => handleToggleTask(t)}
                     aria-label={`${t.status === 'Completed' ? 'Reopen' : 'Complete'} task: ${t.title}`}
-                    className="mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                    className="mt-0.5 h-4 w-4 shrink-0 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
                   />
                   <div className="flex-1 min-w-0">
                     <p
@@ -591,7 +591,7 @@ export const DashboardOverviewPage: React.FC = () => {
                     <div className="flex items-center gap-2 text-[10px] text-slate-400 mt-1">
                       <span>{t.dueDate}</span>
                       <span>•</span>
-                      <span className="text-indigo-600 font-medium">{t.assignedUserName}</span>
+                      <span className="text-emerald-600 font-medium">{t.assignedUserName}</span>
                     </div>
                   </div>
                 </div>
@@ -698,7 +698,7 @@ export const DashboardOverviewPage: React.FC = () => {
                   value={newLeadName}
                   onChange={(e) => setNewLeadName(e.target.value)}
                   placeholder="e.g. Tariq Mehmood"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -711,7 +711,7 @@ export const DashboardOverviewPage: React.FC = () => {
                   value={newLeadCompany}
                   onChange={(e) => setNewLeadCompany(e.target.value)}
                   placeholder="e.g. Apex Global Tech"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -724,7 +724,7 @@ export const DashboardOverviewPage: React.FC = () => {
                   value={newLeadEmail}
                   onChange={(e) => setNewLeadEmail(e.target.value)}
                   placeholder="name@company.com"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -737,7 +737,7 @@ export const DashboardOverviewPage: React.FC = () => {
                   required
                   value={newLeadValue}
                   onChange={(e) => setNewLeadValue(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -751,7 +751,7 @@ export const DashboardOverviewPage: React.FC = () => {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold"
+                  className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-[#1c5547] text-white font-semibold"
                 >
                   Save Lead
                 </button>

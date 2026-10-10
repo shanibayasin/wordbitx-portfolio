@@ -56,7 +56,7 @@ export const NotificationsDrawer: React.FC<NotificationsDrawerProps> = ({ isOpen
       >
         <div className="flex items-center justify-between p-4 border-b border-slate-100">
           <div className="flex items-center gap-2">
-            <Bell className="w-5 h-5 text-indigo-600" />
+            <Bell className="w-5 h-5 text-emerald-600" />
             <h3 className="font-semibold text-slate-900">Notifications</h3>
           </div>
           <button onClick={onClose} className="p-1 text-slate-400 hover:text-slate-600 rounded">
@@ -79,13 +79,13 @@ export const NotificationsDrawer: React.FC<NotificationsDrawerProps> = ({ isOpen
                 className={`p-3.5 rounded-xl border text-sm cursor-pointer transition ${
                   n.read
                     ? 'bg-white border-slate-100 hover:bg-slate-50'
-                    : 'bg-indigo-50/60 border-indigo-100 hover:bg-indigo-50'
+                    : 'bg-emerald-50/60 border-emerald-100 hover:bg-emerald-50'
                 }`}
               >
                 <div className="flex items-start gap-2.5">
                   {n.type === 'SUCCESS' && <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />}
                   {n.type === 'WARNING' && <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />}
-                  {n.type === 'INFO' && <Info className="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />}
+                  {n.type === 'INFO' && <Info className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />}
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <span className="font-semibold text-slate-900 text-xs">{n.title}</span>
@@ -95,7 +95,7 @@ export const NotificationsDrawer: React.FC<NotificationsDrawerProps> = ({ isOpen
                     </div>
                     <p className="text-xs text-slate-600 mt-1 leading-relaxed">{n.message}</p>
                     {n.link && (
-                      <span className="inline-flex items-center gap-1 text-[11px] font-medium text-indigo-600 mt-2 hover:underline">
+                      <span className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-600 mt-2 hover:underline">
                         View Details <ExternalLink className="w-2.5 h-2.5" />
                       </span>
                     )}

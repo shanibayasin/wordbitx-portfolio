@@ -52,7 +52,7 @@ export const DealsPage: React.FC = () => {
 
         <button
           onClick={() => navigate('/app/pipeline')}
-          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#5046e5] hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition self-start sm:self-auto"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#123c32] hover:bg-[#1c5547] text-white text-xs font-semibold shadow-xs transition self-start sm:self-auto"
         >
           View Kanban Pipeline
         </button>
@@ -83,7 +83,7 @@ export const DealsPage: React.FC = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search deals..."
-            className="w-full pl-9 pr-3 py-1.5 text-xs rounded-lg border border-slate-200 focus:outline-indigo-600"
+            className="w-full pl-9 pr-3 py-1.5 text-xs rounded-lg border border-slate-200 focus:outline-emerald-600"
           />
         </div>
       </div>
@@ -102,7 +102,7 @@ export const DealsPage: React.FC = () => {
                     <div className="font-semibold text-slate-900 text-xs">{deal.name}</div>
                     <div className="text-[11px] text-slate-500">{deal.company} • {deal.expectedClose}</div>
                   </div>
-                  <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-50 text-indigo-700 shrink-0">
+                  <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 shrink-0">
                     {deal.stage}
                   </span>
                 </div>
@@ -153,7 +153,7 @@ export const DealsPage: React.FC = () => {
                   <td className="py-3 px-4 text-slate-700">{deal.company}</td>
                   <td className="py-3 px-4 font-bold text-emerald-700">${(deal.value || 0).toLocaleString()}</td>
                   <td className="py-3 px-4">
-                    <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-50 text-indigo-700">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700">
                       {deal.stage}
                     </span>
                   </td>

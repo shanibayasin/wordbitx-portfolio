@@ -68,7 +68,7 @@ export const CallsPage: React.FC = () => {
 
         <button
           onClick={() => setShowAddModal(true)}
-          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#5046e5] hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition self-start sm:self-auto"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#123c32] hover:bg-[#1c5547] text-white text-xs font-semibold shadow-xs transition self-start sm:self-auto"
         >
           <Plus className="w-3.5 h-3.5" />
           <span>Log Call</span>
@@ -159,8 +159,8 @@ export const CallsPage: React.FC = () => {
                   onClick={() => togglePlay(c.id)}
                   className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${
                     playingId === c.id
-                      ? 'bg-indigo-600 text-white'
-                      : 'bg-indigo-50 hover:bg-indigo-100 text-indigo-700'
+                      ? 'bg-emerald-600 text-white'
+                      : 'bg-emerald-50 hover:bg-emerald-100 text-emerald-700'
                   }`}
                 >
                   {playingId === c.id ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
@@ -186,7 +186,7 @@ export const CallsPage: React.FC = () => {
                   value={relatedName}
                   onChange={(e) => setRelatedName(e.target.value)}
                   placeholder="e.g. Ali Raza (Alpha Solutions)"
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 />
               </div>
 
@@ -196,7 +196,7 @@ export const CallsPage: React.FC = () => {
                   <select
                     value={direction}
                     onChange={(e) => setDirection(e.target.value as any)}
-                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                   >
                     <option value="Incoming">Incoming</option>
                     <option value="Outgoing">Outgoing</option>
@@ -209,7 +209,7 @@ export const CallsPage: React.FC = () => {
                     type="number"
                     value={duration}
                     onChange={(e) => setDuration(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                    className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                   />
                 </div>
               </div>
@@ -222,7 +222,7 @@ export const CallsPage: React.FC = () => {
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   placeholder="Key discussion points, customer feedback, next steps..."
-                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-indigo-600"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-emerald-600"
                 ></textarea>
               </div>
 
@@ -236,7 +236,7 @@ export const CallsPage: React.FC = () => {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold"
+                  className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-[#1c5547] text-white font-semibold"
                 >
                   Save Call Log
                 </button>

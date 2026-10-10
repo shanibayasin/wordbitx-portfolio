@@ -147,7 +147,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
   );
 
   return (
-    <div className="min-h-screen bg-[#f4f6fa] flex flex-col font-sans text-slate-800 antialiased">
+    <div className="min-h-screen bg-[#f5f8f7] flex flex-col font-sans text-slate-800 antialiased">
       <div className="flex flex-1 flex-col lg:flex-row min-h-0">
         {/* Mobile Backdrop Overlay */}
         {sidebarOpen && (
@@ -159,7 +159,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
         )}
 
         {/* Mobile Header - Sleek unified top bar for small screens */}
-        <header className="lg:hidden bg-[#131226] text-white px-3.5 py-2.5 flex items-center justify-between border-b border-indigo-950/60 sticky top-0 z-30 shadow-md">
+        <header className="lg:hidden bg-[#101a18] text-white px-3.5 py-2.5 flex items-center justify-between border-b border-emerald-950/60 sticky top-0 z-30 shadow-md">
           <div className="flex items-center gap-2.5">
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -172,10 +172,10 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
               onClick={() => navigate('/app/dashboard')}
               className="flex items-center gap-1.5 font-bold text-base cursor-pointer"
             >
-              <div className="w-6 h-6 rounded-md bg-[#5046e5] flex items-center justify-center text-xs font-black text-white shadow-xs">
+              <div className="w-6 h-6 rounded-md bg-emerald-400 flex items-center justify-center text-xs font-black text-[#10231e] shadow-xs">
                 W
               </div>
-              <span>Wordbit<span className="text-indigo-400">X</span></span>
+              <span>Wordbit<span className="text-emerald-400">X</span></span>
             </div>
           </div>
 
@@ -204,7 +204,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
               title="Notifications"
             >
               <Bell className="w-4 h-4" />
-              <span className="absolute top-1 right-1 w-2 h-2 bg-[#5046e5] rounded-full" />
+              <span className="absolute top-1 right-1 w-2 h-2 bg-[#34d399] rounded-full" />
             </button>
 
             <div
@@ -218,13 +218,13 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
 
         {/* Sidebar - Deep Midnight Violet */}
         <aside
-          className={`fixed inset-y-0 left-0 z-40 w-64 bg-[#131226] border-r border-[#1e1c3b] flex flex-col justify-between transition-transform duration-300 ease-in-out lg:translate-x-0 ${
+          className={`fixed inset-y-0 left-0 z-40 w-64 bg-[#101a18] border-r border-[#263a33] flex flex-col justify-between transition-transform duration-300 ease-in-out lg:translate-x-0 ${
             sidebarOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'
           } lg:static lg:h-screen lg:shrink-0`}
         >
           <div className="flex flex-col flex-1 overflow-y-auto">
             {/* Logo & Workspace Selector */}
-            <div className="p-4 border-b border-[#1e1c3b]">
+            <div className="p-4 border-b border-[#263a33]">
               <div className="flex items-center justify-between mb-3">
                 <div
                   onClick={() => {
@@ -233,10 +233,10 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
                   }}
                   className="flex items-center gap-2.5 cursor-pointer font-bold text-lg tracking-tight text-white"
                 >
-                  <div className="w-7 h-7 rounded-lg bg-[#5046e5] flex items-center justify-center text-white font-black shadow-md shadow-indigo-600/30">
+                  <div className="w-7 h-7 rounded-lg bg-emerald-400 flex items-center justify-center text-[#10231e] font-black shadow-md shadow-emerald-600/30">
                     W
                   </div>
-                  <span>Wordbit<span className="text-indigo-400">X</span></span>
+                  <span>Wordbit<span className="text-emerald-400">X</span></span>
                 </div>
                 <button
                   onClick={() => setSidebarOpen(false)}
@@ -251,14 +251,14 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
               <div className="relative" ref={workspaceDropdownRef}>
                 <div
                   onClick={() => setWorkspaceDropdownOpen(!workspaceDropdownOpen)}
-                  className="px-3 py-2 rounded-lg bg-[#1a1835] border border-indigo-900/30 flex items-center justify-between text-xs text-white cursor-pointer hover:bg-[#201e40] transition select-none"
+                  className="px-3 py-2 rounded-lg bg-[#172823] border border-emerald-900/30 flex items-center justify-between text-xs text-white cursor-pointer hover:bg-[#1d332c] transition select-none"
                   title="Click to switch between all organizations"
                 >
                   <div className="flex items-center gap-2 min-w-0">
                     {organization?.logo ? (
                       <img src={organization.logo} alt={orgName} className="w-4 h-4 rounded object-cover shrink-0" />
                     ) : (
-                      <div className="w-4 h-4 rounded bg-[#5046e5] text-white flex items-center justify-center font-bold text-[9px] shrink-0">
+                      <div className="w-4 h-4 rounded bg-emerald-400 text-[#10231e] flex items-center justify-center font-bold text-[9px] shrink-0">
                         {orgName.charAt(0)}
                       </div>
                     )}
@@ -273,15 +273,15 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
 
                 {/* Workspace Dropdown Panel Showing ALL Organizations */}
                 {workspaceDropdownOpen && (
-                  <div className="absolute top-full left-0 w-64 mt-1.5 bg-[#181636] border border-[#2d295b] rounded-xl shadow-2xl z-50 overflow-hidden text-xs text-slate-200 animate-in fade-in zoom-in-95 duration-100">
-                    <div className="p-2.5 border-b border-[#2d295b] flex items-center justify-between bg-[#12112b]">
+                  <div className="absolute top-full left-0 w-64 mt-1.5 bg-[#172823] border border-[#29483d] rounded-xl shadow-2xl z-50 overflow-hidden text-xs text-slate-200 animate-in fade-in zoom-in-95 duration-100">
+                    <div className="p-2.5 border-b border-[#29483d] flex items-center justify-between bg-[#101a18]">
                       <span className="font-bold text-white text-xs">Switch Workspace</span>
-                      <span className="text-[10px] bg-[#5046e5]/40 text-indigo-300 px-2 py-0.5 rounded-full font-semibold border border-indigo-500/30">
+                      <span className="text-[10px] bg-[#34d399]/40 text-emerald-300 px-2 py-0.5 rounded-full font-semibold border border-emerald-500/30">
                         {displayList.length} {displayList.length === 1 ? 'workspace' : 'workspaces'}
                       </span>
                     </div>
 
-                    <div className="p-2 border-b border-[#2d295b] bg-[#14122d]">
+                    <div className="p-2 border-b border-[#29483d] bg-[#14231f]">
                       <div className="relative">
                         <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2 pointer-events-none" />
                         <input
@@ -289,12 +289,12 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
                           value={workspaceSearch}
                           onChange={(e) => setWorkspaceSearch(e.target.value)}
                           placeholder="Search workspaces..."
-                          className="w-full pl-8 pr-2.5 py-1.5 bg-[#0e0d1f] border border-[#2d295b] rounded-lg text-xs text-white placeholder-slate-400 focus:outline-none focus:border-[#5046e5]"
+                          className="w-full pl-8 pr-2.5 py-1.5 bg-[#0b1512] border border-[#29483d] rounded-lg text-xs text-white placeholder-slate-400 focus:outline-none focus:border-[#34d399]"
                         />
                       </div>
                     </div>
 
-                    <div className="max-h-64 overflow-y-auto divide-y divide-[#232047] p-1 space-y-0.5">
+                    <div className="max-h-64 overflow-y-auto divide-y divide-[#203a31] p-1 space-y-0.5">
                       {filteredWorkspaces.map((ws) => {
                         const isCurrent = organization?.id === ws.id || orgName === ws.name;
                         return (
@@ -307,14 +307,14 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
                             }}
                             className={`w-full flex items-center justify-between p-2 rounded-lg text-left transition ${
                               isCurrent
-                                ? 'bg-[#5046e5]/25 text-white border border-[#5046e5]/50'
+                                ? 'bg-[#34d399]/25 text-white border border-[#34d399]/50'
                                 : 'hover:bg-white/5 text-slate-300 hover:text-white border border-transparent'
                             }`}
                           >
                             <div className="flex items-center gap-2.5 min-w-0">
                               <div
                                 className="w-6 h-6 rounded-md flex items-center justify-center font-bold text-[10px] text-white shrink-0 shadow-xs"
-                                style={{ backgroundColor: ws.color || '#5046e5' }}
+                                style={{ backgroundColor: ws.color || '#34d399' }}
                               >
                                 {ws.name.slice(0, 2).toUpperCase()}
                               </div>
@@ -326,7 +326,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
                               </div>
                             </div>
                             {isCurrent && (
-                              <Check className="w-3.5 h-3.5 text-indigo-400 shrink-0 ml-1.5" />
+                              <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 ml-1.5" />
                             )}
                           </button>
                         );
@@ -336,14 +336,14 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
                       )}
                     </div>
 
-                    <div className="p-2 border-t border-[#2d295b] bg-[#12112b] space-y-1">
+                    <div className="p-2 border-t border-[#29483d] bg-[#101a18] space-y-1">
                       <button
                         onClick={() => {
                           setWorkspaceDropdownOpen(false);
                           setSidebarOpen(false);
                           navigate('/onboarding/organization');
                         }}
-                        className="w-full py-1.5 px-2.5 rounded-lg bg-[#5046e5] hover:bg-indigo-700 text-white font-semibold flex items-center justify-center gap-1.5 text-xs transition shadow-xs"
+                        className="w-full py-1.5 px-2.5 rounded-lg bg-[#123c32] hover:bg-[#1c5547] text-white font-semibold flex items-center justify-center gap-1.5 text-xs transition shadow-xs"
                       >
                         <Plus className="w-3.5 h-3.5" /> Create Organization
                       </button>
@@ -387,7 +387,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
                             }}
                             className={`w-full flex items-center gap-2.5 px-3 py-1.5 rounded-lg transition text-left text-xs ${
                               isActive
-                                ? 'bg-[#5046e5] text-white font-medium shadow-xs'
+                                ? 'bg-[#123c32] text-white font-medium shadow-xs'
                                 : 'text-slate-400 hover:text-white hover:bg-white/5'
                             }`}
                           >
@@ -404,26 +404,26 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
           </div>
 
           {/* Bottom Panel: Multi-Tenant Test + Profile */}
-          <div className="p-3 border-t border-[#1e1c3b] bg-[#0e0d1c] space-y-2">
+          <div className="p-3 border-t border-[#263a33] bg-[#0b1512] space-y-2">
             <button
               onClick={() => {
                 setTesterOpen(true);
                 setSidebarOpen(false);
               }}
-              className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-md bg-indigo-950/60 border border-indigo-800/40 text-indigo-300 hover:text-white hover:bg-indigo-900/60 text-[11px] transition"
+              className="w-full flex items-center justify-between px-2.5 py-1.5 rounded-md bg-emerald-950/60 border border-emerald-800/40 text-emerald-300 hover:text-white hover:bg-emerald-900/60 text-[11px] transition"
               title="Verify Multi-Tenant Isolation Against Org B"
             >
               <span className="flex items-center gap-1.5 font-medium">
-                <ShieldAlert className="w-3.5 h-3.5 text-indigo-400" /> Test Isolation
+                <ShieldAlert className="w-3.5 h-3.5 text-emerald-400" /> Test Isolation
               </span>
-              <span className="text-[9px] bg-indigo-800 text-indigo-200 px-1 rounded font-semibold">Live</span>
+              <span className="text-[9px] bg-emerald-800 text-emerald-200 px-1 rounded font-semibold">Live</span>
             </button>
 
             {/* User profile dropdown trigger */}
             <div className="relative">
               <div
                 onClick={() => setProfileDropdown(!profileDropdown)}
-                className="flex items-center justify-between p-2 rounded-lg bg-[#16142a] hover:bg-[#1e1b38] cursor-pointer border border-[#232042] transition"
+                className="flex items-center justify-between p-2 rounded-lg bg-[#14231f] hover:bg-[#1d332c] cursor-pointer border border-[#29483d] transition"
               >
                 <div className="flex items-center gap-2 min-w-0">
                   <Avatar src={user?.avatar} name={userName} size="sm" />
@@ -436,7 +436,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
               </div>
 
               {profileDropdown && (
-                <div className="absolute bottom-full left-0 w-full mb-1 bg-[#16142a] border border-[#28254b] rounded-lg shadow-xl p-1 text-xs text-slate-300 space-y-0.5 z-50">
+                <div className="absolute bottom-full left-0 w-full mb-1 bg-[#14231f] border border-[#29483d] rounded-lg shadow-xl p-1 text-xs text-slate-300 space-y-0.5 z-50">
                   <button
                     onClick={() => {
                       navigate('/app/settings/organization');
@@ -481,7 +481,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
             <div className="flex-1 max-w-lg flex items-center gap-3">
               <div
                 onClick={() => setSearchOpen(true)}
-                className="flex-1 flex items-center gap-2 px-3 py-1.5 bg-[#f8fafc] border border-slate-200 rounded-lg text-xs text-slate-400 cursor-pointer hover:border-slate-300 transition"
+                className="flex-1 flex items-center gap-2 px-3 py-1.5 bg-[#f5f8f7] border border-slate-200 rounded-lg text-xs text-slate-400 cursor-pointer hover:border-slate-300 transition"
               >
                 <Search className="w-3.5 h-3.5 text-slate-400" />
                 <span>Search anything... (Ctrl+K)</span>
@@ -494,7 +494,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
                 {organization?.logo ? (
                   <img src={organization.logo} alt={orgName} className="w-4 h-4 rounded object-cover shrink-0" />
                 ) : (
-                  <div className="w-4 h-4 rounded bg-[#5046e5] text-white flex items-center justify-center font-bold text-[9px] shrink-0">
+                  <div className="w-4 h-4 rounded bg-emerald-400 text-[#10231e] flex items-center justify-center font-bold text-[9px] shrink-0">
                     {orgName.charAt(0)}
                   </div>
                 )}
@@ -508,7 +508,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
               {onAddLeadClick && (
                 <button
                   onClick={onAddLeadClick}
-                  className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#5046e5] hover:bg-indigo-700 text-white rounded-lg text-xs font-semibold shadow-xs transition"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#123c32] hover:bg-[#1c5547] text-white rounded-lg text-xs font-semibold shadow-xs transition"
                 >
                   + Add Lead
                 </button>
@@ -521,7 +521,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
                 title="Notifications"
               >
                 <Bell className="w-4 h-4 text-slate-600" />
-                <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-[#5046e5] rounded-full" />
+                <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-[#34d399] rounded-full" />
               </button>
 
               {/* User Avatar & Name */}
@@ -540,20 +540,20 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
           </header>
 
           {/* Page Content Viewport */}
-          <main className="p-3.5 sm:p-5 md:p-6 lg:p-8 flex-1 bg-[#f4f6fa] max-w-7xl w-full mx-auto">
+          <main className="p-3.5 sm:p-5 md:p-6 lg:p-8 flex-1 bg-[#f5f8f7] max-w-7xl w-full mx-auto">
             {children}
           </main>
         </div>
       </div>
 
       {/* Full-width dark footer bar matching image.png */}
-      <footer className="w-full bg-[#131226] text-white px-6 py-2.5 flex flex-wrap items-center justify-between border-t border-[#1e1c3b] text-xs">
+      <footer className="w-full bg-[#101a18] text-white px-6 py-2.5 flex flex-wrap items-center justify-between border-t border-[#263a33] text-xs">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5 font-bold text-sm tracking-tight">
-            <div className="w-5 h-5 rounded bg-[#5046e5] flex items-center justify-center text-[10px] font-black text-white">
+            <div className="w-5 h-5 rounded bg-emerald-400 flex items-center justify-center text-[10px] font-black text-[#10231e]">
               W
             </div>
-            <span>Wordbit<span className="text-indigo-400">X</span></span>
+            <span>Wordbit<span className="text-emerald-400">X</span></span>
           </div>
           <span className="text-slate-500 hidden sm:inline">|</span>
           <span className="text-slate-400 text-[11px] hidden sm:inline">
