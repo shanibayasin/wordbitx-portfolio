@@ -289,34 +289,6 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
         </div>
       </div>
 
-      {/* Bottom Footer Banner */}
-      <footer className="w-full bg-[#101a18] text-white px-6 py-2.5 flex flex-wrap items-center justify-between border-t border-[#263a33] text-xs">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5 font-bold text-sm tracking-tight">
-            <div className="w-5 h-5 rounded bg-emerald-400 flex items-center justify-center text-[10px] font-black text-[#10231e]">
-              W
-            </div>
-            <span>Wordbit<span className="text-emerald-400">X</span></span>
-          </div>
-          <span className="text-slate-500 hidden sm:inline">|</span>
-          <span className="text-slate-400 text-[11px] hidden sm:inline">
-            Platform Operations & Multi-Tenant Management Center
-          </span>
-        </div>
-        <div className="flex items-center gap-3 text-[11px] text-slate-400 flex-wrap">
-          <button onClick={() => navigate('/super-admin')} className="hover:text-white transition">Overview</button>
-          <span>|</span>
-          <button onClick={() => navigate('/super-admin/organizations')} className="hover:text-white transition">Organizations</button>
-          <span>|</span>
-          <button onClick={() => navigate('/super-admin/users')} className="hover:text-white transition">Users</button>
-          <span>|</span>
-          <button onClick={() => navigate('/super-admin/demo-requests')} className="hover:text-white transition">Demo Requests</button>
-          <span>|</span>
-          <button onClick={() => navigate('/super-admin/subscriptions')} className="hover:text-white transition">Subscriptions</button>
-          <span>|</span>
-          <button onClick={() => navigate('/super-admin/revenue')} className="hover:text-white transition">Revenue</button>
-        </div>
-      </footer>
     </div>
   );
 };

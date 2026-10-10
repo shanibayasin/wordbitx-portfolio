@@ -546,39 +546,6 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
         </div>
       </div>
 
-      {/* Full-width dark footer bar matching image.png */}
-      <footer className="w-full bg-[#101a18] text-white px-6 py-2.5 flex flex-wrap items-center justify-between border-t border-[#263a33] text-xs">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5 font-bold text-sm tracking-tight">
-            <div className="w-5 h-5 rounded bg-emerald-400 flex items-center justify-center text-[10px] font-black text-[#10231e]">
-              W
-            </div>
-            <span>Wordbit<span className="text-emerald-400">X</span></span>
-          </div>
-          <span className="text-slate-500 hidden sm:inline">|</span>
-          <span className="text-slate-400 text-[11px] hidden sm:inline">
-            Unified CRM • Telephony Call Center • Intelligent Operations
-          </span>
-        </div>
-        <div className="flex items-center gap-3 text-[11px] text-slate-400 flex-wrap">
-          <button onClick={() => navigate('/app/dashboard')} className="hover:text-white transition">CRM</button>
-          <span>|</span>
-          <button onClick={() => navigate('/app/pipeline')} className="hover:text-white transition">Pipeline</button>
-          <span>|</span>
-          <button onClick={() => navigate('/app/customers')} className="hover:text-white transition">Customers</button>
-          <span>|</span>
-          <button onClick={() => navigate('/app/deals')} className="hover:text-white transition">Deals</button>
-          <span>|</span>
-          <button onClick={() => navigate('/app/tasks')} className="hover:text-white transition">Tasks</button>
-          <span>|</span>
-          <button onClick={() => navigate('/app/reports')} className="hover:text-white transition">Reports</button>
-          <span>|</span>
-          <button onClick={() => navigate('/app/team')} className="hover:text-white transition">Team</button>
-          <span>|</span>
-          <button onClick={() => navigate('/app/integrations')} className="hover:text-white transition">Integrations</button>
-        </div>
-      </footer>
-
       {/* Global Modals */}
       <GlobalSearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
       <NotificationsDrawer isOpen={notifsOpen} onClose={() => setNotifsOpen(false)} />
