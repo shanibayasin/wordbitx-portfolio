@@ -56,31 +56,15 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
   const [workspaceSearch, setWorkspaceSearch] = useState('');
   const workspaceDropdownRef = useRef<HTMLDivElement>(null);
 
-  const defaultWorkspaces = [
-    { id: '6ac2a411ceac76195538b01f', name: 'WordbitX Technologies (ABC Tech)', plan: 'PROFESSIONAL', industry: 'Software & Technology', color: '#5046e5', badge: 'Default Public Lead Org' },
-    { id: 'org_abc', name: 'ABC Technologies', plan: 'PROFESSIONAL', industry: 'Software & Technology', color: '#5046e5' },
-    { id: 'org_nova', name: 'Nova Tech', plan: 'STARTER', industry: 'Technology & AI', color: '#0ea5e9' },
-    { id: 'org_prime', name: 'Prime Estates', plan: 'PROFESSIONAL', industry: 'Real Estate & Brokerage', color: '#14b8a6' },
-    { id: 'org_bright', name: 'Bright Dental', plan: 'STARTER', industry: 'Healthcare & Dental', color: '#10b981' },
-    { id: 'org_techvision', name: 'Tech Vision', plan: 'PROFESSIONAL', industry: 'Cloud & IT Services', color: '#6366f1' },
-    { id: 'org_glow', name: 'Glow Clinic', plan: 'STARTER', industry: 'Aesthetic Dermatology', color: '#f43f5e' },
-    { id: 'org_solarpro', name: 'SolarPro', plan: 'PROFESSIONAL', industry: 'Renewable Energy', color: '#f59e0b' },
-    { id: 'org_urban', name: 'Urban Homes', plan: 'ENTERPRISE', industry: 'Architecture & Construction', color: '#8b5cf6' },
-    { id: 'org_apex', name: 'Apex Dynamics', plan: 'STARTER', industry: 'Manufacturing & Logistics', color: '#64748b' },
-  ];
-
-  // Fetch all workspaces for switcher
+  // Fetch only the workspaces the signed-in user can access.
   useEffect(() => {
     const loadWorkspaces = async () => {
       try {
         const res = await api.getWorkspaces();
-        if (res && res.length > 0) {
-          setWorkspaces(res);
-        } else {
-          setWorkspaces(defaultWorkspaces);
-        }
+        setWorkspaces(res || []);
       } catch (err) {
-        setWorkspaces(defaultWorkspaces);
+        setWorkspaces([]);
+        toast(err instanceof Error ? err.message : 'Workspaces could not be loaded.', 'error');
       }
     };
     loadWorkspaces();
@@ -154,9 +138,9 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
 
   const userName = user?.displayName || user?.name || user?.email?.split('@')[0] || 'CRM User';
   const userRole = (user?.role && roleMap[user.role]) || user?.role || 'Owner';
-  const orgName = organization?.name || 'ABC Technologies';
+  const orgName = organization?.name || 'Your workspace';
 
-  const displayList = workspaces.length > 0 ? workspaces : defaultWorkspaces;
+  const displayList = workspaces;
   const filteredWorkspaces = displayList.filter((ws) =>
     ws.name?.toLowerCase().includes(workspaceSearch.toLowerCase()) ||
     ws.industry?.toLowerCase().includes(workspaceSearch.toLowerCase())
@@ -293,7 +277,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
                     <div className="p-2.5 border-b border-[#2d295b] flex items-center justify-between bg-[#12112b]">
                       <span className="font-bold text-white text-xs">Switch Workspace</span>
                       <span className="text-[10px] bg-[#5046e5]/40 text-indigo-300 px-2 py-0.5 rounded-full font-semibold border border-indigo-500/30">
-                        {displayList.length} Orgs
+                        {displayList.length} {displayList.length === 1 ? 'workspace' : 'workspaces'}
                       </span>
                     </div>
 
@@ -337,7 +321,7 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
                               <div className="min-w-0">
                                 <div className="font-semibold truncate text-white text-xs">{ws.name}</div>
                                 <div className="text-[10px] text-slate-400 truncate">
-                                  {ws.plan || 'Pro'} • {ws.industry || 'Technology'}
+                                  {ws.plan || 'Plan not set'} • {ws.industry || 'Industry not set'}
                                 </div>
                               </div>
                             </div>
@@ -347,6 +331,9 @@ export const CrmLayout: React.FC<CrmLayoutProps> = ({ children, onAddLeadClick }
                           </button>
                         );
                       })}
+                      {filteredWorkspaces.length === 0 && (
+                        <p className="px-3 py-5 text-center text-xs text-slate-400">No accessible workspaces found.</p>
+                      )}
                     </div>
 
                     <div className="p-2 border-t border-[#2d295b] bg-[#12112b] space-y-1">

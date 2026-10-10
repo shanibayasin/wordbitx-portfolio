@@ -3,7 +3,7 @@ import { crmStore } from './dataStore';
 const TOKEN_KEY = 'wordbitx_token';
 
 export function getToken(): string | null {
-  return localStorage.getItem(TOKEN_KEY) || 'demo_token_shaniba';
+  return localStorage.getItem(TOKEN_KEY);
 }
 
 export function setToken(token: string | null) {
@@ -54,7 +54,8 @@ export const api = {
         method: 'POST',
         body: JSON.stringify(body),
       });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       const newUser = {
         id: `usr_${Date.now()}`,
         name: body.name,
@@ -76,7 +77,8 @@ export const api = {
         method: 'POST',
         body: JSON.stringify(body),
       });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       const email = body.email.toLowerCase().trim();
       let matchedUser = crmStore.getUsers().find((u) => u.email.toLowerCase() === email);
       if (!matchedUser) {
@@ -101,7 +103,8 @@ export const api = {
   me: async () => {
     try {
       return await request<{ user: any; organization?: any; memberships: any[]; isSuperAdmin: boolean }>('/api/auth/me');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       const user = crmStore.getUsers().find((u) => u.email === 'shaniba@wordbitx.com') || crmStore.getUsers()[1];
       const org = crmStore.getOrganization(user.organizationId || '6ac2a411ceac76195538b01f');
       return {
@@ -119,7 +122,8 @@ export const api = {
         method: 'POST',
         body: JSON.stringify(body),
       });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       const org = crmStore.createCompany({ name: body.name, industry: body.industry });
       return { token: 'mock_token', organization: org, user: crmStore.getUsers()[1] };
     }
@@ -132,7 +136,8 @@ export const api = {
         method: 'POST',
         body: JSON.stringify(body),
       });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return { success: true, message: 'Demo request registered successfully.', demoId: `demo_${Date.now()}` };
     }
   },
@@ -142,8 +147,9 @@ export const api = {
     try {
       const qs = params ? '?' + new URLSearchParams(params).toString() : '';
       return await request<any>(`/api/crm/dashboard${qs}`);
-    } catch {
-      return crmStore.getDashboardMetrics(params?.organizationId);
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
+      return { ...crmStore.getDashboardMetrics(params?.organizationId), isDemo: true };
     }
   },
 
@@ -151,7 +157,8 @@ export const api = {
     try {
       const qs = params ? '?' + new URLSearchParams(params).toString() : '';
       return await request<any[]>(`/api/crm/leads${qs}`);
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       let leads = crmStore.getLeads(params?.organizationId);
       if (params?.status && params.status !== 'all') {
         leads = leads.filter((l) => l.status.toLowerCase() === params.status?.toLowerCase());
@@ -167,7 +174,8 @@ export const api = {
   getLead: async (id: string) => {
     try {
       return await request<any>(`/api/crm/leads/${id}`);
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getLead(id);
     }
   },
@@ -175,7 +183,8 @@ export const api = {
   createLead: async (body: any) => {
     try {
       return await request<any>('/api/crm/leads', { method: 'POST', body: JSON.stringify(body) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.createLead(body);
     }
   },
@@ -183,7 +192,8 @@ export const api = {
   updateLead: async (id: string, body: any) => {
     try {
       return await request<any>(`/api/crm/leads/${id}`, { method: 'PUT', body: JSON.stringify(body) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.updateLead(id, body);
     }
   },
@@ -191,7 +201,8 @@ export const api = {
   deleteLead: async (id: string) => {
     try {
       return await request<any>(`/api/crm/leads/${id}`, { method: 'DELETE' });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       crmStore.deleteLead(id);
       return { success: true };
     }
@@ -200,7 +211,8 @@ export const api = {
   convertLead: async (id: string) => {
     try {
       return await request<any>(`/api/crm/leads/${id}/convert`, { method: 'POST' });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.convertLeadToDeal(id);
     }
   },
@@ -209,7 +221,8 @@ export const api = {
   getDeals: async () => {
     try {
       return await request<any[]>('/api/crm/deals');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getDeals();
     }
   },
@@ -217,7 +230,8 @@ export const api = {
   getDeal: async (id: string) => {
     try {
       return await request<any>(`/api/crm/deals/${id}`);
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getDeals().find((d) => d.id === id);
     }
   },
@@ -225,7 +239,8 @@ export const api = {
   createDeal: async (body: any) => {
     try {
       return await request<any>('/api/crm/deals', { method: 'POST', body: JSON.stringify(body) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.createDeal(body);
     }
   },
@@ -233,7 +248,8 @@ export const api = {
   updateDealStage: async (id: string, stage: string) => {
     try {
       return await request<any>(`/api/crm/deals/${id}/stage`, { method: 'PUT', body: JSON.stringify({ stage }) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.updateDeal(id, { stage: stage as any });
     }
   },
@@ -241,7 +257,8 @@ export const api = {
   updateDeal: async (id: string, body: any) => {
     try {
       return await request<any>(`/api/crm/deals/${id}`, { method: 'PUT', body: JSON.stringify(body) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.updateDeal(id, body);
     }
   },
@@ -249,7 +266,8 @@ export const api = {
   deleteDeal: async (id: string) => {
     try {
       return await request<any>(`/api/crm/deals/${id}`, { method: 'DELETE' });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       crmStore.deleteDeal(id);
       return { success: true };
     }
@@ -259,7 +277,8 @@ export const api = {
   getCustomers: async () => {
     try {
       return await request<any[]>('/api/crm/customers');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getCustomers();
     }
   },
@@ -267,7 +286,8 @@ export const api = {
   createCustomer: async (body: any) => {
     try {
       return await request<any>('/api/crm/customers', { method: 'POST', body: JSON.stringify(body) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.createCustomer(body);
     }
   },
@@ -275,7 +295,8 @@ export const api = {
   getCompanies: async () => {
     try {
       return await request<any[]>('/api/crm/companies');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getCompanies();
     }
   },
@@ -283,7 +304,8 @@ export const api = {
   createCompany: async (body: any) => {
     try {
       return await request<any>('/api/crm/companies', { method: 'POST', body: JSON.stringify(body) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.createCompany(body);
     }
   },
@@ -292,7 +314,8 @@ export const api = {
   getTasks: async () => {
     try {
       return await request<any[]>('/api/crm/tasks');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getTasks();
     }
   },
@@ -300,7 +323,8 @@ export const api = {
   createTask: async (body: any) => {
     try {
       return await request<any>('/api/crm/tasks', { method: 'POST', body: JSON.stringify(body) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.createTask(body);
     }
   },
@@ -308,7 +332,8 @@ export const api = {
   updateTask: async (id: string, _body: any) => {
     try {
       return await request<any>(`/api/crm/tasks/${id}`, { method: 'PUT', body: JSON.stringify(_body) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.toggleTaskStatus(id);
     }
   },
@@ -316,7 +341,8 @@ export const api = {
   deleteTask: async (id: string) => {
     try {
       return await request<any>(`/api/crm/tasks/${id}`, { method: 'DELETE' });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       crmStore.deleteTask(id);
       return { success: true };
     }
@@ -326,7 +352,8 @@ export const api = {
   getCalls: async () => {
     try {
       return await request<any[]>('/api/crm/calls');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getCalls();
     }
   },
@@ -334,7 +361,8 @@ export const api = {
   createCall: async (body: any) => {
     try {
       return await request<any>('/api/crm/calls', { method: 'POST', body: JSON.stringify(body) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.logCall(body);
     }
   },
@@ -343,7 +371,8 @@ export const api = {
   getActivities: async () => {
     try {
       return await request<any[]>('/api/crm/activities');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getActivities();
     }
   },
@@ -352,7 +381,8 @@ export const api = {
   getReports: async () => {
     try {
       return await request<any>('/api/crm/reports');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       const deals = crmStore.getDeals();
       const leads = crmStore.getLeads();
       const wonDeals = deals.filter((d) => d.stage === 'Won');
@@ -383,7 +413,8 @@ export const api = {
   getTeam: async () => {
     try {
       return await request<any[]>('/api/crm/team');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getUsers();
     }
   },
@@ -391,7 +422,8 @@ export const api = {
   inviteTeamMember: async (body: any) => {
     try {
       return await request<any>('/api/crm/team/invite', { method: 'POST', body: JSON.stringify(body) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.inviteTeamMember(body);
     }
   },
@@ -400,7 +432,8 @@ export const api = {
   getWorkflows: async () => {
     try {
       return await request<any[]>('/api/crm/workflows');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getWorkflows();
     }
   },
@@ -408,7 +441,8 @@ export const api = {
   toggleWorkflow: async (id: string, _enabled: boolean) => {
     try {
       return await request<any>(`/api/crm/workflows/${id}/toggle`, { method: 'PATCH', body: JSON.stringify({ enabled: _enabled }) });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.toggleWorkflow(id);
     }
   },
@@ -417,7 +451,8 @@ export const api = {
   getIntegrations: async () => {
     try {
       return await request<any[]>('/api/crm/integrations');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getIntegrations();
     }
   },
@@ -425,7 +460,8 @@ export const api = {
   toggleIntegration: async (id: string) => {
     try {
       return await request<any>(`/api/crm/integrations/${id}/toggle`, { method: 'POST' });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.toggleIntegration(id);
     }
   },
@@ -434,7 +470,8 @@ export const api = {
   getWorkspaces: async () => {
     try {
       return await request<any[]>('/api/crm/workspaces');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getOrganizations();
     }
   },
@@ -445,7 +482,8 @@ export const api = {
         method: 'POST',
         body: JSON.stringify({ organizationId }),
       });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       const org = crmStore.getOrganization(organizationId);
       const user = crmStore.getUsers()[1];
       return { token: 'mock_token', organization: org, user };
@@ -456,7 +494,8 @@ export const api = {
   getSuperAdminDashboard: async () => {
     try {
       return await request<any>('/api/super-admin/dashboard');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       const orgs = crmStore.getOrganizations();
       return {
         totalOrganizations: orgs.length,
@@ -471,14 +510,16 @@ export const api = {
   getSuperAdminOrganizations: async () => {
     try {
       return await request<any[]>('/api/super-admin/organizations');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getOrganizations();
     }
   },
   getSuperAdminUsers: async () => {
     try {
       return await request<any[]>('/api/super-admin/users');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return crmStore.getUsers();
     }
   },
@@ -487,7 +528,8 @@ export const api = {
   search: async (q: string) => {
     try {
       return await request<any>(`/api/crm/search?q=${encodeURIComponent(q)}`);
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       const s = q.toLowerCase();
       const leads = crmStore.getLeads().filter((l) => l.name.toLowerCase().includes(s) || l.company.toLowerCase().includes(s));
       const deals = crmStore.getDeals().filter((d) => d.name.toLowerCase().includes(s) || d.company.toLowerCase().includes(s));
@@ -502,7 +544,8 @@ export const api = {
   getNotifications: async () => {
     try {
       return await request<any[]>('/api/crm/notifications');
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return [
         {
           id: 'notif_1',
@@ -535,7 +578,8 @@ export const api = {
   markNotificationRead: async (id: string) => {
     try {
       return await request<any>(`/api/crm/notifications/${id}/read`, { method: 'PATCH' });
-    } catch {
+    } catch (err) {
+      if (!import.meta.env.DEV) throw err;
       return { success: true };
     }
   },

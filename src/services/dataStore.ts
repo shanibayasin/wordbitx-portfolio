@@ -1216,12 +1216,14 @@ class DataStore {
       avgDealSize,
       winRate,
       pendingTasks: tasks.filter((t) => t.status === 'Pending').length,
+      overdueTasks: tasks.filter((t) => t.status === 'Overdue').length,
       completedCalls: calls.filter((c) => c.status === 'Completed').length,
       stages,
       recentLeads: leads.slice(0, 5),
-      recentDeals: deals.slice(0, 5),
+      recentDeals: deals.filter((deal) => deal.status === 'ACTIVE').slice(0, 5),
       recentCalls: calls.slice(0, 4),
       recentTasks: tasks.slice(0, 5),
+      recentActivities: this.getActivities(orgId).slice(0, 8),
     };
   }
 

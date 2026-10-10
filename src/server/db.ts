@@ -1718,7 +1718,7 @@ class Database {
       Won: { count: 0, value: 0 },
       Lost: { count: 0, value: 0 },
     };
-    deals.forEach((d) => {
+    deals.filter((d) => d.status === 'ACTIVE').forEach((d) => {
       const stage = d.stage || 'New';
       if (!pipelineStages[stage]) {
         pipelineStages[stage] = { count: 0, value: 0 };
@@ -1826,7 +1826,7 @@ class Database {
       monthlyRevenue,
       teamPerformance,
       recentLeads: leads.slice(0, 8),
-      recentDeals: deals.slice(0, 8),
+      recentDeals: deals.filter((deal) => deal.status === 'ACTIVE').slice(0, 8),
       upcomingTasks: actionItems,
       recentCalls: calls.slice(0, 5),
       recentActivities: activities.slice(0, 8),
@@ -1840,6 +1840,11 @@ class Database {
       totals: {
         allLeadsCount: rawLeads.length,
         allDealsCount: rawDeals.length,
+        activeDealsCount: rawDeals.filter((deal) => deal.status === 'ACTIVE').length,
+        activePipelineValue: rawDeals
+          .filter((deal) => deal.status === 'ACTIVE')
+          .reduce((sum, deal) => sum + (Number(deal.value) || 0), 0),
+        allCustomersCount: this.getCustomers(orgId).length,
         allTasksCount: rawTasks.length,
       },
     };

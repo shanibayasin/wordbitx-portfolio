@@ -23,10 +23,11 @@ async function startServer() {
     const allowed = (process.env.PUBLIC_LEAD_ALLOWED_ORIGINS || 'http://localhost:3000,http://127.0.0.1:3000')
       .split(',')
       .map((s) => s.trim());
-    if (origin && (allowed.includes(origin) || allowed.includes('*'))) {
-      res.setHeader('Access-Control-Allow-Origin', origin);
-    } else {
+    res.setHeader('Vary', 'Origin');
+    if (origin && allowed.includes('*')) {
       res.setHeader('Access-Control-Allow-Origin', '*');
+    } else if (origin && allowed.includes(origin)) {
+      res.setHeader('Access-Control-Allow-Origin', origin);
     }
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-api-key');
@@ -38,7 +39,7 @@ async function startServer() {
   });
 
   // JSON request body parser
-  app.use(express.json());
+  app.use(express.json({ limit: '1mb' }));
 
   // Mount API router
   app.use('/api', apiRouter);
@@ -47,8 +48,6 @@ async function startServer() {
   app.get('/api/health', (_req, res) => {
     res.json({
       status: 'ok',
-      organizationId: process.env.PUBLIC_LEAD_ORGANIZATION_ID || '6ac2a411ceac76195538b01f',
-      superAdminEmail: process.env.PLATFORM_SUPER_ADMIN_EMAIL || 'admin@wordbitx.com',
       time: new Date().toISOString(),
     });
   });

@@ -125,8 +125,8 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f5f8f6] text-slate-900 dark:bg-[#071714] dark:text-slate-100 transition-colors selection:bg-indigo-200 selection:text-indigo-950">
-      {!isAuthPage && <AnnouncementBar />}
+    <div className="min-h-screen flex flex-col bg-wbx-canvas text-slate-900 dark:bg-wbx-dark-surface dark:text-slate-100 transition-colors selection:bg-indigo-200 selection:text-indigo-950">
+      {!isAuthPage && activePath !== '/' && <AnnouncementBar />}
       <Navbar />
       <main className="flex-1 w-full">
         <Suspense fallback={<RouteLoading />}>{renderPublicPage()}</Suspense>

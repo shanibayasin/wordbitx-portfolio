@@ -3,7 +3,14 @@ import type { Request, Response, NextFunction } from 'express';
 import { db } from './db.js';
 import type { User, Organization, UserRole } from '../types/crm.js';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'wordbitx_super_secure_secret_production_key_2026';
+const configuredJwtSecret = process.env.JWT_SECRET;
+if (process.env.NODE_ENV === 'production' && !configuredJwtSecret) {
+  throw new Error('JWT_SECRET must be configured in production.');
+}
+if (configuredJwtSecret && Buffer.byteLength(configuredJwtSecret, 'utf8') < 32) {
+  throw new Error('JWT_SECRET must be at least 32 bytes.');
+}
+const JWT_SECRET = configuredJwtSecret || crypto.randomBytes(32).toString('hex');
 
 export interface AuthenticatedUser extends User {
   tokenOrgId?: string;

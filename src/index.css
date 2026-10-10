@@ -4,11 +4,13 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
-  --color-wbx-dark: #0b1f1b;
-  --color-wbx-dark-hover: #12352e;
-  --color-wbx-dark-card: #0e2722;
-  --color-wbx-dark-surface: #071714;
-  --color-wbx-canvas: #f5f8f6;
+  --color-wbx-dark: #17172b;
+  --color-wbx-dark-hover: #252542;
+  --color-wbx-dark-card: #20203a;
+  --color-wbx-dark-surface: #11111f;
+  --color-wbx-canvas: #f7f8fc;
+  --color-wbx-indigo: #5146d8;
+  --color-wbx-violet: #7655d8;
   --color-wbx-emerald: #10b981;
   --color-wbx-emerald-light: #34d399;
 }
@@ -16,14 +18,19 @@
 @layer base {
   html {
     font-family: var(--font-sans);
+    scroll-behavior: smooth;
   }
   h1, h2, h3, .font-display {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
+
+  :focus-visible {
+    outline: 2px solid var(--color-wbx-indigo);
+    outline-offset: 2px;
+  }
 }
 
-/* Custom subtle scrollbar with emerald tint */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -32,9 +39,39 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(16, 185, 129, 0.2);
+  background: rgba(81, 70, 216, 0.2);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(16, 185, 129, 0.4);
+  background: rgba(81, 70, 216, 0.4);
+}
+
+@keyframes capability-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.capability-marquee-track {
+  animation: capability-marquee 36s linear infinite;
+}
+
+.group:hover .capability-marquee-track,
+.group:focus-within .capability-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .capability-marquee-track {
+    animation: none !important;
+  }
 }

@@ -1,115 +1,110 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Sparkles, TrendingUp, CheckCircle, Bell, UserPlus, PhoneCall, Zap, BarChart2 } from 'lucide-react';
+import { ArrowRight, Check, Headphones, UsersRound } from 'lucide-react';
+import { motion, useReducedMotion } from 'motion/react';
 import { Button } from '../ui/Button';
 import { useNavigation } from '../../context/NavigationContext';
 import { HeroDashboardPreview } from './HeroDashboardPreview';
 
 export const HeroSection: React.FC = () => {
-  const { navigate, openExploreDemo } = useNavigation();
+  const { navigate } = useNavigation();
+  const shouldReduceMotion = useReducedMotion();
+  const enter = (delay: number) => ({
+    duration: shouldReduceMotion ? 0 : 0.48,
+    delay: shouldReduceMotion ? 0 : delay,
+    ease: [0.22, 1, 0.36, 1] as const,
+  });
 
   return (
-    <section className="relative pt-12 pb-20 md:pt-16 md:pb-28 overflow-hidden bg-[#f5f8f6] dark:bg-[#071714]">
-      {/* Subtle emerald ambient aura */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[380px] bg-emerald-500/10 dark:bg-emerald-500/15 blur-[120px] rounded-full"></div>
-      </div>
+    <section className="relative isolate overflow-hidden bg-[#f5f8f7] py-8 dark:bg-[#101a18] sm:py-11 lg:min-h-[calc(100svh-56px)] lg:py-12">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_46%_34%,rgba(219,239,230,0.55),transparent_66%)] dark:bg-[radial-gradient(ellipse_at_46%_34%,rgba(26,74,58,0.18),transparent_66%)]" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Eyebrow & Headline matching wordbitxx template */}
-        <div className="text-center max-w-4xl mx-auto space-y-5">
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200/90 dark:border-emerald-800/80 bg-white dark:bg-[#0e2722] px-3.5 py-1.5 text-xs font-bold text-emerald-800 dark:text-emerald-300 shadow-xs">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-            <span>One secure workspace for growing teams</span>
-          </div>
+      <div className="mx-auto grid w-full max-w-[1400px] items-center gap-8 px-4 sm:px-6 md:gap-10 lg:min-h-[calc(100svh-152px)] lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:gap-8 lg:px-8 xl:gap-12">
+        <div className="mx-auto w-full max-w-[540px] text-center lg:mx-0 lg:text-left">
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={enter(0)}
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#cfe4d9] bg-[#eaf4ef] px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.1em] text-[#176d5b] dark:border-[#285344] dark:bg-[#12352e] dark:text-emerald-300 sm:mb-5 sm:text-[10px]"
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-[#319679]" />
+            CRM software for growing teams
+          </motion.div>
 
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-[62px] font-bold tracking-tight text-slate-950 dark:text-white leading-[1.06] text-balance">
-            One CRM for Sales, Clients, Teams &amp; Call Center Operations.
-          </h1>
+          <motion.h1
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={enter(0.06)}
+            className="text-balance font-display text-[clamp(2.35rem,4.5vw,3.65rem)] font-bold leading-[0.99] tracking-[-0.045em] text-[#172a3e] dark:text-white"
+          >
+            Every customer
+            <br className="hidden lg:block" /> conversation,
+            <br />
+            connected.
+          </motion.h1>
 
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed text-balance">
-            Manage leads, customers, deals, calls, support, tasks and reporting from one focused operating system built to give your team a complete picture of every relationship.
-          </p>
+          <motion.p
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={enter(0.12)}
+            className="mx-auto mt-4 max-w-[470px] text-pretty text-[13px] leading-[1.7] text-slate-600 dark:text-slate-300 sm:text-sm lg:mx-0"
+          >
+            WordbitX CRM brings your leads, client management, call-center operations, and team workflows together in one connected workspace.
+          </motion.p>
 
-          {/* Primary Action Row */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={enter(0.18)}
+            className="mt-5 flex flex-col justify-center gap-2.5 sm:flex-row lg:justify-start"
+          >
             <Button
               variant="primary"
-              size="lg"
-              onClick={() => navigate('/signup')}
-              className="w-full sm:w-auto bg-[#0b1f1b] hover:bg-[#12352e] text-white dark:bg-emerald-400 dark:text-[#0b1f1b] dark:hover:bg-emerald-300 shadow-lg shadow-emerald-950/15"
-              iconRight={<ArrowRight className="w-4 h-4" />}
+              size="md"
+              onClick={() => navigate('/features')}
+              className="w-full border-[#123c32] bg-[#123c32] text-white shadow-sm hover:border-[#1c5547] hover:bg-[#1c5547] dark:border-emerald-400 dark:bg-emerald-400 dark:text-[#10231e] sm:w-auto"
+              iconRight={<ArrowRight className="h-4 w-4" />}
             >
-              Start Free
+              Explore Platform
             </Button>
             <Button
               variant="outline"
-              size="lg"
+              size="md"
               onClick={() => navigate('/demo')}
-              className="w-full sm:w-auto border-slate-300 bg-white dark:bg-[#0e2722] text-slate-700 dark:text-slate-200 hover:border-emerald-400 hover:text-emerald-800 dark:hover:border-emerald-500"
+              className="w-full border-slate-300 bg-white text-slate-700 hover:border-[#9ac8b9] hover:text-[#176d5b] dark:border-[#3c514a] dark:bg-[#18231f] dark:text-slate-200 sm:w-auto"
             >
               Book a Demo
             </Button>
-          </div>
+          </motion.div>
 
-          {/* Trust reassurance text */}
-          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs font-semibold text-slate-500 dark:text-slate-400 pt-1">
-            <span>No credit card required</span>
-            <span aria-hidden="true" className="text-emerald-600">•</span>
-            <span>Set up in minutes</span>
-            <span aria-hidden="true" className="text-emerald-600">•</span>
-            <span>Built for growing teams</span>
-          </div>
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={enter(0.25)}
+            className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[9px] font-medium text-slate-500 dark:text-slate-400 sm:gap-x-5 sm:text-[10px] lg:justify-start"
+          >
+            <span className="inline-flex items-center gap-1.5">
+              <Check aria-hidden="true" className="h-3 w-3 text-[#23836b]" />
+              Sales pipeline
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <UsersRound aria-hidden="true" className="h-3 w-3 text-[#23836b]" />
+              Team collaboration
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Headphones aria-hidden="true" className="h-3 w-3 text-[#23836b]" />
+              Customer support
+            </span>
+          </motion.div>
         </div>
 
-        {/* Hero Interactive Dashboard Container with subtle floating indicator cards */}
-        <div className="relative mt-12 lg:mt-16">
-          {/* Subtle floating card 1: New Qualified Lead (Top Left) */}
-          <div className="hidden lg:flex absolute -top-5 -left-4 z-20 items-center gap-3 px-3.5 py-2.5 bg-white/95 dark:bg-[#0e2722]/95 backdrop-blur-md rounded-xl border border-emerald-200 dark:border-emerald-800/80 shadow-lg text-xs animate-in fade-in slide-in-from-bottom-2 duration-500">
-            <div className="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
-              <UserPlus className="w-4 h-4" />
-            </div>
-            <div>
-              <div className="font-bold text-slate-900 dark:text-white">New qualified lead</div>
-              <div className="text-[11px] text-slate-500 dark:text-slate-400">Ahmed Khan • Score 92/100</div>
-            </div>
-          </div>
-
-          {/* Subtle floating card 2: Deal Won (Top Right) */}
-          <div className="hidden lg:flex absolute -top-5 -right-4 z-20 items-center gap-3 px-3.5 py-2.5 bg-white/95 dark:bg-[#0e2722]/95 backdrop-blur-md rounded-xl border border-emerald-200 dark:border-emerald-800/80 shadow-lg text-xs animate-in fade-in slide-in-from-bottom-2 duration-700">
-            <div className="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
-              <TrendingUp className="w-4 h-4" />
-            </div>
-            <div>
-              <div className="font-bold text-slate-900 dark:text-white">+$8,500 Deal won</div>
-              <div className="text-[11px] text-slate-500 dark:text-slate-400">ABC Technologies • Signed</div>
-            </div>
-          </div>
-
-          {/* Subtle floating card 3: Follow-up due (Bottom Left) */}
-          <div className="hidden lg:flex absolute -bottom-4 -left-4 z-20 items-center gap-3 px-3.5 py-2.5 bg-white/95 dark:bg-[#0e2722]/95 backdrop-blur-md rounded-xl border border-emerald-200 dark:border-emerald-800/80 shadow-lg text-xs">
-            <div className="w-7 h-7 rounded-lg bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400 flex items-center justify-center shrink-0">
-              <Bell className="w-4 h-4" />
-            </div>
-            <div>
-              <div className="font-bold text-slate-900 dark:text-white">Follow-up due in 20 min</div>
-              <div className="text-[11px] text-slate-500 dark:text-slate-400">Nova Labs proposal call</div>
-            </div>
-          </div>
-
-          {/* Subtle floating card 4: AI High Intent (Bottom Right) */}
-          <div className="hidden lg:flex absolute -bottom-4 -right-4 z-20 items-center gap-3 px-3.5 py-2.5 bg-white/95 dark:bg-[#0e2722]/95 backdrop-blur-md rounded-xl border border-emerald-200 dark:border-emerald-800/80 shadow-lg text-xs">
-            <div className="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
-              <Sparkles className="w-4 h-4" />
-            </div>
-            <div>
-              <div className="font-bold text-slate-900 dark:text-white">AI high-intent detected</div>
-              <div className="text-[11px] text-slate-500 dark:text-slate-400">92% purchase probability</div>
-            </div>
-          </div>
-
-          {/* Main Interactive Product Preview */}
+        <motion.div
+          initial={shouldReduceMotion ? false : { opacity: 0, x: 16, scale: 0.99 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          transition={enter(0.16)}
+          className="min-w-0 lg:-mr-2 xl:-mr-4"
+        >
           <HeroDashboardPreview />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

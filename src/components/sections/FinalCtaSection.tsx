@@ -1,70 +1,40 @@
 import React from 'react';
-import { ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
-import { Button } from '../ui/Button';
+import { ArrowRight } from 'lucide-react';
 import { useNavigation } from '../../context/NavigationContext';
 
 export const FinalCtaSection: React.FC = () => {
-  const { navigate, openExploreDemo } = useNavigation();
+  const { navigate } = useNavigation();
 
   return (
-    <section className="px-4 py-12 sm:px-5 sm:py-16 lg:px-8 bg-transparent">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-2xl bg-[#0b1f1b] px-5 py-8 text-white shadow-xl sm:px-10 sm:py-14 relative">
-        {/* Subtle emerald aura */}
-        <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div className="relative max-w-3xl space-y-6">
-          <span className="inline-flex items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-400/10 px-3 py-1 text-[11px] font-bold text-emerald-300">
-            <Sparkles className="h-3.5 w-3.5 text-emerald-400" />
-            Built for real operations
+    <section className="px-4 py-7 sm:px-6 sm:py-10 lg:px-8">
+      <div className="relative isolate mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 overflow-hidden rounded-xl border border-emerald-900/40 bg-[#06100e] px-5 py-6 text-white shadow-xl sm:rounded-2xl sm:px-8 sm:py-8 lg:flex-row lg:items-center lg:gap-10 lg:px-10">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_80%_50%,rgba(16,185,129,0.16),transparent_42%),linear-gradient(105deg,#071714_0%,#0b1f1b_55%,#08120f_100%)]"
+      />
+        <div className="relative max-w-2xl">
+          <span className="mb-2 inline-flex items-center gap-2 text-[8px] font-bold uppercase tracking-[0.18em] text-emerald-300 sm:text-[9px]">
+            <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            Get started today
           </span>
-
-          <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.12]">
+          <h2 className="text-balance font-display text-xl font-bold leading-[1.12] tracking-tight text-white sm:text-2xl lg:text-[1.75rem]">
             Bring your entire customer operation into focus.
           </h2>
-
-          <p className="text-sm sm:text-base text-emerald-100/80 max-w-2xl leading-relaxed">
-            Start free, configure your team pipelines, connect your communications, and run leads, deals and service with complete clarity.
+          <p className="mt-2 max-w-xl text-[10px] leading-relaxed text-emerald-100/75 sm:text-xs">
+            Streamline your workflow, boost team productivity, and deliver exceptional customer
+            experiences with WordbitX CRM.
           </p>
+        </div>
 
-          {/* Action Buttons matching template */}
-          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            <Button
-              variant="primary"
-              size="lg"
-              onClick={() => navigate('/signup')}
-              className="bg-emerald-400 text-[#0b1f1b] hover:bg-emerald-300 border-emerald-400 font-bold shadow-lg shadow-emerald-950/30"
-              iconRight={<ArrowRight className="w-4 h-4 text-[#0b1f1b]" />}
-            >
-              Get started free
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => navigate('/demo')}
-              className="border-emerald-800 bg-[#12352e] text-white hover:bg-[#183932] hover:border-emerald-600 shadow-none"
-            >
-              Request a demo
-            </Button>
-            <Button
-              variant="ghost"
-              size="lg"
-              onClick={openExploreDemo}
-              className="text-emerald-300 hover:text-white hover:bg-emerald-950/40"
-            >
-              Explore live sandbox
-            </Button>
-          </div>
-
-          <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-emerald-200/70">
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              14-day full platform access
-            </span>
-            <span className="text-emerald-700">•</span>
-            <span>No credit card required</span>
-            <span className="text-emerald-700">•</span>
-            <span>Fast migration support</span>
-          </div>
+        <div className="relative w-full shrink-0 sm:w-auto">
+          <button
+            type="button"
+            onClick={() => navigate('/features')}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-emerald-500 px-4 py-2.5 text-[10px] font-bold text-[#071714] shadow-lg shadow-emerald-950/30 transition hover:bg-emerald-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300 sm:w-auto sm:min-w-36 sm:px-5 sm:text-xs"
+          >
+            Explore the platform
+            <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
+          </button>
         </div>
       </div>
     </section>

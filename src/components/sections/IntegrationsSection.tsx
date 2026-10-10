@@ -20,7 +20,7 @@ export const IntegrationsSection: React.FC = () => {
             Connect WordbitX to the tools your team already uses.
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-balance">
-            Whether you run on Google Workspace, Microsoft Exchange, Twilio WebRTC, or custom on-premises SIP telecom switches, WordbitX connects smoothly.
+            Catalog entries describe potential integration paths, not verified live connections. Provider credentials and setup are required before relying on synchronization, telephony, or billing.
           </p>
         </div>
 
@@ -38,16 +38,18 @@ export const IntegrationsSection: React.FC = () => {
                   </span>
                   <span
                     className={`text-[10px] font-semibold px-2 py-0.5 rounded ${
-                      item.status === 'Available'
-                        ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
-                        : item.status === 'Connect'
-                        ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
+                      item.status === 'Available' || item.status === 'Connect'
+                        ? 'bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800'
                         : item.status === 'Enterprise'
                         ? 'bg-slate-100 dark:bg-[#12352e] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-[#183932]'
                         : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
                     }`}
                   >
-                    {item.status}
+                    {item.status === 'Available' || item.status === 'Connect'
+                      ? 'Setup required'
+                      : item.status === 'Enterprise'
+                      ? 'Enterprise setup'
+                      : item.status}
                   </span>
                 </div>
                 <h3 className="font-bold text-sm text-slate-950 dark:text-white">
@@ -72,7 +74,7 @@ export const IntegrationsSection: React.FC = () => {
             onClick={() => navigate('/integrations')}
             iconRight={<ArrowRight className="w-4 h-4" />}
           >
-            Explore Complete Integrations Directory (12+)
+            Explore integration options
           </Button>
         </div>
       </div>

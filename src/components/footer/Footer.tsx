@@ -14,14 +14,14 @@ export const Footer: React.FC = () => {
           {/* Brand info */}
           <div className="col-span-2 space-y-4">
             <div className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-xl text-base font-black bg-emerald-400 text-[#0b1f1b] shadow-sm">
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-emerald-500 text-base font-black text-[#071714] shadow-sm">
                 W
               </span>
-              <span>
+              <span className="flex flex-col leading-none">
                 <span className="block text-base font-bold tracking-tight text-white leading-tight">
                   Wordbit<span className="text-emerald-400">X</span>
                 </span>
-                <span className="block text-[9px] font-bold uppercase tracking-[0.18em] text-emerald-400">
+                <span className="mt-1 block text-[9px] font-bold uppercase tracking-[0.18em] text-emerald-400">
                   CRM
                 </span>
               </span>

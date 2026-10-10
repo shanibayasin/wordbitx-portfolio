@@ -1,3 +1,4 @@
+import crypto from 'crypto';
 import { Router } from 'express';
 import { db, hashPassword, verifyPassword, DEFAULT_ROLE_PERMISSIONS } from './db.js';
 import {
@@ -200,9 +201,23 @@ apiRouter.post('/auth/switch-organization', authenticate, (req: AuthenticatedReq
     return res.status(404).json({ error: 'Organization workspace not found.' });
   }
   const user = req.user!;
+  const hasActiveMembership = db.getMembershipsForUser(user.id).some(
+    (membership) => membership.organizationId === org.id && membership.status === 'ACTIVE'
+  );
+  if (
+    user.role !== 'SUPER_ADMIN' &&
+    user.organizationId !== org.id &&
+    org.ownerId !== user.id &&
+    !hasActiveMembership
+  ) {
+    return res.status(403).json({ error: 'You are not a member of this workspace.' });
+  }
+  if (org.status === 'SUSPENDED') {
+    return res.status(403).json({ error: 'This workspace has been suspended.' });
+  }
   const newToken = createToken({
     userId: user.id,
-    role: user.role === 'SUPER_ADMIN' ? 'SUPER_ADMIN' : 'ORGANIZATION_OWNER',
+    role: user.role,
     organizationId: org.id,
   });
   db.updateUser(user.id, { organizationId: org.id });
@@ -214,8 +229,20 @@ apiRouter.post('/auth/switch-organization', authenticate, (req: AuthenticatedReq
 });
 
 // Get all workspaces available in the platform
-apiRouter.get('/crm/workspaces', authenticate, (_req: AuthenticatedRequest, res) => {
-  const orgs = db.getAllOrganizations();
+apiRouter.get('/crm/workspaces', authenticate, (req: AuthenticatedRequest, res) => {
+  const user = req.user!;
+  const allOrganizations = db.getAllOrganizations();
+  if (user.role === 'SUPER_ADMIN') {
+    return res.json(allOrganizations);
+  }
+  const activeMembershipIds = db
+    .getMembershipsForUser(user.id)
+    .filter((membership) => membership.status === 'ACTIVE')
+    .map((membership) => membership.organizationId);
+  const accessibleIds = new Set([user.organizationId, ...activeMembershipIds]);
+  const orgs = allOrganizations.filter(
+    (organization) => accessibleIds.has(organization.id) || organization.ownerId === user.id
+  );
   res.json(orgs);
 });
 
@@ -349,22 +376,23 @@ apiRouter.post('/public/leads', (req, res) => {
 
 apiRouter.post('/admin/setup', (req, res) => {
   const { setupToken } = req.body;
-  const initialToken = process.env.INITIAL_ADMIN_SETUP_TOKEN || 'dg0oF5FsL0zxqSxsSECvlE22w5tN3Xj5DuqmjquMMrQ';
-  const superAdminToken = process.env.PLATFORM_SUPER_ADMIN_SETUP_TOKEN || '0cd6bd56e5ba775377e0dd65589d891f2f0023893152a209613b7cf36b6cee5a';
+  const configuredTokens = [
+    process.env.INITIAL_ADMIN_SETUP_TOKEN,
+    process.env.PLATFORM_SUPER_ADMIN_SETUP_TOKEN,
+  ].filter((token): token is string => Boolean(token));
 
-  if (!setupToken || (setupToken !== initialToken && setupToken !== superAdminToken)) {
+  if (configuredTokens.length === 0) {
+    return res.status(503).json({ error: 'Admin setup verification is not configured.' });
+  }
+  if (typeof setupToken !== 'string' || !configuredTokens.some((token) => {
+    const submitted = Buffer.from(setupToken, 'utf8');
+    const expected = Buffer.from(token, 'utf8');
+    return submitted.length === expected.length && crypto.timingSafeEqual(submitted, expected);
+  })) {
     return res.status(401).json({ error: 'Invalid or unauthorized admin setup token.' });
   }
 
-  res.json({
-    success: true,
-    message: 'WordbitX SaaS environment verified successfully.',
-    organizationId: process.env.PUBLIC_LEAD_ORGANIZATION_ID || '6ac2a411ceac76195538b01f',
-    superAdminEmail: process.env.PLATFORM_SUPER_ADMIN_EMAIL || 'admin@wordbitx.com',
-    mongodbStatus: 'Connected (Atlas Cluster)',
-    cloudinaryStatus: 'Configured (dz7f6rlrk)',
-    organizationsCount: db.getAllOrganizations().length,
-  });
+  res.json({ success: true, message: 'Admin setup token verified.' });
 });
 
 // ==========================================
@@ -590,7 +618,7 @@ apiRouter.get('/crm/deals/:id', authenticate, requireTenant, (req: Authenticated
   res.json({ deal, activities, tasks, notes });
 });
 
-apiRouter.put('/crm/deals/:id/stage', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
+apiRouter.put('/crm/deals/:id/stage', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN', 'SALES_MANAGER', 'SALES_AGENT']), (req: AuthenticatedRequest, res) => {
   const orgId = req.organization!.id;
   const actor = { id: req.user!.id, name: req.user!.name };
   const { stage } = req.body;
@@ -607,7 +635,7 @@ apiRouter.put('/crm/deals/:id/stage', authenticate, requireTenant, (req: Authent
   res.json({ success: true, deal: updated });
 });
 
-apiRouter.put('/crm/deals/:id', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
+apiRouter.put('/crm/deals/:id', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN', 'SALES_MANAGER', 'SALES_AGENT']), (req: AuthenticatedRequest, res) => {
   const orgId = req.organization!.id;
   const actor = { id: req.user!.id, name: req.user!.name };
   const updated = db.updateDeal(orgId, req.params.id, req.body, actor);
@@ -637,7 +665,7 @@ apiRouter.get('/crm/customers', authenticate, requireTenant, (req: Authenticated
   res.json(db.getCustomers(orgId));
 });
 
-apiRouter.post('/crm/customers', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
+apiRouter.post('/crm/customers', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN', 'SALES_MANAGER', 'SALES_AGENT']), (req: AuthenticatedRequest, res) => {
   const orgId = req.organization!.id;
   const actor = { id: req.user!.id, name: req.user!.name };
   const { name, company, email, phone, revenue, status } = req.body;
@@ -681,7 +709,7 @@ apiRouter.get('/crm/companies', authenticate, requireTenant, (req: Authenticated
   res.json(db.getCompanies(orgId));
 });
 
-apiRouter.post('/crm/companies', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
+apiRouter.post('/crm/companies', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN', 'SALES_MANAGER', 'SALES_AGENT']), (req: AuthenticatedRequest, res) => {
   const orgId = req.organization!.id;
   const actor = { id: req.user!.id, name: req.user!.name };
   const { name, industry, employees, website, revenue } = req.body;
@@ -726,7 +754,7 @@ apiRouter.get('/crm/tasks', authenticate, requireTenant, (req: AuthenticatedRequ
   res.json(db.getTasks(orgId));
 });
 
-apiRouter.post('/crm/tasks', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
+apiRouter.post('/crm/tasks', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN', 'SALES_MANAGER', 'SALES_AGENT']), (req: AuthenticatedRequest, res) => {
   const orgId = req.organization!.id;
   const actor = { id: req.user!.id, name: req.user!.name };
   const { title, description, assignedUserId, assignedUserName, dueDate, priority, type, relatedType, relatedId, relatedName } = req.body;
@@ -754,7 +782,7 @@ apiRouter.post('/crm/tasks', authenticate, requireTenant, (req: AuthenticatedReq
   res.status(201).json(task);
 });
 
-apiRouter.put('/crm/tasks/:id', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
+apiRouter.put('/crm/tasks/:id', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN', 'SALES_MANAGER', 'SALES_AGENT']), (req: AuthenticatedRequest, res) => {
   const orgId = req.organization!.id;
   const actor = { id: req.user!.id, name: req.user!.name };
   const updated = db.updateTask(orgId, req.params.id, req.body, actor);
@@ -762,7 +790,7 @@ apiRouter.put('/crm/tasks/:id', authenticate, requireTenant, (req: Authenticated
   res.json(updated);
 });
 
-apiRouter.delete('/crm/tasks/:id', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
+apiRouter.delete('/crm/tasks/:id', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN', 'SALES_MANAGER', 'SALES_AGENT']), (req: AuthenticatedRequest, res) => {
   const orgId = req.organization!.id;
   const success = db.deleteTask(orgId, req.params.id);
   if (!success) return res.status(404).json({ error: 'Task not found.' });
@@ -775,7 +803,7 @@ apiRouter.get('/crm/calls', authenticate, requireTenant, (req: AuthenticatedRequ
   res.json(db.getCalls(orgId));
 });
 
-apiRouter.post('/crm/calls', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
+apiRouter.post('/crm/calls', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN', 'SALES_MANAGER', 'SALES_AGENT']), (req: AuthenticatedRequest, res) => {
   const orgId = req.organization!.id;
   const actor = { id: req.user!.id, name: req.user!.name };
   const { caller, recipient, direction, durationSeconds, relatedType, relatedId, relatedName, notes, status } = req.body;
@@ -815,7 +843,7 @@ apiRouter.get('/crm/activities', authenticate, requireTenant, (req: Authenticate
 });
 
 // Notes
-apiRouter.post('/crm/notes', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
+apiRouter.post('/crm/notes', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN', 'SALES_MANAGER', 'SALES_AGENT']), (req: AuthenticatedRequest, res) => {
   const orgId = req.organization!.id;
   const actor = { id: req.user!.id, name: req.user!.name };
   const { relatedType, relatedId, content } = req.body;
@@ -1000,7 +1028,7 @@ apiRouter.get('/crm/workflows', authenticate, requireTenant, (req: Authenticated
   res.json(db.getWorkflows(req.organization!.id));
 });
 
-apiRouter.post('/crm/workflows', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
+apiRouter.post('/crm/workflows', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN']), (req: AuthenticatedRequest, res) => {
   const { name, trigger, conditions, actions } = req.body;
   if (!name || !trigger) return res.status(400).json({ error: 'Name and trigger are required.' });
 
@@ -1015,7 +1043,7 @@ apiRouter.post('/crm/workflows', authenticate, requireTenant, (req: Authenticate
   res.status(201).json(wf);
 });
 
-apiRouter.patch('/crm/workflows/:id/toggle', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
+apiRouter.patch('/crm/workflows/:id/toggle', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN']), (req: AuthenticatedRequest, res) => {
   const { enabled } = req.body;
   const wf = db.toggleWorkflow(req.organization!.id, req.params.id, Boolean(enabled));
   res.json(wf);
@@ -1026,9 +1054,12 @@ apiRouter.get('/crm/integrations', authenticate, requireTenant, (req: Authentica
   res.json(db.getIntegrations(req.organization!.id));
 });
 
-apiRouter.post('/crm/integrations/:provider/toggle', authenticate, requireTenant, (req: AuthenticatedRequest, res) => {
-  const { status, config } = req.body;
-  const int = db.updateIntegration(req.organization!.id, req.params.provider, status || 'CONNECTED', config);
+apiRouter.post('/crm/integrations/:provider/toggle', authenticate, requireTenant, requireRole(['ORGANIZATION_OWNER', 'ORGANIZATION_ADMIN']), (req: AuthenticatedRequest, res) => {
+  const { status } = req.body;
+  if (status !== 'NOT_CONNECTED') {
+    return res.status(501).json({ error: 'Provider connection setup is not available through this endpoint.' });
+  }
+  const int = db.updateIntegration(req.organization!.id, req.params.provider, 'NOT_CONNECTED');
   res.json(int);
 });
 

@@ -26,7 +26,7 @@ export const SecuritySection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-white dark:bg-[#071714] border-b border-slate-200/80 dark:border-[#183932]">
+    <section id="security" className="py-20 md:py-28 bg-white dark:bg-[#071714] border-b border-slate-200/80 dark:border-[#183932]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
           <div className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
