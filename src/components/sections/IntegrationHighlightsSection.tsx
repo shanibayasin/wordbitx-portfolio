@@ -7,7 +7,8 @@ const integrationTools = [
   {
     id: 'email-sync',
     title: 'Email Sync',
-    subtext: 'IMAP / SMTP',
+    subtext: 'Email connectors',
+    status: 'Coming soon',
     icon: (
       <svg aria-hidden="true" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="4" width="18" height="16" rx="2" />
@@ -18,7 +19,8 @@ const integrationTools = [
   {
     id: 'whatsapp',
     title: 'WhatsApp',
-    subtext: 'Cloud API',
+    subtext: 'Messaging',
+    status: 'Coming soon',
     icon: (
       <svg aria-hidden="true" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
@@ -27,8 +29,9 @@ const integrationTools = [
   },
   {
     id: 'webrtc-voice',
-    title: 'WebRTC Voice',
-    subtext: 'Twilio / Telnyx',
+    title: 'Telephony',
+    subtext: 'Voice integrations',
+    status: 'Coming soon',
     icon: (
       <span aria-hidden="true" className="flex h-7 w-7 items-center justify-center rounded-full bg-sky-400 shadow-sm">
         <svg className="h-3.5 w-3.5 fill-white text-white" viewBox="0 0 24 24">
@@ -39,8 +42,9 @@ const integrationTools = [
   },
   {
     id: 'calendar',
-    title: 'Calendar',
-    subtext: 'Outlook / Google',
+    title: 'Calendar sync',
+    subtext: 'Calendar connectors',
+    status: 'Coming soon',
     icon: (
       <span aria-hidden="true" className="flex h-7 w-7 flex-col overflow-hidden rounded-md border border-slate-300 bg-white shadow-sm dark:border-zinc-700 dark:bg-zinc-800">
         <span className="h-2.5 w-full bg-rose-500" />
@@ -55,7 +59,8 @@ const integrationTools = [
   {
     id: 'rest-api',
     title: 'REST API',
-    subtext: 'Swagger v3',
+    subtext: 'Available in settings',
+    status: 'Available',
     icon: (
       <svg aria-hidden="true" className="h-6 w-6 fill-amber-500 text-amber-500" viewBox="0 0 24 24">
         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
@@ -65,7 +70,8 @@ const integrationTools = [
   {
     id: 'webhooks',
     title: 'Webhooks',
-    subtext: 'Real-time events',
+    subtext: 'Available in settings',
+    status: 'Available',
     icon: (
       <svg aria-hidden="true" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c0-2.21 1.79-4 4-4h5.99c1.1 0 1.95-.94 2.48-1.9A4 4 0 0 1 22 13c0 2.21-1.79 4-4 3.98z" />
@@ -96,17 +102,16 @@ export const IntegrationHighlightsSection: React.FC = () => {
         <header className="mx-auto mb-9 max-w-3xl text-center sm:mb-11">
           <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1.5 text-[9px] font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 sm:text-[10px]">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            One-click integrations
+            Integration availability
           </div>
           <h2
             id="integration-highlights-title"
             className="text-balance text-2xl font-extrabold leading-tight tracking-tight text-slate-950 dark:text-white sm:text-3xl lg:text-4xl"
           >
-            Connect with your favorite tools &amp; carriers.
+            Connect with your stack.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-pretty text-sm leading-relaxed text-slate-600 dark:text-zinc-300 sm:text-base">
-            Native webhooks, bi-directional email sync, and carrier-grade VoIP backbones can hook
-            directly into your WordbitX instance.
+            REST API and Webhooks are available in settings. Other connectors are coming soon.
           </p>
         </header>
 
@@ -120,6 +125,7 @@ export const IntegrationHighlightsSection: React.FC = () => {
                 whileHover={shouldReduceMotion ? undefined : { y: -4 }}
                 transition={{ duration: 0.18 }}
                 aria-pressed={isSelected}
+                aria-label={`${tool.title}: ${tool.status}`}
                 onClick={() => setSelectedTool(isSelected ? null : tool.title)}
                 className={`group flex min-h-32 cursor-pointer flex-col items-center justify-center rounded-2xl border px-3 py-5 text-center shadow-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500 sm:px-4 ${
                   isSelected
@@ -140,6 +146,13 @@ export const IntegrationHighlightsSection: React.FC = () => {
                 <span className="font-mono text-[9px] font-semibold tracking-tight text-teal-700 dark:text-teal-400 sm:text-[10px]">
                   {tool.subtext}
                 </span>
+                <span className={`mt-2 rounded-full px-2 py-0.5 text-[8px] font-bold uppercase tracking-wide ${
+                  tool.status === 'Available'
+                    ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300'
+                    : 'bg-slate-100 text-slate-600 dark:bg-white/10 dark:text-zinc-300'
+                }`}>
+                  {tool.status}
+                </span>
               </motion.button>
             );
           })}
@@ -157,7 +170,7 @@ export const IntegrationHighlightsSection: React.FC = () => {
             >
               <div className="flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-[10px] font-semibold text-emerald-700 shadow-sm dark:text-emerald-400 sm:text-xs">
                 <CheckCircle2 aria-hidden="true" className="h-3.5 w-3.5 shrink-0 text-emerald-500" />
-                <span>{selectedTool} selected. Setup is required to connect this integration.</span>
+                <span>{selectedTool} is {integrationTools.find((tool) => tool.title === selectedTool)?.status.toLowerCase()}.</span>
               </div>
             </motion.div>
           )}
