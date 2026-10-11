@@ -71,6 +71,14 @@ export const CommandPalette: React.FC = () => {
         action: () => navigate('/resources')
       },
       {
+        id: 'nav-updates',
+        category: 'Navigation',
+        title: "What's new",
+        subtitle: 'Recent releases and production improvements',
+        icon: <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />,
+        action: () => navigate('/updates')
+      },
+      {
         id: 'nav-about',
         category: 'Navigation',
         title: 'About WordbitX',

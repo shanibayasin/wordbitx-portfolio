@@ -86,7 +86,7 @@ const BrandGroup: React.FC<{ isClone?: boolean }> = ({ isClone = false }) => (
     {brands.map(({ name, color, icon }) => (
       <div key={name} className="flex shrink-0 items-center gap-2.5 opacity-70 transition-opacity duration-200 hover:opacity-100">
         <span className={color}>{icon}</span>
-        <span className="whitespace-nowrap font-mono text-[10px] font-extrabold tracking-wider text-slate-800 dark:text-zinc-200 sm:text-xs">
+        <span className="whitespace-nowrap font-mono text-xs font-extrabold tracking-wider text-slate-800 dark:text-zinc-200 sm:text-xs">
           {name}
         </span>
       </div>
@@ -96,11 +96,12 @@ const BrandGroup: React.FC<{ isClone?: boolean }> = ({ isClone = false }) => (
 
 export const TrustStrip: React.FC = () => (
   <section
+    id="sample-brands"
     aria-label="Trusted by forward-thinking businesses"
     className="relative overflow-hidden border-y border-slate-200/60 bg-[#f8faf9] py-8 transition-colors dark:border-white/5 dark:bg-[#070a0b] sm:py-10"
   >
     <div className="mb-5 text-center">
-      <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400 dark:text-zinc-500 sm:text-[10px]">
+      <span className="text-xs font-bold uppercase tracking-[0.22em] text-slate-400 dark:text-zinc-500 sm:text-xs">
         Sample brands shown for demo purposes
       </span>
     </div>

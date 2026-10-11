@@ -67,6 +67,7 @@ export const RESOURCES_MENU: MegaMenuCategory[] = [
     title: 'Support & Updates',
     items: [
       { name: 'Product Documentation', href: '/resources#docs', description: 'API reference, webhooks and developer guides' },
+      { name: "What's New", href: '/updates', description: 'Recent releases and platform improvements' },
       { name: 'Help Center', href: '/resources#help', description: 'Step-by-step walkthroughs for common admin tasks' },
       { name: 'Case Studies', href: '/resources#case-studies', description: 'Realistic transformation examples across diverse industries' },
       { name: 'FAQ & Architecture', href: '/#faq', description: 'Frequently asked questions on data security & pricing' }

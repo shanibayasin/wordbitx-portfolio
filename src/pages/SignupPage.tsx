@@ -39,7 +39,7 @@ export const SignupPage: React.FC = () => {
   };
 
   return (
-    <div className="w-full min-h-[calc(100vh-64px)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-[#f5f8f6] dark:bg-[#071714]">
+    <div className="w-full min-h-dvh flex items-center justify-center py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-[#f5f8f6] dark:bg-[#071714]">
       <div className="max-w-xl w-full space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">

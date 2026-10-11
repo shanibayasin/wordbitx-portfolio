@@ -10,8 +10,8 @@ export const Footer: React.FC = () => {
   return (
     <footer className="border-t border-[#183932] bg-[#0b1f1b] text-sm text-slate-300">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-5 lg:gap-12">
-          <div className="col-span-2 space-y-4">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
+          <div className="col-span-2 space-y-4 md:col-span-1">
             <div className="flex items-center gap-2.5">
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-emerald-500 text-base font-black text-[#071714] shadow-sm">
                 W
@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
                 <span className="block text-base font-bold leading-tight tracking-tight text-white">
                   Wordbit<span className="text-emerald-400">X</span>
                 </span>
-                <span className="mt-1 block text-[9px] font-bold uppercase tracking-[0.18em] text-emerald-400">
+                <span className="mt-1 block text-xs font-bold uppercase tracking-[0.18em] text-emerald-400">
                   CRM
                 </span>
               </span>
@@ -70,6 +70,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-xs">
               <li><button onClick={() => navigate('/about')} className={`${linkClass} cursor-pointer`}>About WordbitX</button></li>
               <li><button onClick={() => navigate('/resources')} className={`${linkClass} cursor-pointer`}>Guides &amp; playbooks</button></li>
+              <li><button onClick={() => navigate('/updates')} className={`${linkClass} cursor-pointer`}>What&apos;s new</button></li>
               <li><button onClick={() => navigate('/contact')} className={`${linkClass} cursor-pointer`}>Contact</button></li>
               <li><button onClick={() => navigate('/demo')} className={`${linkClass} cursor-pointer`}>Request a demo</button></li>
               <li><button onClick={() => navigate('/login')} className={`${linkClass} cursor-pointer`}>Sign in</button></li>

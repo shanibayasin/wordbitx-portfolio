@@ -171,7 +171,7 @@ export const PipelinePage: React.FC = () => {
                 key={col.id}
                 className={`${
                   activeMobileStage === 'all' ? 'w-[82vw] sm:w-72 shrink-0 snap-center' : 'w-full max-w-xl mx-auto'
-                } bg-slate-100/70 rounded-xl p-3 border border-slate-200 flex flex-col max-h-[calc(100vh-210px)]`}
+                } bg-slate-100/70 rounded-xl p-3 border border-slate-200 flex flex-col max-h-[calc(100dvh-210px)]`}
               >
                 {/* Column Header */}
                 <div className="flex items-center justify-between pb-3 mb-2 border-b border-slate-200">

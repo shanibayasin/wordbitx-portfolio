@@ -1,95 +1,197 @@
 import React from 'react';
-import { BarChart3, CircleDollarSign, GitBranch, Target } from 'lucide-react';
+import { ArrowUpRight, BarChart3, CircleDollarSign, Target, UsersRound } from 'lucide-react';
+import { DEMO_DEALS, DEMO_REPORT_METRICS, DEMO_REVENUE, DEMO_SOURCES } from '../demo/sampleData';
 
-const reportMetrics = [
-  { label: 'Win rate', detail: 'See the share of deals won.', icon: Target },
-  { label: 'Lead source conversion', detail: 'Compare conversion across lead sources.', icon: GitBranch },
-  { label: 'Revenue', detail: 'Review revenue from won deals.', icon: CircleDollarSign },
-  { label: 'Deals by stage', detail: 'See how deals are distributed across stages.', icon: BarChart3 },
+const chartPoints = DEMO_REVENUE.map((point, index) => `${35 + index * 70},${145 - point.revenue * 1.45}`).join(' ');
+const chartArea = `M35,145 L${chartPoints.replaceAll(' ', ' L')} L385,145 Z`;
+const formatCurrency = (value: number) => `$${value.toLocaleString('en-US')}`;
+
+const metrics = [
+  {
+    label: 'Revenue won',
+    value: formatCurrency(DEMO_REPORT_METRICS.totalWonRevenue),
+    detail: 'Across closed deals',
+    icon: CircleDollarSign,
+    tone: 'bg-emerald-50 text-emerald-700 dark:bg-emerald-300/10 dark:text-emerald-300',
+  },
+  {
+    label: 'Open pipeline',
+    value: formatCurrency(DEMO_REPORT_METRICS.openPipeline),
+    detail: `${DEMO_REPORT_METRICS.activeDeals} active opportunities`,
+    icon: BarChart3,
+    tone: 'bg-sky-50 text-sky-700 dark:bg-sky-300/10 dark:text-sky-300',
+  },
+  {
+    label: 'Qualified leads',
+    value: String(DEMO_REPORT_METRICS.qualifiedLeads),
+    detail: `${DEMO_REPORT_METRICS.newLeadsThisMonth} new this month`,
+    icon: UsersRound,
+    tone: 'bg-violet-50 text-violet-700 dark:bg-violet-300/10 dark:text-violet-300',
+  },
+  {
+    label: 'Win rate',
+    value: `${DEMO_REPORT_METRICS.winRate}%`,
+    detail: `From ${DEMO_REPORT_METRICS.closedDeals} closed deals`,
+    icon: Target,
+    tone: 'bg-amber-50 text-amber-700 dark:bg-amber-300/10 dark:text-amber-300',
+  },
 ];
 
 export const AnalyticsSection: React.FC = () => (
   <section
+    id="reports"
     aria-labelledby="analytics-title"
-    className="border-b border-slate-200/80 bg-[#f5f8f6] py-20 dark:border-[#183932] dark:bg-[#071714] md:py-28"
+    className="border-y border-slate-200 bg-[#f6f8f7] py-16 dark:border-white/10 dark:bg-[#0b1510] sm:py-24"
   >
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-        <div className="max-w-2xl space-y-3">
-          <div className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
-            Reports
-          </div>
-          <h2 id="analytics-title" className="text-balance font-display text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl lg:text-5xl">
+    <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+      <div className="mb-7 flex flex-col justify-between gap-4 sm:mb-8 sm:flex-row sm:items-end">
+        <div className="max-w-2xl">
+          <p className="text-xs font-semibold uppercase tracking-[.16em] text-emerald-700 dark:text-emerald-300">Sales analytics</p>
+          <h2 id="analytics-title" className="mt-2 text-balance font-display text-3xl font-semibold tracking-[-.045em] text-slate-950 dark:text-white sm:text-4xl">
             A clear view of sales performance.
           </h2>
-          <p className="text-base text-slate-600 dark:text-slate-300">
-            Review win rate, lead source conversion, revenue, and deals by stage in your reports.
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">
+            See revenue, pipeline health, and team progress at a glance.
           </p>
         </div>
-        <span className="inline-flex w-fit items-center rounded-full border border-amber-300 bg-amber-50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wide text-amber-800 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-300">
+        <span className="w-fit rounded-full border border-amber-300 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-amber-900 dark:border-amber-300/15 dark:bg-amber-300/10 dark:text-amber-200">
           Sample data
         </span>
       </div>
 
-      <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {reportMetrics.map(({ label, detail, icon: Icon }) => (
-          <article
-            key={label}
-            className="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-[#183932] dark:bg-[#0e2722]"
-          >
-            <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400">
-              <Icon aria-hidden="true" className="h-4 w-4 text-emerald-700 dark:text-emerald-400" />
-              <h3 className="text-[11px] font-semibold">{label}</h3>
+      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        {metrics.map(({ label, value, detail, icon: Icon, tone }) => (
+          <article key={label} className="flex min-w-0 items-start justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-[#101a15] sm:p-5">
+            <div className="min-w-0">
+              <p className="text-xs font-medium text-slate-500 dark:text-slate-400">{label}</p>
+              <p className="mt-2 truncate font-mono text-xl font-semibold tabular-nums tracking-tight text-slate-950 dark:text-white">{value}</p>
+              <p className="mt-1 truncate text-xs text-slate-500 dark:text-slate-400">{detail}</p>
             </div>
-            <div className="mt-3 text-lg font-bold text-slate-800 dark:text-white">Preview</div>
-            <p className="mt-1 text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">{detail}</p>
+            <span className={`grid h-9 w-9 shrink-0 place-items-center rounded-xl ${tone}`}>
+              <Icon aria-hidden="true" className="h-4 w-4" />
+            </span>
           </article>
         ))}
       </div>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
-        <section className="space-y-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-xs dark:border-[#183932] dark:bg-[#0e2722] lg:col-span-8">
-          <div>
-            <h3 className="text-sm font-semibold text-slate-950 dark:text-white">Revenue from won deals</h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400">Sample report layout</p>
+      <div className="mt-3 grid gap-3 lg:grid-cols-12">
+        <article className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-[#101a15] sm:p-5 lg:col-span-8">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Revenue performance</h3>
+              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">Monthly won revenue · USD thousands</p>
+            </div>
+            <span className="rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-600 dark:border-white/10 dark:text-slate-300">May–Oct</span>
           </div>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3" aria-label="Sample revenue report fields">
-            {['Reporting period', 'Won deals', 'Revenue'].map((label) => (
-              <div key={label} className="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-white/5 dark:bg-white/5">
-                <div className="text-[10px] font-medium text-slate-500 dark:text-slate-400">{label}</div>
-                <div className="mt-2 h-5 rounded bg-slate-200/80 dark:bg-white/10" aria-hidden="true" />
+          <div className="mt-3 rounded-xl bg-[#f8faf9] px-2 pt-2 dark:bg-white/[0.025] sm:px-3">
+            <svg
+              role="img"
+              aria-label="Sample revenue chart showing growth from 28 thousand dollars in May to 72 thousand dollars in October"
+              viewBox="0 0 420 190"
+              className="h-44 w-full sm:h-48"
+            >
+              <defs>
+                <linearGradient id="salesRevenueArea" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stopColor="#10b981" stopOpacity=".2" />
+                  <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              {[35, 75, 115, 155].map((y) => (
+                <line key={y} x1="25" x2="400" y1={y} y2={y} stroke="currentColor" className="text-slate-200 dark:text-white/10" strokeDasharray="3 5" />
+              ))}
+              <path d={chartArea} fill="url(#salesRevenueArea)" />
+              <polyline points={chartPoints} fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              {DEMO_REVENUE.map((point, index) => (
+                <g key={point.month}>
+                  <circle cx={35 + index * 70} cy={145 - point.revenue * 1.45} r="4" fill="#10b981" stroke="white" strokeWidth="2" />
+                  <text x={35 + index * 70} y="178" textAnchor="middle" className="fill-slate-500 text-xs dark:fill-slate-400">{point.month}</text>
+                </g>
+              ))}
+            </svg>
+          </div>
+          <div className="mt-3 flex items-center justify-between gap-4 rounded-xl border border-slate-100 px-3 py-2.5 dark:border-white/10">
+            <div>
+              <p className="text-xs text-slate-500 dark:text-slate-400">Revenue this month</p>
+              <p className="mt-0.5 font-mono text-lg font-semibold tabular-nums text-slate-950 dark:text-white">{formatCurrency(DEMO_REPORT_METRICS.monthlyWonRevenue)}</p>
+            </div>
+            <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700 dark:bg-emerald-300/10 dark:text-emerald-300">
+              <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+              Trending up
+            </span>
+          </div>
+        </article>
+
+        <article className="flex flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-[#101a15] sm:p-5 lg:col-span-4">
+          <div>
+            <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Win rate</h3>
+            <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">Share of deals won</p>
+          </div>
+          <div className="flex flex-1 flex-col items-center justify-center py-4">
+            <div className="relative grid h-36 w-36 place-items-center">
+              <svg role="img" aria-label={`Sample win rate: ${DEMO_REPORT_METRICS.winRate} percent`} viewBox="0 0 112 112" className="h-full w-full -rotate-90">
+                <circle cx="56" cy="56" r="43" fill="none" stroke="currentColor" strokeWidth="9" className="text-slate-100 dark:text-white/10" />
+                <circle cx="56" cy="56" r="43" fill="none" stroke="#10b981" strokeWidth="9" strokeLinecap="round" strokeDasharray={`${(DEMO_REPORT_METRICS.winRate / 100) * 270.18} 270.18`} />
+              </svg>
+              <div className="absolute text-center">
+                <p className="font-mono text-2xl font-semibold tabular-nums tracking-tight text-slate-950 dark:text-white">{DEMO_REPORT_METRICS.winRate}%</p>
+                <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">win rate</p>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-xl bg-[#f8faf9] px-3 py-2.5 text-center dark:bg-white/[0.035]">
+            <p className="text-xs text-slate-500 dark:text-slate-400">Based on {DEMO_REPORT_METRICS.closedDeals} closed deals</p>
+          </div>
+        </article>
+
+        <article className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-[#101a15] sm:p-5 lg:col-span-5">
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Lead source performance</h3>
+              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">Conversion to qualified leads</p>
+            </div>
+            <span className="text-xs text-slate-400">Sample</span>
+          </div>
+          <div className="mt-5 space-y-4">
+            {DEMO_SOURCES.map((source) => (
+              <div key={source.name}>
+                <div className="mb-1.5 flex justify-between gap-3 text-xs">
+                  <span className="font-medium text-slate-700 dark:text-slate-200">{source.name}<span className="ml-1.5 font-normal text-slate-400">{source.leads} leads</span></span>
+                  <span className="font-mono font-medium tabular-nums text-slate-800 dark:text-white">{source.rate}%</span>
+                </div>
+                <div className="h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
+                  <div className="h-full rounded-full bg-emerald-500" style={{ width: `${source.rate * 2.4}%` }} />
+                </div>
               </div>
             ))}
           </div>
-          <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs text-slate-600 dark:border-white/5 dark:bg-white/5 dark:text-zinc-300">
-            Report values come from the records in your workspace.
-          </div>
-        </section>
+        </article>
 
-        <div className="space-y-6 lg:col-span-4">
-          <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-xs dark:border-[#183932] dark:bg-[#0e2722]">
-            <h3 className="text-xs font-semibold text-slate-950 dark:text-white">Lead source conversion</h3>
-            <div className="mt-4 space-y-2">
-              {['Lead source', 'Converted leads', 'Conversion rate'].map((label) => (
-                <div key={label} className="flex items-center justify-between gap-3 rounded-lg bg-slate-50 px-3 py-2 text-[10px] text-slate-600 dark:bg-white/5 dark:text-zinc-300">
-                  <span>{label}</span>
-                  <span className="h-3 w-12 rounded bg-slate-200 dark:bg-white/10" aria-hidden="true" />
+        <article className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-[#101a15] sm:p-5 lg:col-span-7">
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Open opportunities</h3>
+              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">Deals that need a next step</p>
+            </div>
+            <span className="text-xs font-medium text-slate-500 dark:text-slate-400">{DEMO_REPORT_METRICS.activeDeals} active</span>
+          </div>
+          <div className="mt-4 divide-y divide-slate-100 dark:divide-white/10">
+            {DEMO_DEALS.slice(0, 3).map((deal) => (
+              <div key={deal.company} className="flex items-center justify-between gap-3 py-3 first:pt-0 last:pb-0">
+                <div className="flex min-w-0 items-center gap-2.5">
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-emerald-50 text-xs font-semibold text-emerald-800 dark:bg-emerald-300/10 dark:text-emerald-200">{deal.owner}</span>
+                  <div className="min-w-0">
+                    <p className="truncate text-xs font-semibold text-slate-800 dark:text-slate-100">{deal.company}</p>
+                    <p className="truncate text-xs text-slate-500 dark:text-slate-400">{deal.title} · {deal.stage}</p>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </section>
-          <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-xs dark:border-[#183932] dark:bg-[#0e2722]">
-            <h3 className="text-xs font-semibold text-slate-950 dark:text-white">Deals by stage</h3>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {['Stage', 'Deal count', 'Deal value'].map((label) => (
-                <span key={label} className="rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-[10px] text-slate-600 dark:border-white/5 dark:bg-white/5 dark:text-zinc-300">
-                  {label}
-                </span>
-              ))}
-            </div>
-          </section>
-        </div>
+                <span className="shrink-0 font-mono text-xs font-semibold tabular-nums text-slate-900 dark:text-white">{formatCurrency(deal.value)}</span>
+              </div>
+            ))}
+          </div>
+        </article>
       </div>
+
+      <p className="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">Illustrative values for product preview only · Demo data</p>
     </div>
   </section>
 );

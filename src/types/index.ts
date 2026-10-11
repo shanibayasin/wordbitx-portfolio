@@ -5,6 +5,7 @@ export type PageRoute =
   | '/integrations'
   | '/pricing'
   | '/resources'
+  | '/updates'
   | '/about'
   | '/contact'
   | '/demo'

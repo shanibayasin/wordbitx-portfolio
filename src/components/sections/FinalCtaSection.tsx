@@ -1,40 +1,23 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import { useNavigation } from '../../context/NavigationContext';
 
 export const FinalCtaSection: React.FC = () => {
   const { navigate } = useNavigation();
 
   return (
-    <section className="px-4 py-7 sm:px-6 sm:py-10 lg:px-8">
-      <div className="relative isolate mx-auto flex max-w-7xl flex-col items-start justify-between gap-5 overflow-hidden rounded-xl border border-emerald-900/40 bg-[#06100e] px-5 py-6 text-white shadow-xl sm:rounded-2xl sm:px-8 sm:py-8 lg:flex-row lg:items-center lg:gap-10 lg:px-10">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_80%_50%,rgba(16,185,129,0.16),transparent_42%),linear-gradient(105deg,#071714_0%,#0b1f1b_55%,#08120f_100%)]"
-      />
-        <div className="relative max-w-2xl">
-          <span className="mb-2 inline-flex items-center gap-2 text-[8px] font-bold uppercase tracking-[0.18em] text-emerald-300 sm:text-[9px]">
-            <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            Get started today
-          </span>
-          <h2 className="text-balance font-display text-xl font-bold leading-[1.12] tracking-tight text-white sm:text-2xl lg:text-[1.75rem]">
-            Bring leads, deals, and customer calls into one view.
-          </h2>
-          <p className="mt-2 max-w-xl text-[10px] leading-relaxed text-emerald-100/75 sm:text-xs">
-            Track lead sources, move deals through Kanban stages, log calls, and manage follow-ups with your team.
-          </p>
+    <section className="bg-[#f6f8f7] px-4 py-10 dark:bg-[#0b1510] sm:px-6 sm:py-16 lg:px-8">
+      <div className="relative isolate mx-auto max-w-[1200px] overflow-hidden rounded-[28px] border border-emerald-900/40 bg-[#06130f] px-6 py-12 text-center text-white sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(16,185,129,.2),transparent_55%)]" />
+        <div aria-hidden="true" className="hero-grid pointer-events-none absolute inset-0 -z-10 opacity-20" />
+        <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1.5 text-xs font-medium text-emerald-100/80"><span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />One calm place for customer work</span>
+        <h2 className="mx-auto mt-5 max-w-3xl text-balance font-display text-3xl font-semibold tracking-[-.05em] sm:text-4xl lg:text-5xl">Make every next step feel clear.</h2>
+        <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/65 sm:text-base">Explore the lead, pipeline, call log, and follow-up experience using clearly labeled demo data.</p>
+        <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+          <button type="button" onClick={() => navigate('/demo')} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-emerald-400 px-5 text-sm font-semibold text-[#062015] transition hover:-translate-y-0.5 hover:bg-emerald-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-200">Try the live demo<ArrowRight className="h-4 w-4" /></button>
+          <button type="button" onClick={() => navigate('/features')} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.04] px-5 text-sm font-semibold text-white transition hover:bg-white/[0.08] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-200"><Check className="h-4 w-4 text-emerald-300" />Explore current features</button>
         </div>
-
-        <div className="relative w-full shrink-0 sm:w-auto">
-          <button
-            type="button"
-            onClick={() => navigate('/demo')}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-emerald-500 px-4 py-2.5 text-[10px] font-bold text-[#071714] shadow-lg shadow-emerald-950/30 transition hover:bg-emerald-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300 sm:w-auto sm:min-w-36 sm:px-5 sm:text-xs"
-          >
-            Try the live demo
-            <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
-          </button>
-        </div>
+        <p className="mt-4 text-xs text-white/40">No claim of a real booking or workspace creation from this preview.</p>
       </div>
     </section>
   );

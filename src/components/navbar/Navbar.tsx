@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, Moon, Sun, X } from 'lucide-react';
 import { useNavigation } from '../../context/NavigationContext';
 import { PRODUCT_MENU, SOLUTIONS_MENU } from '../../data/navigationData';
 import { Button } from '../ui/Button';
+import { useTheme } from '../../context/ThemeContext';
 
 export const Navbar: React.FC = () => {
   const { currentPath, navigate } = useNavigation();
@@ -11,6 +12,7 @@ export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const isHomePage = currentPath === '/';
+  const { resolvedTheme, toggleTheme } = useTheme();
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const mobileMenuToggleRef = useRef<HTMLButtonElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
@@ -69,35 +71,54 @@ export const Navbar: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-40 w-full transition-all duration-200 ${
-        isScrolled
-          ? 'bg-white/95 dark:bg-[#11111f]/95 backdrop-blur-xl border-b border-slate-200/90 dark:border-[#323250] shadow-xs'
-          : 'bg-white/90 dark:bg-[#11111f]/90 backdrop-blur-lg border-b border-slate-200/60 dark:border-[#323250]/70'
+        isHomePage && !isScrolled
+          ? 'border-b border-white/5 bg-[#020d0a] text-white'
+          : isScrolled
+            ? 'bg-white/95 shadow-xs backdrop-blur-xl border-b border-slate-200/90 dark:bg-[#11111f]/95 dark:border-[#323250]'
+            : 'bg-white/90 backdrop-blur-lg border-b border-slate-200/60 dark:bg-[#11111f]/90 dark:border-[#323250]/70'
       }`}
     >
-      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 ${isHomePage ? 'h-[52px]' : 'h-[60px]'}`}>
+      <div className={`mx-auto flex max-w-[1336px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-8 ${isHomePage ? 'h-[84px]' : 'h-[60px]'}`}>
         {/* WordbitX brand */}
         <div className="flex shrink-0 items-center">
           <button
             onClick={() => navigate('/')}
             aria-label="WordbitX CRM home"
-            className="group flex items-center gap-2 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+            className={`group flex items-center gap-2 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 ${isHomePage && !isScrolled ? 'text-white' : ''}`}
           >
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-emerald-500 text-base font-black text-[#071714] shadow-sm transition-transform group-hover:scale-105">
+            <span className={`grid h-9 w-9 place-items-center rounded-xl text-base font-black shadow-sm transition-transform group-hover:scale-105 ${isHomePage ? 'bg-emerald-400 text-[#041d18]' : 'bg-emerald-500 text-[#071714]'}`}>
               W
             </span>
-            <span className="flex flex-col leading-none">
-              <span className="text-[15px] font-bold tracking-tight text-slate-950 dark:text-white">
-                Wordbit<span className="text-[#23836b] dark:text-emerald-400">X</span>
+            <span className={isHomePage ? 'text-lg font-bold tracking-tight text-white' : 'flex flex-col leading-none'}>
+              <span className={`${isHomePage ? '' : 'text-[15px] '}font-bold tracking-tight ${isHomePage && !isScrolled ? 'text-white' : isHomePage ? '' : 'text-slate-950 dark:text-white'}`}>
+                Wordbit<span className={isHomePage ? 'text-emerald-300' : 'text-[#23836b] dark:text-emerald-400'}>X</span>
               </span>
-              <span className="mt-1 text-[8px] font-bold uppercase tracking-[0.16em] text-[#26735e] dark:text-emerald-300">
-                CRM
-              </span>
+              {!isHomePage && <span className="mt-1 text-xs font-bold uppercase tracking-[0.16em] text-[#26735e] dark:text-emerald-300">CRM</span>}
             </span>
           </button>
         </div>
 
         {/* Zone 2: Navigation Links */}
         <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 text-[13px] font-medium text-slate-600 dark:text-slate-300">
+          {isHomePage ? (
+            [
+              ['Product', '/features'],
+              ['Solutions', '/solutions'],
+              ['Integrations', '/integrations'],
+              ['Pricing', '/pricing'],
+              ['Resources', '/resources'],
+            ].map(([label, path]) => (
+              <button
+                key={path}
+                type="button"
+                onClick={() => navigate(path)}
+                className="rounded-lg px-3 py-2 text-slate-300 transition-colors hover:text-white"
+              >
+                {label}
+              </button>
+            ))
+          ) : (
+            <>
           {/* Capabilities menu */}
           <div
             className="relative"
@@ -124,14 +145,14 @@ export const Navbar: React.FC = () => {
               >
                 {PRODUCT_MENU.map((col, idx) => (
                   <div key={idx} className="space-y-1">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-indigo-800 dark:text-indigo-400 px-2 py-1">
+                    <div className="text-xs font-bold uppercase tracking-wider text-indigo-800 dark:text-indigo-400 px-2 py-1">
                       {col.title}
                     </div>
                     {col.items.map((item) => item.badge ? (
                       <div key={item.name} aria-disabled="true" className="block w-full rounded-xl p-2 text-left">
                         <div className="flex items-center justify-between gap-2">
                           <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{item.name}</span>
-                          <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[9px] font-bold text-slate-600 dark:bg-white/10 dark:text-zinc-300">{item.badge}</span>
+                          <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-xs font-bold text-slate-600 dark:bg-white/10 dark:text-zinc-300">{item.badge}</span>
                         </div>
                         <div className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">{item.description}</div>
                       </div>
@@ -184,14 +205,14 @@ export const Navbar: React.FC = () => {
               >
                 {SOLUTIONS_MENU.map((col, idx) => (
                   <div key={idx} className="space-y-1">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-indigo-800 dark:text-indigo-400 px-2 py-1">
+                    <div className="text-xs font-bold uppercase tracking-wider text-indigo-800 dark:text-indigo-400 px-2 py-1">
                       {col.title}
                     </div>
                     {col.items.map((item) => item.badge ? (
                       <div key={item.name} aria-disabled="true" className="block w-full rounded-xl p-2 text-left">
                         <div className="flex items-center justify-between gap-2">
                           <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{item.name}</span>
-                          <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[9px] font-bold text-slate-600 dark:bg-white/10 dark:text-zinc-300">{item.badge}</span>
+                          <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-xs font-bold text-slate-600 dark:bg-white/10 dark:text-zinc-300">{item.badge}</span>
                         </div>
                         <div className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">{item.description}</div>
                       </div>
@@ -240,33 +261,56 @@ export const Navbar: React.FC = () => {
           >
             Security
           </button>
+            </>
+          )}
         </nav>
 
         {/* Zone 3: Account actions */}
         <div className="flex items-center gap-2 sm:gap-3">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={`Switch to ${resolvedTheme === 'dark' ? 'light' : 'dark'} mode`}
+            title={`Switch to ${resolvedTheme === 'dark' ? 'light' : 'dark'} mode`}
+            className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 ${isHomePage ? 'hidden' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white'}`}
+          >
+            {resolvedTheme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </button>
+
           {/* Sign In */}
           <button
             onClick={() => handleGo('/login')}
-            className="text-[13px] font-semibold text-slate-700 dark:text-slate-200 hover:text-[#176d5b] dark:hover:text-emerald-300 px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap cursor-pointer"
+            className={`text-[13px] font-semibold hover:text-white px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap cursor-pointer ${isHomePage && !isScrolled ? 'text-slate-300' : 'text-slate-700 dark:text-slate-200'}`}
           >
             Sign In
           </button>
 
           {/* Get Started */}
+          {isHomePage && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => handleGo('/demo')}
+              className="hidden border-[#253143] bg-[#091411] px-4 py-2 text-sm text-slate-200 hover:border-emerald-400/60 hover:bg-white/5 hover:text-white sm:inline-flex"
+            >
+              Try the demo
+            </Button>
+          )}
           <Button
             variant="primary"
             size="sm"
             onClick={() => handleGo('/signup')}
-            className="hidden sm:inline-flex border-[#123c32] bg-[#123c32] text-white hover:border-[#1c5547] hover:bg-[#1c5547] dark:border-emerald-400 dark:bg-emerald-400 dark:text-[#10231e]"
+            className={`hidden sm:inline-flex ${isHomePage ? 'border-emerald-400 bg-emerald-400 px-4 py-2 text-sm font-semibold text-[#041d18] hover:border-emerald-300 hover:bg-emerald-300' : 'border-[#123c32] bg-[#123c32] text-white hover:border-[#1c5547] hover:bg-[#1c5547] dark:border-emerald-400 dark:bg-emerald-400 dark:text-[#10231e]'}`}
           >
-            Get started
+            {isHomePage ? 'Start Free' : 'Get started'}
+            {isHomePage && <span aria-hidden="true" className="ml-1">→</span>}
           </Button>
 
           {/* Mobile hamburger */}
           <button
             ref={mobileMenuToggleRef}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-800 dark:hover:text-white hover:bg-indigo-50 dark:hover:bg-[#20203a] transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+            className={`lg:hidden cursor-pointer rounded-lg p-2 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 ${isHomePage && !isScrolled ? 'text-slate-300 hover:bg-white/10 hover:text-white' : 'text-slate-600 hover:bg-indigo-50 hover:text-indigo-800 dark:text-slate-300 dark:hover:bg-[#20203a] dark:hover:text-white'}`}
             aria-label="Toggle mobile menu"
             aria-expanded={mobileMenuOpen}
             aria-controls="public-mobile-navigation"
@@ -286,7 +330,7 @@ export const Navbar: React.FC = () => {
           className="lg:hidden border-b border-slate-200 dark:border-[#323250] bg-white dark:bg-[#11111f] px-4 py-4 space-y-4 animate-in fade-in duration-150"
         >
           <div className="space-y-1">
-            {['/features', '/solutions', '/integrations', '/pricing', '/#security', '/resources', '/about', '/contact'].map((path) => {
+            {['/features', '/solutions', '/integrations', '/pricing', '/#security', '/resources', '/updates', '/about', '/contact'].map((path) => {
               const label =
                 path === '/features'
                   ? 'Product'
@@ -300,6 +344,8 @@ export const Navbar: React.FC = () => {
                   ? 'Security'
                   : path === '/resources'
                   ? 'Guides & Playbooks'
+                  : path === '/updates'
+                  ? "What's new"
                   : path === '/about'
                   ? 'About WordbitX'
                   : 'Contact';

@@ -74,8 +74,8 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
   ];
 
   return (
-    <div className="min-h-screen bg-[#f5f8f7] text-slate-800 flex flex-col font-sans antialiased">
-      <div className="flex flex-1 flex-col lg:flex-row min-h-0">
+    <div className="min-h-dvh w-full min-w-0 overflow-x-clip bg-[#f5f8f7] text-slate-800 flex flex-col font-sans antialiased">
+      <div className="flex flex-1 flex-col lg:flex-row min-h-0 min-w-0">
         {/* Mobile Backdrop Overlay */}
         {mobileMenuOpen && (
           <div
@@ -251,7 +251,7 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
         </aside>
 
         {/* Super Admin Main Content Viewport */}
-        <div className="flex-1 flex flex-col min-w-0 min-h-0 lg:h-screen lg:overflow-y-auto">
+        <div className="flex-1 flex flex-col min-w-0 min-h-0 lg:h-dvh lg:overflow-y-auto">
           {/* Top Header - Desktop Only */}
           <header className="hidden lg:flex bg-white border-b border-slate-200/90 px-6 py-3 items-center justify-between sticky top-0 z-20">
             <div className="flex-1 max-w-sm">
@@ -283,7 +283,7 @@ export const SuperAdminLayout: React.FC<SuperAdminLayoutProps> = ({ children }) 
             </div>
           </header>
 
-          <main className="p-3.5 sm:p-5 md:p-6 lg:p-8 flex-1 bg-[#f5f8f7] max-w-7xl w-full mx-auto">
+          <main className="min-w-0 p-3.5 sm:p-5 md:p-6 lg:p-8 flex-1 bg-[#f5f8f7] max-w-7xl w-full mx-auto">
             {children}
           </main>
         </div>

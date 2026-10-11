@@ -15,12 +15,8 @@ export const LoginPage: React.FC = () => {
   const { navigate: routerNavigate } = useRouter();
   const { login, quickDemoLogin } = useAuth();
   const handleBack = () => {
-    if (window.history.length > 1) {
-      window.history.back();
-    } else {
-      routerNavigate('/');
-      navContextNavigate('/');
-    }
+    routerNavigate('/');
+    navContextNavigate('/');
   };
 
   const handleQuickLogin = async (demoEmail: string, demoPass = 'password123') => {

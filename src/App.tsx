@@ -22,6 +22,7 @@ const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then((module) =
 const IntegrationsPage = lazy(() => import('./pages/IntegrationsPage').then((module) => ({default: module.IntegrationsPage})));
 const PricingPage = lazy(() => import('./pages/PricingPage').then((module) => ({default: module.PricingPage})));
 const ResourcesPage = lazy(() => import('./pages/ResourcesPage').then((module) => ({default: module.ResourcesPage})));
+const UpdatesPage = lazy(() => import('./pages/UpdatesPage').then((module) => ({default: module.UpdatesPage})));
 const AboutPage = lazy(() => import('./pages/AboutPage').then((module) => ({default: module.AboutPage})));
 const ContactPage = lazy(() => import('./pages/ContactPage').then((module) => ({default: module.ContactPage})));
 const DemoPage = lazy(() => import('./pages/DemoPage').then((module) => ({default: module.DemoPage})));
@@ -109,6 +110,8 @@ const AppContent: React.FC = () => {
         return <PricingPage />;
       case '/resources':
         return <ResourcesPage />;
+      case '/updates':
+        return <UpdatesPage />;
       case '/about':
         return <AboutPage />;
       case '/contact':
@@ -129,7 +132,7 @@ const AppContent: React.FC = () => {
     }
   };
 
-  if (isAuthPage) {
+  if (isAuthPage || activePath === '/updates') {
     return (
       <div className="min-h-dvh bg-[#f5f8f7] text-slate-900 dark:bg-[#071714] dark:text-slate-100 transition-colors">
         <main className="min-h-dvh w-full">
