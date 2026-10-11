@@ -5,6 +5,14 @@ import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 import { useNavigation } from '../../context/NavigationContext';
 
+const productCapabilities = [
+  'Lead and customer records',
+  'Kanban deal pipeline and values',
+  'Call logs, tasks, and activity history',
+  'Team roles and workflow rules',
+  'Reports for win rate, lead sources, and revenue',
+];
+
 export const PricingSection: React.FC = () => {
   const [isYearly, setIsYearly] = useState(true);
   const { navigate } = useNavigation();
@@ -14,24 +22,28 @@ export const PricingSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-10">
           <div className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
-            Transparent Pricing
+            Demo pricing
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-950 dark:text-white tracking-tight text-balance">
-            Predictable plans that scale with your team.
+            Plans and prices for product evaluation.
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-balance">
-            Every plan includes unified contact histories and sales pipelines. Upgrade as your team adds call center telephony and automated workflows.
+            Billing is not live, and plan limits are not enforced. Compare the current product capabilities below.
+          </p>
+          <p className="text-xs font-bold text-amber-800 dark:text-amber-300">
+            Demo pricing, billing not live
           </p>
 
-          {/* Billing Toggle (Monthly / Yearly) */}
+          {/* Demo price display toggle */}
           <div className="pt-4 flex items-center justify-center gap-3 text-xs font-semibold">
             <span className={!isYearly ? 'text-slate-900 dark:text-white' : 'text-slate-500'}>
-              Monthly Billing
+              Monthly display
             </span>
             <button
               onClick={() => setIsYearly(!isYearly)}
-              className="relative w-12 h-6 rounded-full bg-[#0b1f1b] dark:bg-emerald-950 p-0.5 transition-colors cursor-pointer border border-emerald-900/50"
-              aria-label="Toggle billing frequency"
+              className="relative w-12 h-6 rounded-full border border-emerald-900/50 bg-[#0b1f1b] p-0.5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:bg-emerald-950"
+              aria-label="Toggle demo pricing display"
+              aria-pressed={isYearly}
             >
               <div
                 className={`w-5 h-5 rounded-full bg-emerald-400 transition-transform ${
@@ -40,10 +52,7 @@ export const PricingSection: React.FC = () => {
               ></div>
             </button>
             <span className={isYearly ? 'text-slate-900 dark:text-white flex items-center gap-1.5' : 'text-slate-500'}>
-              <span>Annual Billing</span>
-              <span className="text-[10px] font-bold text-emerald-800 dark:text-emerald-300 px-2 py-0.5 rounded-full bg-emerald-100/80 dark:bg-emerald-950/60 border border-emerald-300/80 dark:border-emerald-800/80">
-                Save 20%
-              </span>
+              <span>Annual equivalent</span>
             </span>
           </div>
         </div>
@@ -74,7 +83,9 @@ export const PricingSection: React.FC = () => {
                       {tier.name}
                     </h3>
                     <p className="text-xs text-slate-500 mt-1 leading-snug">
-                      {tier.tagline}
+                      {tier.id === 'enterprise'
+                        ? 'Contact us to discuss your team’s needs.'
+                        : 'Explore WordbitX CRM with demo pricing.'}
                     </p>
                   </div>
                   <div className="pt-2">
@@ -85,17 +96,17 @@ export const PricingSection: React.FC = () => {
                       <span className="text-xs text-slate-500">/ user / month</span>
                     </div>
                     <span className="text-[11px] text-slate-400 block mt-0.5">
-                      {isYearly ? 'Billed annually' : 'Billed monthly'}
+                      {isYearly ? 'Annual equivalent · demo only' : 'Monthly display · demo only'}
                     </span>
                   </div>
 
                   {/* Feature list */}
                   <div className="pt-4 border-t border-slate-100 dark:border-[#183932] space-y-2.5 text-xs">
                     <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2">
-                      Included capabilities:
+                      Product capabilities:
                     </span>
-                    {tier.features.slice(0, 7).map((feat, i) => (
-                      <div key={i} className="flex items-start gap-2.5 text-slate-700 dark:text-slate-300">
+                    {productCapabilities.map((feat) => (
+                      <div key={feat} className="flex items-start gap-2.5 text-slate-700 dark:text-slate-300">
                         <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                         <span className="leading-snug">{feat}</span>
                       </div>
@@ -117,7 +128,7 @@ export const PricingSection: React.FC = () => {
                         : 'bg-slate-100 text-slate-800 hover:bg-slate-200 dark:bg-[#12352e]/60 dark:text-slate-200 border-none'
                     }`}
                   >
-                    {tier.ctaText}
+                    {tier.id === 'enterprise' ? 'Contact us' : 'Start free trial'}
                   </Button>
                 </div>
               </div>
@@ -131,7 +142,7 @@ export const PricingSection: React.FC = () => {
             onClick={() => navigate('/pricing')}
             className="text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:underline inline-flex items-center gap-1.5 cursor-pointer"
           >
-            <span>View complete 36-feature comparison matrix</span>
+            <span>View pricing details</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
