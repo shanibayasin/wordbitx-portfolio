@@ -32,14 +32,16 @@ export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
 
   const navigate = (path: string) => {
     if (path.startsWith('/#')) {
-      if (currentPath !== '/') {
+      if (window.location.pathname !== '/') {
         setCurrentPath('/');
         window.history.pushState({}, '', '/');
+        window.dispatchEvent(new PopStateEvent('popstate'));
         setTimeout(() => {
           const el = document.querySelector(path.substring(1));
           if (el) el.scrollIntoView({ behavior: 'smooth' });
         }, 150);
       } else {
+        setCurrentPath('/');
         const el = document.querySelector(path.substring(1));
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       }
@@ -54,7 +56,10 @@ export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     const cleanPath = path.split('#')[0] || '/';
     setCurrentPath(cleanPath);
     try {
-      window.history.pushState({}, '', path);
+      if (`${window.location.pathname}${window.location.hash}` !== path) {
+        window.history.pushState({}, '', path);
+      }
+      window.dispatchEvent(new PopStateEvent('popstate'));
     } catch (e) {}
     window.scrollTo({ top: 0, behavior: 'smooth' });
 

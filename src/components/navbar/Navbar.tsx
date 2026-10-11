@@ -1,17 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useNavigation } from '../../context/NavigationContext';
-import { useRouter } from '../../router/Router';
 import { PRODUCT_MENU, SOLUTIONS_MENU } from '../../data/navigationData';
 import { Button } from '../ui/Button';
 
 export const Navbar: React.FC = () => {
   const { currentPath, navigate } = useNavigation();
-  const { navigate: routerNavigate } = useRouter();
-  const handleGo = (to: string) => {
-    navigate(to);
-    routerNavigate(to);
-  };
+  const handleGo = (to: string) => navigate(to);
   const [activeDropdown, setActiveDropdown] = useState<'product' | 'solutions' | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
