@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
-import { PRICING_COMPARISON, PRICING_TIERS } from '../../data/pricingData';
+import { PRICING_TIERS } from '../../data/pricingData';
 import { Button } from '../ui/Button';
 import { useNavigation } from '../../context/NavigationContext';
 
@@ -9,12 +9,13 @@ export const PricingSection: React.FC = () => {
   const { navigate } = useNavigation();
 
   return (
-    <section id="pricing" className="border-y border-slate-200 bg-[#f6f8f7] py-20 dark:border-white/10 dark:bg-[#0b1510] sm:py-28">
+    <section id="pricing" className="relative isolate overflow-hidden border-y border-slate-200 bg-[#f6f8f7] py-16 dark:border-white/10 dark:bg-[#0b1510] lg:py-24">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-64 bg-[radial-gradient(ellipse_at_50%_0%,rgba(16,185,129,.07),transparent_74%)]" />
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
           <p className="text-xs font-semibold uppercase tracking-[.16em] text-emerald-700 dark:text-emerald-300">Straightforward plans</p>
           <h2 className="mt-3 text-balance font-display text-3xl font-semibold tracking-[-.045em] text-slate-950 dark:text-white sm:text-4xl lg:text-5xl">Find your team’s starting point.</h2>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">Compare illustrative plan options while you explore the product.</p>
+          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-slate-600 dark:text-slate-300">Compare illustrative plan options while you explore the product.</p>
           <p className="mt-3 inline-flex rounded-full border border-amber-300 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-amber-900 dark:border-amber-300/15 dark:bg-amber-300/10 dark:text-amber-200">Demo pricing, billing not live</p>
           <div className="mt-6 inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white p-1.5 text-xs dark:border-white/10 dark:bg-white/[0.03]">
             <span className={`px-2 ${!isYearly ? 'font-semibold text-slate-900 dark:text-white' : 'text-slate-500'}`}>Monthly</span>
@@ -22,7 +23,7 @@ export const PricingSection: React.FC = () => {
             <span className={`px-2 ${isYearly ? 'font-semibold text-slate-900 dark:text-white' : 'text-slate-500'}`}>Annual equivalent</span>
           </div>
         </div>
-        <div className="mx-auto grid max-w-6xl items-stretch gap-4 md:grid-cols-3">
+        <div className="grid items-stretch gap-5 md:grid-cols-3">
           {PRICING_TIERS.map((tier) => {
             const price = isYearly ? tier.priceYearly : tier.priceMonthly;
             return <article key={tier.id} className={`relative flex flex-col rounded-3xl border bg-white p-5 transition hover:-translate-y-1 hover:shadow-xl dark:bg-[#101a15] sm:p-7 ${tier.popular ? 'border-emerald-400 shadow-lg ring-1 ring-emerald-400/20 dark:border-emerald-300/35' : 'border-slate-200 shadow-sm dark:border-white/10'}`}>
@@ -36,52 +37,10 @@ export const PricingSection: React.FC = () => {
             </article>;
           })}
         </div>
-        <div aria-label="Plan comparison" className="mx-auto mt-12 max-w-6xl">
-          <h3 className="mb-4 text-xl font-semibold tracking-tight text-slate-950 dark:text-white">Compare what’s included</h3>
-          <div className="hidden overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-white/10 dark:bg-[#101a15] md:block">
-            <table className="w-full border-collapse text-left text-xs">
-              <thead className="bg-slate-50 dark:bg-white/[0.04]">
-                <tr>
-                  <th scope="col" className="w-[40%] px-5 py-3 font-semibold text-slate-700 dark:text-slate-200">Capability</th>
-                  {PRICING_TIERS.map((tier) => <th key={tier.id} scope="col" className="px-4 py-3 font-semibold text-slate-700 dark:text-slate-200">{tier.name}</th>)}
-                </tr>
-              </thead>
-              <tbody>
-                {PRICING_COMPARISON.map((category) => <React.Fragment key={category.category}>
-                  <tr className="border-t border-slate-200 bg-slate-50/70 dark:border-white/10 dark:bg-white/[0.025]"><th colSpan={4} scope="colgroup" className="px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">{category.category}</th></tr>
-                  {category.features.map((feature) => <tr key={feature.name} className="border-t border-slate-100 dark:border-white/5">
-                    <th scope="row" className="px-5 py-3 font-medium text-slate-700 dark:text-slate-300">{feature.name}</th>
-                    <td className="px-4 py-3 text-slate-600 dark:text-slate-300">{typeof feature.starter === 'boolean' ? (feature.starter ? 'Included' : '—') : feature.starter}</td>
-                    <td className="px-4 py-3 text-slate-600 dark:text-slate-300">{typeof feature.business === 'boolean' ? (feature.business ? 'Included' : '—') : feature.business}</td>
-                    <td className="px-4 py-3 text-slate-600 dark:text-slate-300">{typeof feature.enterprise === 'boolean' ? (feature.enterprise ? 'Included' : '—') : feature.enterprise}</td>
-                  </tr>)}
-                </React.Fragment>)}
-              </tbody>
-            </table>
-          </div>
-          <div className="space-y-3 md:hidden">
-            {PRICING_COMPARISON.map((category) => <details key={category.category} className="group rounded-2xl border border-slate-200 bg-white dark:border-white/10 dark:bg-[#101a15]">
-              <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-sm font-semibold text-slate-900 focus-visible:outline-2 focus-visible:outline-emerald-600 dark:text-white">
-                {category.category}
-                <span aria-hidden="true" className="text-lg text-slate-400 transition-transform group-open:rotate-45">+</span>
-              </summary>
-              <div className="space-y-3 border-t border-slate-100 px-4 py-4 dark:border-white/10">
-                {category.features.map((feature) => <div key={feature.name} className="rounded-xl bg-slate-50 p-3 dark:bg-white/[0.035]">
-                  <p className="text-xs font-medium text-slate-800 dark:text-slate-100">{feature.name}</p>
-                  <div className="mt-2 grid grid-cols-3 gap-2 text-xs text-slate-500 dark:text-slate-400">
-                    {PRICING_TIERS.map((tier) => {
-                      const value = tier.id === 'starter'
-                        ? feature.starter
-                        : tier.id === 'business'
-                          ? feature.business
-                          : feature.enterprise;
-                      return <span key={tier.id}><span className="block font-semibold text-slate-700 dark:text-slate-300">{tier.name}</span>{String(value)}</span>;
-                    })}
-                  </div>
-                </div>)}
-              </div>
-            </details>)}
-          </div>
+        <div className="mt-8 flex justify-center">
+          <button type="button" onClick={() => navigate('/pricing')} className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 text-sm font-semibold text-slate-800 transition hover:border-emerald-500 hover:text-emerald-800 focus-visible:outline-2 focus-visible:outline-emerald-600 dark:border-white/15 dark:bg-white/[0.04] dark:text-white dark:hover:border-emerald-300 dark:hover:text-emerald-200">
+            Compare all plans<ArrowRight className="h-4 w-4" />
+          </button>
         </div>
         <p className="mt-6 text-center text-xs text-slate-500 dark:text-slate-400">Prices and plans are illustrative only. Billing and plan limits are not live or enforced.</p>
       </div>

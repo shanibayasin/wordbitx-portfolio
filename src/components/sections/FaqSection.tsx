@@ -8,17 +8,17 @@ export const FaqSection: React.FC = () => {
   const { navigate } = useNavigation();
 
   return (
-    <section id="faq" className="border-b border-slate-200 bg-white py-20 dark:border-white/10 dark:bg-[#08110e] sm:py-28">
+    <section id="faq" className="border-b border-slate-200 bg-white py-16 dark:border-white/10 dark:bg-[#08110e] lg:py-24">
       <div className="mx-auto grid max-w-[1200px] gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_.72fr] lg:gap-16 lg:px-8">
         <div>
-          <div className="mb-8 max-w-2xl"><p className="text-xs font-semibold uppercase tracking-[.16em] text-emerald-700 dark:text-emerald-300">Questions, answered</p><h2 className="mt-3 font-display text-3xl font-semibold tracking-[-.045em] text-slate-950 dark:text-white sm:text-4xl">Good to know before you begin.</h2><p className="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">Clear answers about what WordbitX supports today and what is still on the roadmap.</p></div>
+          <div className="mb-8 max-w-2xl"><p className="text-xs font-semibold uppercase tracking-[.16em] text-emerald-800 dark:text-emerald-300">Questions, answered</p><h2 className="mt-3 font-display text-3xl font-semibold tracking-[-.045em] text-slate-950 dark:text-white sm:text-4xl">Good to know before you begin.</h2><p className="mt-4 text-base leading-relaxed text-slate-700 dark:text-slate-300">Clear answers about what WordbitX supports today and what is still on the roadmap.</p></div>
           <div className="space-y-2.5">
             {FAQ_DATA.slice(0, 6).map((item) => {
               const open = openId === item.id;
               const panelId = `home-${item.id}-answer`;
               return <article key={item.id} className={`overflow-hidden rounded-2xl border transition-colors ${open ? 'border-emerald-300 bg-[#f9fcfa] dark:border-emerald-300/20 dark:bg-white/[0.035]' : 'border-slate-200 bg-white dark:border-white/10 dark:bg-[#0b1510]'}`}>
                 <h3><button type="button" aria-expanded={open} aria-controls={panelId} onClick={() => setOpenId(open ? null : item.id)} className="flex min-h-14 w-full items-center justify-between gap-4 px-4 py-3 text-left focus-visible:outline-2 focus-visible:outline-inset focus-visible:outline-emerald-600 sm:px-5"><span className="text-sm font-semibold text-slate-900 dark:text-white">{item.question}</span><ChevronDown className={`h-4 w-4 shrink-0 text-slate-400 transition-transform duration-200 ${open ? 'rotate-180 text-emerald-700 dark:text-emerald-300' : ''}`} /></button></h3>
-                <div id={panelId} aria-hidden={!open} className={`grid transition-[grid-template-rows] duration-300 ease-out ${open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}><div className="overflow-hidden"><p className="px-4 pb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:px-5">{item.answer}</p></div></div>
+                <div id={panelId} aria-hidden={!open} className={`grid transition-[grid-template-rows] duration-300 ease-out ${open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}><div className="overflow-hidden"><p className="px-4 pb-4 text-base leading-relaxed text-slate-700 dark:text-slate-300 sm:px-5">{item.answer}</p></div></div>
               </article>;
             })}
           </div>

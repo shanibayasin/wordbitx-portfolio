@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, BarChart3, CircleDollarSign, Target, UsersRound } from 'lucide-react';
+import { ArrowUpRight, BarChart3, Target, UsersRound } from 'lucide-react';
 import { DEMO_DEALS, DEMO_REPORT_METRICS, DEMO_REVENUE, DEMO_SOURCES } from '../demo/sampleData';
 
 const chartPoints = DEMO_REVENUE.map((point, index) => `${35 + index * 70},${145 - point.revenue * 1.45}`).join(' ');
@@ -8,32 +8,32 @@ const formatCurrency = (value: number) => `$${value.toLocaleString('en-US')}`;
 
 const metrics = [
   {
-    label: 'Revenue won',
-    value: formatCurrency(DEMO_REPORT_METRICS.totalWonRevenue),
-    detail: 'Across closed deals',
-    icon: CircleDollarSign,
+    label: 'Open deals',
+    value: String(DEMO_REPORT_METRICS.openDeals),
+    detail: 'Demo data',
+    icon: BarChart3,
     tone: 'bg-emerald-50 text-emerald-700 dark:bg-emerald-300/10 dark:text-emerald-300',
   },
   {
-    label: 'Open pipeline',
+    label: 'Pipeline value',
     value: formatCurrency(DEMO_REPORT_METRICS.openPipeline),
-    detail: `${DEMO_REPORT_METRICS.activeDeals} active opportunities`,
+    detail: `${DEMO_REPORT_METRICS.openDeals} open deals`,
     icon: BarChart3,
-    tone: 'bg-sky-50 text-sky-700 dark:bg-sky-300/10 dark:text-sky-300',
+    tone: 'bg-emerald-50 text-emerald-800 dark:bg-emerald-300/10 dark:text-emerald-300',
   },
   {
-    label: 'Qualified leads',
-    value: String(DEMO_REPORT_METRICS.qualifiedLeads),
-    detail: `${DEMO_REPORT_METRICS.newLeadsThisMonth} new this month`,
+    label: 'New leads this week',
+    value: String(DEMO_REPORT_METRICS.newLeadsThisWeek),
+    detail: 'Demo data',
     icon: UsersRound,
-    tone: 'bg-violet-50 text-violet-700 dark:bg-violet-300/10 dark:text-violet-300',
+    tone: 'bg-emerald-50 text-emerald-800 dark:bg-emerald-300/10 dark:text-emerald-300',
   },
   {
     label: 'Win rate',
     value: `${DEMO_REPORT_METRICS.winRate}%`,
-    detail: `From ${DEMO_REPORT_METRICS.closedDeals} closed deals`,
+    detail: 'Demo data',
     icon: Target,
-    tone: 'bg-amber-50 text-amber-700 dark:bg-amber-300/10 dark:text-amber-300',
+    tone: 'bg-emerald-50 text-emerald-800 dark:bg-emerald-300/10 dark:text-emerald-300',
   },
 ];
 
@@ -41,8 +41,9 @@ export const AnalyticsSection: React.FC = () => (
   <section
     id="reports"
     aria-labelledby="analytics-title"
-    className="border-y border-slate-200 bg-[#f6f8f7] py-16 dark:border-white/10 dark:bg-[#0b1510] sm:py-24"
+    className="relative isolate overflow-hidden border-y border-slate-200 bg-[#f6f8f7] py-16 dark:border-white/10 dark:bg-[#0b1510] lg:py-24"
   >
+    <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-72 bg-[radial-gradient(ellipse_at_50%_0%,rgba(16,185,129,.08),transparent_72%)]" />
     <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
       <div className="mb-7 flex flex-col justify-between gap-4 sm:mb-8 sm:flex-row sm:items-end">
         <div className="max-w-2xl">
@@ -50,7 +51,7 @@ export const AnalyticsSection: React.FC = () => (
           <h2 id="analytics-title" className="mt-2 text-balance font-display text-3xl font-semibold tracking-[-.045em] text-slate-950 dark:text-white sm:text-4xl">
             A clear view of sales performance.
           </h2>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">
+          <p className="mt-3 max-w-xl text-base leading-relaxed text-slate-700 dark:text-slate-300">
             See revenue, pipeline health, and team progress at a glance.
           </p>
         </div>
@@ -81,7 +82,7 @@ export const AnalyticsSection: React.FC = () => (
               <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Revenue performance</h3>
               <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">Monthly won revenue · USD thousands</p>
             </div>
-            <span className="rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-600 dark:border-white/10 dark:text-slate-300">May–Oct</span>
+            <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-900 dark:border-emerald-300/20 dark:bg-emerald-300/10 dark:text-emerald-100">Sample data</span>
           </div>
           <div className="mt-3 rounded-xl bg-[#f8faf9] px-2 pt-2 dark:bg-white/[0.025] sm:px-3">
             <svg
@@ -124,7 +125,7 @@ export const AnalyticsSection: React.FC = () => (
         <article className="flex flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-[#101a15] sm:p-5 lg:col-span-4">
           <div>
             <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Win rate</h3>
-            <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">Share of deals won</p>
+            <p className="mt-1 text-xs text-slate-600 dark:text-slate-300">Share of deals won · Sample data</p>
           </div>
           <div className="flex flex-1 flex-col items-center justify-center py-4">
             <div className="relative grid h-36 w-36 place-items-center">
@@ -139,7 +140,7 @@ export const AnalyticsSection: React.FC = () => (
             </div>
           </div>
           <div className="rounded-xl bg-[#f8faf9] px-3 py-2.5 text-center dark:bg-white/[0.035]">
-            <p className="text-xs text-slate-500 dark:text-slate-400">Based on {DEMO_REPORT_METRICS.closedDeals} closed deals</p>
+            <p className="text-xs text-slate-600 dark:text-slate-300">Illustrative demo data</p>
           </div>
         </article>
 
@@ -149,7 +150,7 @@ export const AnalyticsSection: React.FC = () => (
               <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Lead source performance</h3>
               <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">Conversion to qualified leads</p>
             </div>
-            <span className="text-xs text-slate-400">Sample</span>
+            <span className="text-xs font-medium text-slate-600 dark:text-slate-300">Sample data</span>
           </div>
           <div className="mt-5 space-y-4">
             {DEMO_SOURCES.map((source) => (
@@ -172,7 +173,7 @@ export const AnalyticsSection: React.FC = () => (
               <h3 className="text-sm font-semibold text-slate-900 dark:text-white">Open opportunities</h3>
               <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">Deals that need a next step</p>
             </div>
-            <span className="text-xs font-medium text-slate-500 dark:text-slate-400">{DEMO_REPORT_METRICS.activeDeals} active</span>
+            <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-900 dark:border-emerald-300/20 dark:bg-emerald-300/10 dark:text-emerald-100">Demo data · {DEMO_REPORT_METRICS.openDeals} active</span>
           </div>
           <div className="mt-4 divide-y divide-slate-100 dark:divide-white/10">
             {DEMO_DEALS.slice(0, 3).map((deal) => (

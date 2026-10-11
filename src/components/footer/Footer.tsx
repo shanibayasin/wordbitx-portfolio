@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="border-t border-[#183932] bg-[#0b1f1b] text-sm text-slate-300">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+      <div className="mx-auto max-w-[1200px] px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
           <div className="col-span-2 space-y-4 md:col-span-1">
             <div className="flex items-center gap-2.5">
@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
                 </span>
               </span>
             </div>
-            <p className="max-w-sm text-xs leading-relaxed text-slate-400">
+            <p className="max-w-sm text-base leading-relaxed text-slate-300">
               Manage leads, deals, customer records, call logs, tasks, reports, workflows, and team roles in organization workspaces.
             </p>
             <button

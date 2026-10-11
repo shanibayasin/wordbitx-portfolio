@@ -10,17 +10,18 @@ export const HeroSection: React.FC = () => {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#020d0a] pb-16 pt-4 text-white sm:pb-24 lg:pb-28">
-      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(48,190,155,0.12),transparent_35%),radial-gradient(circle_at_85%_20%,rgba(101,92,255,0.14),transparent_25%)]" />
+    <section className="relative isolate overflow-hidden bg-[#020d0a] pb-16 pt-4 text-white sm:pb-20 lg:pb-24">
+      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_50%_60%,rgba(16,185,129,0.18),transparent_42%),radial-gradient(circle_at_85%_18%,rgba(16,185,129,0.11),transparent_25%)]" />
+      <div aria-hidden="true" className="hero-grid pointer-events-none absolute inset-0 -z-10 opacity-20" />
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
-      <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl pt-12 text-center sm:pt-16 lg:pt-20">
+      <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1120px] pt-10 text-center sm:pt-12 lg:pt-14">
           <motion.div
             initial={reduceMotion ? false : { opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.45 }}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/5 px-3 py-1.5 text-[11px] font-medium tracking-[0.18em] text-emerald-100 uppercase"
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1.5 text-xs font-semibold tracking-[0.14em] text-emerald-100 uppercase"
           >
             <Sparkles className="h-3.5 w-3.5 text-emerald-300" />
             WordbitX CRM Platform
@@ -30,13 +31,10 @@ export const HeroSection: React.FC = () => {
             initial={reduceMotion ? false : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.55, delay: reduceMotion ? 0 : 0.05 }}
-            className="mx-auto max-w-5xl text-balance font-display text-[clamp(2.8rem,6vw,5rem)] font-semibold leading-[0.96] tracking-[-0.065em] text-white"
+            className="mx-auto max-w-[1240px] text-balance font-display text-[clamp(1rem,5.2vw,4.4rem)] font-semibold leading-[1.02] tracking-[-0.065em] text-white"
           >
-            One CRM for your
-            <br className="hidden sm:block" /> leads, deals and{' '}
-            <span className="bg-gradient-to-r from-emerald-300 via-cyan-200 to-violet-200 bg-clip-text text-transparent">
-              customer calls.
-            </span>
+            <span className="block whitespace-nowrap">One CRM for your</span>
+            <span className="hero-title-accent block whitespace-nowrap">leads, deals and customer calls.</span>
           </motion.h1>
 
           <motion.p
@@ -73,7 +71,7 @@ export const HeroSection: React.FC = () => {
             </Button>
           </motion.div>
 
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-slate-400">
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-slate-300">
             {['Leads & companies', 'Deal pipeline', 'Calls & follow-ups'].map((item) => (
               <span key={item} className="inline-flex items-center gap-1.5">
                 <Check aria-hidden="true" className="h-3.5 w-3.5 text-emerald-400" />
@@ -87,7 +85,7 @@ export const HeroSection: React.FC = () => {
           initial={reduceMotion ? false : { opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: reduceMotion ? 0 : 0.65, delay: reduceMotion ? 0 : 0.2 }}
-          className="mt-14 sm:mt-20"
+          className="mt-10 sm:mt-14"
         >
           <HeroDashboardPreview />
         </motion.div>

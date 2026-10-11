@@ -7,6 +7,7 @@ import { PricingSection } from '../components/sections/PricingSection';
 import { FaqSection } from '../components/sections/FaqSection';
 import { FinalCtaSection } from '../components/sections/FinalCtaSection';
 import { ProductTourSection } from '../components/sections/ProductTourSection';
+import { IntegrationHighlightsSection } from '../components/sections/IntegrationHighlightsSection';
 
 export const HomePage: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ export const HomePage: React.FC = () => {
       <TrustStrip />
       <ProductTourSection />
       <AnalyticsSection />
+      <IntegrationHighlightsSection />
       <MultiWorkspaceSection />
       <PricingSection />
       <FaqSection />

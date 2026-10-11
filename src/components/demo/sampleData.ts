@@ -1,21 +1,19 @@
 export const DEMO_LEADS = [
-  { name: 'Olivia Chen', initials: 'OC', company: 'Northstar Health', source: 'Referral', status: 'Qualified', value: 24500 },
-  { name: 'Marcus Reed', initials: 'MR', company: 'Fieldnote Labs', source: 'Website', status: 'Contacted', value: 18200 },
-  { name: 'Priya Nair', initials: 'PN', company: 'Cedar & Finch', source: 'Partner', status: 'Proposal', value: 32750 },
-  { name: 'Theo Martin', initials: 'TM', company: 'Arcwell Systems', source: 'Outbound', status: 'New', value: 12800 },
+  { name: 'Olivia Chen', initials: 'OC', company: 'Cortexa Health', source: 'Referral', status: 'Qualified', value: 42000 },
+  { name: 'Marcus Reed', initials: 'MR', company: 'Northpeak Cloud', source: 'Website', status: 'Contacted', value: 78000 },
+  { name: 'Priya Nair', initials: 'PN', company: 'Omni Workspace', source: 'Partner', status: 'Proposal', value: 45000 },
 ] as const;
 
 export const DEMO_DEALS = [
-  { company: 'Northstar Health', title: 'Regional rollout', value: 24500, stage: 'Discovery', owner: 'OC', age: '4 days' },
-  { company: 'Fieldnote Labs', title: 'Team workspace', value: 18200, stage: 'Proposal', owner: 'MR', age: '9 days' },
-  { company: 'Cedar & Finch', title: 'Annual platform', value: 32750, stage: 'Negotiation', owner: 'PN', age: '2 days' },
-  { company: 'Arcwell Systems', title: 'Service expansion', value: 12800, stage: 'Qualified', owner: 'TM', age: '6 days' },
+  { company: 'Cortexa Health', title: 'Regional rollout', value: 42000, stage: 'Discovery', owner: 'OC', age: '4 days' },
+  { company: 'Northpeak Cloud', title: 'Cloud workspace', value: 78000, stage: 'Proposal', owner: 'MR', age: '9 days' },
+  { company: 'Omni Workspace', title: 'Annual platform', value: 45000, stage: 'Negotiation', owner: 'PN', age: '2 days' },
 ] as const;
 
 export const DEMO_CALLS = [
-  { name: 'Olivia Chen', company: 'Northstar Health', time: '10:42 AM', duration: '08:24', note: 'Reviewed regional rollout; send revised seat estimate by Thursday.' },
-  { name: 'Marcus Reed', company: 'Fieldnote Labs', time: 'Yesterday', duration: '05:16', note: 'Confirmed security review attendees and next-step timeline.' },
-  { name: 'Priya Nair', company: 'Cedar & Finch', time: 'Mon, 2:18 PM', duration: '12:03', note: 'Walked through annual terms; procurement reviewing proposal.' },
+  { name: 'Olivia Chen', company: 'Cortexa Health', time: '10:42 AM', duration: '08:24', note: 'Reviewed regional rollout; send revised seat estimate by Thursday.' },
+  { name: 'Marcus Reed', company: 'Northpeak Cloud', time: 'Yesterday', duration: '05:16', note: 'Confirmed security review attendees and next-step timeline.' },
+  { name: 'Priya Nair', company: 'Omni Workspace', time: 'Mon, 2:18 PM', duration: '12:03', note: 'Walked through annual terms; procurement reviewing proposal.' },
 ] as const;
 
 export const DEMO_TASKS = [
@@ -37,19 +35,17 @@ export const DEMO_REPORT_METRICS = {
   totalWonRevenue: 272_000,
   monthlyWonRevenue: 72_000,
   dealsWonThisMonth: 5,
-  winRate: 32.6,
-  closedDeals: 46,
-  qualifiedLeads: 48,
-  openPipeline: 286_400,
-  activeDeals: 24,
-  newLeadsThisMonth: 38,
+  winRate: 28.4,
+  openPipeline: 384_500,
+  openDeals: 42,
+  newLeadsThisWeek: 36,
 } as const;
 
 export const DEMO_SOURCES = [
-  { name: 'Referral', leads: 42, rate: 38 },
-  { name: 'Website', leads: 68, rate: 24 },
-  { name: 'Partner', leads: 31, rate: 32 },
-  { name: 'Outbound', leads: 54, rate: 17 },
+  { name: 'Referral', leads: 10, rate: 38 },
+  { name: 'Website', leads: 12, rate: 24 },
+  { name: 'Partner', leads: 8, rate: 32 },
+  { name: 'Outbound', leads: 6, rate: 17 },
 ] as const;
 
 export const DEMO_STAGES = [
@@ -70,8 +66,7 @@ export const DEMO_PERMISSIONS = [
 ] as const;
 
 export const DEMO_PALETTE_RECORDS = [
-  'Olivia Chen · Northstar Health',
-  'Marcus Reed · Fieldnote Labs',
-  'Priya Nair · Cedar & Finch',
-  'Theo Martin · Arcwell Systems',
+  'Olivia Chen · Cortexa Health',
+  'Marcus Reed · Northpeak Cloud',
+  'Priya Nair · Omni Workspace',
 ] as const;
