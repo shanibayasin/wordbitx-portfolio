@@ -25,6 +25,7 @@ const ResourcesPage = lazy(() => import('./pages/ResourcesPage').then((module) =
 const AboutPage = lazy(() => import('./pages/AboutPage').then((module) => ({default: module.AboutPage})));
 const ContactPage = lazy(() => import('./pages/ContactPage').then((module) => ({default: module.ContactPage})));
 const DemoPage = lazy(() => import('./pages/DemoPage').then((module) => ({default: module.DemoPage})));
+const LegalPlaceholderPage = lazy(() => import('./pages/LegalPlaceholderPage').then((module) => ({default: module.LegalPlaceholderPage})));
 const LoginPage = lazy(() => import('./pages/LoginPage').then((module) => ({default: module.LoginPage})));
 const SignupPage = lazy(() => import('./pages/SignupPage').then((module) => ({default: module.SignupPage})));
 const DashboardOverviewPage = lazy(() => import('./pages/crm/DashboardOverviewPage').then((module) => ({default: module.DashboardOverviewPage})));
@@ -114,6 +115,10 @@ const AppContent: React.FC = () => {
         return <ContactPage />;
       case '/demo':
         return <DemoPage />;
+      case '/privacy':
+        return <LegalPlaceholderPage kind="privacy" />;
+      case '/terms':
+        return <LegalPlaceholderPage kind="terms" />;
       case '/login':
         return <LoginPage />;
       case '/signup':
