@@ -13,13 +13,13 @@ export const SolutionsPage: React.FC = () => {
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <div className="text-xs font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
-            Tailored Industry Architectures
+            Current CRM use cases
           </div>
           <h1 className="font-display text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white tracking-tight text-balance">
-            Built for how your specific team sells and supports.
+            Use WordbitX to organize leads, deals, and customer activity.
           </h1>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed text-balance">
-            Whether closing high-ticket B2B deals, managing hundreds of daily customer calls, or scaling an agency with isolated client spaces, WordbitX eliminates operational friction.
+            Explore examples based on features available today. Items marked “Coming soon” are planned and are not available in the current product.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export const SolutionsPage: React.FC = () => {
                   </p>
                   <div className="space-y-2 pt-2 text-xs">
                     <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block mb-1">
-                      Key Operational Advantages:
+                      Current capabilities:
                     </span>
                     {sol.keyBenefits.map((b, i) => (
                       <div key={i} className="flex items-start gap-2.5 text-slate-700 dark:text-slate-300">
@@ -81,7 +81,7 @@ export const SolutionsPage: React.FC = () => {
                   {/* Workflow steps */}
                   <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#0e2722] border border-slate-200/80 dark:border-[#183932] space-y-2.5 text-xs">
                     <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 block mb-1">
-                      Automated Operational Cycle:
+                      Example workflow:
                     </span>
                     {sol.workflowSteps.map((ws, i) => (
                       <div key={i} className="flex items-start gap-2">
@@ -103,9 +103,9 @@ export const SolutionsPage: React.FC = () => {
 
         {/* Bottom CTA */}
         <div className="p-8 sm:p-10 rounded-2xl bg-[#0b1f1b] text-white max-w-5xl mx-auto text-center space-y-4 shadow-xl border border-emerald-950/60">
-          <h3 className="text-2xl sm:text-3xl font-bold font-display">Need a tailored implementation plan?</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold font-display">Explore the current CRM</h3>
           <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
-            Our solution architects can configure custom pipelines, telephone bridges, and automations for your exact team size.
+            Review the available CRM features in the demo. Billing and plan limits are not live.
           </p>
           <div className="pt-2 flex justify-center gap-3">
             <Button

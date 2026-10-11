@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Minus, ArrowRight, HelpCircle, ShieldCheck } from 'lucide-react';
+import { Check, Minus } from 'lucide-react';
 import { PRICING_TIERS, PRICING_COMPARISON } from '../data/pricingData';
 import { FAQ_DATA } from '../data/faqData';
 import { Button } from '../components/ui/Button';
@@ -15,24 +15,24 @@ export const PricingPage: React.FC = () => {
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <div className="text-xs font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
-            Simple & Transparent Plans
+            Demo plans
           </div>
           <h1 className="font-display text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white tracking-tight text-balance">
             Choose the right foundation for your revenue team.
           </h1>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed text-balance">
-            Start with our 14-day free trial on any plan. No credit card required. Upgrade, downgrade, or cancel anytime.
+            Demo pricing only. Billing and plan limits are not live or enforced. The prices and plan labels below are illustrative.
           </p>
 
           {/* Monthly / Yearly Toggle */}
           <div className="pt-4 flex items-center justify-center gap-3 text-xs font-semibold">
             <span className={!isYearly ? 'text-slate-900 dark:text-white' : 'text-slate-500'}>
-              Monthly Billing
+              Monthly display
             </span>
             <button
               onClick={() => setIsYearly(!isYearly)}
               className="relative w-12 h-6 rounded-full bg-slate-200 dark:bg-[#122e28] p-0.5 transition-colors cursor-pointer"
-              aria-label="Toggle billing frequency"
+              aria-label="Toggle demo price display"
             >
               <div
                 className={`w-5 h-5 rounded-full bg-emerald-600 transition-transform ${
@@ -41,9 +41,9 @@ export const PricingPage: React.FC = () => {
               ></div>
             </button>
             <span className={isYearly ? 'text-slate-900 dark:text-white flex items-center gap-1.5' : 'text-slate-500'}>
-              <span>Annual Billing</span>
+              <span>Annual equivalent</span>
               <span className="text-[10px] font-semibold text-emerald-700 dark:text-emerald-300 px-1.5 py-0.2 rounded bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/60 dark:border-emerald-800/60">
-                Save 20%
+                Demo only
               </span>
             </span>
           </div>
@@ -83,10 +83,10 @@ export const PricingPage: React.FC = () => {
                       <span className="text-4xl font-bold font-display text-slate-900 dark:text-white tabular-nums">
                         ${price}
                       </span>
-                      <span className="text-xs text-slate-500">/ user / mo</span>
+                      <span className="text-xs text-slate-500">/ user / mo · demo</span>
                     </div>
                     <span className="text-[11px] text-slate-400 block mt-0.5">
-                      {isYearly ? 'Billed annually' : 'Billed monthly'}
+                      {isYearly ? 'Annual equivalent · not billed' : 'Monthly display · not billed'}
                     </span>
                   </div>
                   <div className="pt-4 border-t border-slate-100 dark:border-[#183932] space-y-2 text-xs">
@@ -107,7 +107,7 @@ export const PricingPage: React.FC = () => {
                     size="md"
                     onClick={() => {
                       if (tier.id === 'enterprise') navigate('/contact');
-                      else navigate('/signup');
+                      else navigate('/demo');
                     }}
                     className={`w-full justify-center ${
                       tier.popular ? 'bg-[#0b1f1b] hover:bg-[#12332c] text-white border-transparent' : ''
@@ -125,9 +125,9 @@ export const PricingPage: React.FC = () => {
         <div className="max-w-6xl mx-auto space-y-6">
           <div className="text-center space-y-2">
             <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white">
-              Comprehensive Feature Comparison
+              Current Feature Availability
             </h2>
-            <p className="text-xs text-slate-500">Compare specifications across Starter, Business, and Enterprise tiers</p>
+            <p className="text-xs text-slate-500">These demo columns do not represent enforced plan limits or billing entitlements.</p>
           </div>
 
           <div className="bg-white dark:bg-[#0b1f1b] rounded-2xl border border-slate-200/80 dark:border-[#183932] shadow-md overflow-hidden">
@@ -189,9 +189,9 @@ export const PricingPage: React.FC = () => {
         <div className="max-w-4xl mx-auto space-y-6 pt-8">
           <div className="text-center space-y-2">
             <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white">
-              Pricing & Billing FAQ
+              Product FAQ
             </h2>
-            <p className="text-xs text-slate-500">Common questions about plans, billing, and trial transitions</p>
+            <p className="text-xs text-slate-500">Common questions about current product capabilities</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {FAQ_DATA.slice(0, 4).map((faq) => (

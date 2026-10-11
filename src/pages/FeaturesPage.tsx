@@ -32,7 +32,7 @@ export const FeaturesPage: React.FC = () => {
             Every feature designed for modern business operations.
           </h1>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed text-balance">
-            Explore how WordbitX unifies leads, pipelines, telephony call centers, tickets, workflows, and AI intelligence into one cohesive platform.
+            Explore the CRM features available today. Items marked “Coming soon” are planned and are not available in the current product.
           </p>
         </div>
 
@@ -88,6 +88,13 @@ export const FeaturesPage: React.FC = () => {
                     </span>
                     <span className="text-slate-300 dark:text-slate-700">•</span>
                     <span className="text-xs text-slate-500 dark:text-slate-400">{feat.tagline}</span>
+                    <span className={`text-[10px] font-semibold px-2 py-0.5 rounded ${
+                      feat.status === 'Available'
+                        ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300'
+                        : 'bg-slate-100 text-slate-600 dark:bg-white/10 dark:text-zinc-300'
+                    }`}>
+                      {feat.status}
+                    </span>
                   </div>
 
                   <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white">
@@ -111,17 +118,19 @@ export const FeaturesPage: React.FC = () => {
                     <Button
                       variant="primary"
                       size="sm"
-                      onClick={() => navigate('/demo')}
+                      onClick={feat.status === 'Available' ? () => navigate('/demo') : undefined}
+                      disabled={feat.status !== 'Available'}
                       iconRight={<ArrowRight className="w-3.5 h-3.5" />}
                       className="bg-[#0b1f1b] hover:bg-[#12332c] text-white border-transparent"
                     >
                       {feat.ctaText}
                     </Button>
                     <button
-                      onClick={openExploreDemo}
-                      className="text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                      onClick={feat.status === 'Available' ? openExploreDemo : undefined}
+                      disabled={feat.status !== 'Available'}
+                      className="text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors disabled:cursor-not-allowed disabled:opacity-60"
                     >
-                      Inspect in Live App
+                      {feat.status === 'Available' ? 'Try the demo' : 'Coming soon'}
                     </button>
                   </div>
                 </div>
@@ -129,14 +138,14 @@ export const FeaturesPage: React.FC = () => {
                 {/* Right 5 cols: Use Case Callout */}
                 <div className="lg:col-span-5 p-5 rounded-xl bg-slate-50 dark:bg-[#0e2722] border border-slate-200/80 dark:border-[#183932] space-y-3 text-xs">
                   <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
-                    Real-World Operational Scenario
+                    Illustrative example
                   </div>
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed italic">
                     "{feat.useCase}"
                   </p>
                   <div className="pt-2 border-t border-slate-200/60 dark:border-[#183932] flex items-center justify-between text-[11px] text-slate-500">
-                    <span>Target Deployment: Standard</span>
-                    <span className="font-semibold text-emerald-700 dark:text-emerald-400">Ready Out of the Box</span>
+                    <span>Example only · Demo data</span>
+                    <span className="font-semibold text-emerald-700 dark:text-emerald-400">{feat.status}</span>
                   </div>
                 </div>
               </div>

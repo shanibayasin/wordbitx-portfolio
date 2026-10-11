@@ -17,10 +17,10 @@ export const IntegrationsSection: React.FC = () => {
             Ecosystem Connectivity
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-950 dark:text-white tracking-tight text-balance">
-            Connect WordbitX to the tools your team already uses.
+            Connect with your stack.
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-balance">
-            Catalog entries describe potential integration paths, not verified live connections. Provider credentials and setup are required before relying on synchronization, telephony, or billing.
+            REST API and Webhooks are available in settings. Other listed integrations are coming soon.
           </p>
         </div>
 
@@ -38,18 +38,12 @@ export const IntegrationsSection: React.FC = () => {
                   </span>
                   <span
                     className={`text-[10px] font-semibold px-2 py-0.5 rounded ${
-                      item.status === 'Available' || item.status === 'Connect'
+                      item.status === 'Available'
                         ? 'bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800'
-                        : item.status === 'Enterprise'
-                        ? 'bg-slate-100 dark:bg-[#12352e] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-[#183932]'
                         : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
                     }`}
                   >
-                    {item.status === 'Available' || item.status === 'Connect'
-                      ? 'Setup required'
-                      : item.status === 'Enterprise'
-                      ? 'Enterprise setup'
-                      : item.status}
+                    {item.status}
                   </span>
                 </div>
                 <h3 className="font-bold text-sm text-slate-950 dark:text-white">

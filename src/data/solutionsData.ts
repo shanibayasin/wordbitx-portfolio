@@ -14,133 +14,133 @@ export const SOLUTIONS_DATA: SolutionItem[] = [
   {
     id: 'sales-teams',
     category: 'role',
-    title: 'For Modern Sales Teams',
-    badge: 'Sales Velocity',
-    tagline: 'Close larger deals faster with disciplined pipeline management',
-    description: 'Equip Account Executives and SDRs with a single workspace where leads are enriched, follow-ups are automatically scheduled, and pipeline stages clearly indicate next steps.',
+    title: 'For Sales Teams',
+    badge: 'Leads & Deals',
+    tagline: 'Organize leads and move deals through pipeline stages',
+    description: 'Use lead records, deal values, Kanban stages, and reports to keep sales activity organized in one CRM.',
     keyBenefits: [
-      'Zero manual data logging with automatic email and call tracking',
-      'Dynamic deal weighting to forecast monthly targets accurately',
-      'One-click proposal generation and follow-up templates'
+      'Create, assign, and convert leads',
+      'Track deals by stage and value',
+      'Review win rate, lead source conversion, and revenue reports'
     ],
     workflowSteps: [
-      { title: 'Inbound Ingestion', desc: 'Leads qualify instantly via scoring rules' },
-      { title: 'Discovery & Stage Move', desc: 'Discovery call notes sync to CRM automatically' },
-      { title: 'Proposal & Win', desc: 'Automated notification to legal and finance upon contract won' }
+      { title: 'Create a lead', desc: 'Record the lead and its source.' },
+      { title: 'Assign and follow up', desc: 'Assign the lead and track tasks or calls.' },
+      { title: 'Convert', desc: 'Convert the lead into a customer and deal.' }
     ],
     metrics: [
-      { label: 'Follow-up Latency', value: '< 12 mins' },
-      { label: 'Pipeline Visibility', value: '100%' }
+      { label: 'Lead and deal records', value: 'Available' },
+      { label: 'Illustrative workflow', value: 'Demo data' }
     ]
   },
   {
     id: 'call-centers',
     category: 'role',
-    title: 'For High-Volume Call Centers',
-    badge: 'Telephony Operations',
-    tagline: 'Deliver personal service at enterprise scale with live caller intelligence',
-    description: 'Empower agents with instant caller history, active tickets, and recent deals before they even say hello. Monitor queue health and agent capacity in real time.',
+    title: 'For Call-Center Operations',
+    badge: 'Call Logging',
+    tagline: 'Keep call logs with lead and customer records',
+    description: 'WordbitX supports call logging today. Live calling, telephony providers, call queues, and call recording are not available yet.',
     keyBenefits: [
-      'Screen-pop caller profile instantly upon ring detection',
-      'Live queue metrics: wait time, abandon rate, and agent availability',
-      'Compatible with existing SIP trunks, Twilio, and Vonage infrastructure'
+      'Log calls against leads or customers',
+      'Review call entries in activity history',
+      'Use tasks to track follow-ups'
     ],
     workflowSteps: [
-      { title: 'Queue Routing', desc: 'Call matched to account owner or best tier agent' },
-      { title: 'Live Context', desc: 'Agent reads purchase history while call connects' },
-      { title: 'Disposition & Wrap', desc: 'One-click call outcome tags task for follow-up' }
+      { title: 'Log a call', desc: 'Record call details after a conversation.' },
+      { title: 'Link the record', desc: 'Associate the entry with a lead or customer.' },
+      { title: 'Plan follow-up', desc: 'Create a task if another action is needed.' }
     ],
     metrics: [
-      { label: 'Avg Hold Time', value: '-38%' },
-      { label: 'First Call Resolution', value: '84%' }
+      { label: 'Call logging', value: 'Available' },
+      { label: 'Live telephony', value: 'Coming soon' }
     ]
   },
   {
     id: 'customer-support',
     category: 'role',
-    title: 'For Customer Success & Support',
-    badge: 'Support Desk',
-    tagline: 'Turn support interactions into expansion and retention drivers',
-    description: 'Break down data silos between account managers and customer support. Resolve complex tickets with full commercial awareness and transparent SLA countdowns.',
+    title: 'For Customer-Facing Teams',
+    badge: 'Tasks & Activities',
+    tagline: 'Track follow-ups and customer activity',
+    description: 'Use customer records, tasks, calls, notes, and the activity timeline to keep track of customer interactions. Support tickets and SLA timers are not available yet.',
     keyBenefits: [
-      'Unified view of customer plan tier, active renewals, and open tickets',
-      'Escalation rules that notify the assigned Account Executive on urgent issues',
-      'Canned macros, internal notes, and integrated satisfaction tracking'
+      'Review customer and company detail views',
+      'Track tasks, call logs, notes, and activities',
+      'Support tickets and SLA timers — Coming soon'
     ],
     workflowSteps: [
-      { title: 'Ticket Triage', desc: 'Auto-categorization and priority routing based on SLA' },
-      { title: 'Contextual Resolution', desc: 'Solve bugs with engineering notes attached' },
-      { title: 'Expansion Signal', desc: 'Alert sales rep if ticket indicates need for extra seats' }
+      { title: 'Open a record', desc: 'Review customer or company details.' },
+      { title: 'Record activity', desc: 'Add a note, call log, or activity.' },
+      { title: 'Create a task', desc: 'Track a follow-up action.' }
     ],
     metrics: [
-      { label: 'SLA Compliance', value: '99.2%' },
-      { label: 'Resolution Speed', value: '2.4x' }
+      { label: 'Customer records and tasks', value: 'Available' },
+      { label: 'Support tickets', value: 'Coming soon' }
     ]
   },
   {
     id: 'agencies',
     category: 'industry',
-    title: 'For Marketing & Digital Agencies',
-    badge: 'Agency Workspaces',
-    tagline: 'Manage multiple client pipelines and retainers with workspace isolation',
-    description: 'Eliminate confusing spreadsheets and cross-client leakage. Create clean segregated environments for each client account with custom access controls.',
+    title: 'For Agencies',
+    badge: 'Organizations',
+    tagline: 'Switch between organization workspaces',
+    description: 'Create organizations and switch between them. Organization roles and audit logs are available; client-specific agency features are not promised here.',
     keyBenefits: [
-      'Multi-workspace architecture with instantaneous switching',
-      'Client guest view permissions for transparent reporting',
-      'Retainer and project milestones tracked alongside revenue'
+      'Create and switch organizations',
+      'Invite team members and assign organization roles',
+      'Review audit logs in settings'
     ],
     workflowSteps: [
-      { title: 'Pitch & Scope', desc: 'Track proposals and signed statements of work' },
-      { title: 'Client Onboarding', desc: 'Kick off workspace automations upon deal signature' },
-      { title: 'Retainer Renewal', desc: 'Automated 60-day renewal alerts and check-ins' }
+      { title: 'Create an organization', desc: 'Set up a separate organization workspace.' },
+      { title: 'Invite members', desc: 'Choose an organization role for each member.' },
+      { title: 'Switch workspace', desc: 'Move between organizations as needed.' }
     ],
     metrics: [
-      { label: 'Client Onboarding', value: 'Under 1 day' },
-      { label: 'Cross-Account Safety', value: 'Zero leakage' }
+      { label: 'Organization switching', value: 'Available' },
+      { label: 'Illustrative workflow', value: 'Demo data' }
     ]
   },
   {
     id: 'real-estate',
     category: 'industry',
-    title: 'For Real Estate & Property Brokerages',
-    badge: 'Property CRM',
-    tagline: 'Match high-intent property seekers to inventory seamlessly',
-    description: 'Keep track of buyers, property viewings, commission milestones, and mortgage pre-approvals without losing track of crucial follow-up dates.',
+    title: 'For Real Estate Teams',
+    badge: 'CRM Basics',
+    tagline: 'Organize inquiries, follow-ups, and deal stages',
+    description: 'Use the CRM’s general lead, customer, task, and deal features to organize a sales process. Property-specific tools and integrations are not available yet.',
     keyBenefits: [
-      'Custom property preference tags and budget range filters',
-      'Automated WhatsApp/SMS reminders for scheduled site viewings',
-      'Multi-agent split commission tracking and closing documentation'
+      'Track lead sources and assigned owners',
+      'Create follow-up tasks',
+      'Move deals through Kanban stages'
     ],
     workflowSteps: [
-      { title: 'Inquiry Capture', desc: 'Portal leads populate with location and budget desires' },
-      { title: 'Viewing Schedule', desc: 'Calendar synced booking with auto-directions' },
-      { title: 'Closing Escrow', desc: 'Milestone tracking through deed registration' }
+      { title: 'Add an inquiry', desc: 'Create a lead and record its source.' },
+      { title: 'Track follow-up', desc: 'Assign the lead and create a task.' },
+      { title: 'Manage the deal', desc: 'Create a deal and move it through stages.' }
     ],
     metrics: [
-      { label: 'Viewing Show-up Rate', value: '91%' },
-      { label: 'Closing Time', value: '-14 Days' }
+      { label: 'General CRM features', value: 'Available' },
+      { label: 'Property-specific tools', value: 'Coming soon' }
     ]
   },
   {
     id: 'enterprise',
     category: 'industry',
-    title: 'For Scaled Enterprise Operations',
-    badge: 'Enterprise Architecture',
-    tagline: 'Governance, custom role permissions, and scalable API architecture',
-    description: 'Meet enterprise security and compliance standards with centralized administrator controls, granular role matrices, dedicated audit logs, and REST/Webhook integrations.',
+    title: 'For Organizations',
+    badge: 'Roles & Settings',
+    tagline: 'Manage organization members and settings',
+    description: 'Invite members, assign one of the available organization roles, and review audit logs. Compliance certifications and enterprise service-level commitments are not claimed.',
     keyBenefits: [
-      'Hierarchical permissions down to field-level edit restrictions',
-      'Comprehensive security audit trails with exportable activity logs',
-      'Dedicated integration engineering and custom SLA commitments'
+      'Organization Owner, Admin, Sales Manager, Sales Agent, and Viewer roles',
+      'Organization profile and permission settings',
+      'Audit logs and API keys in settings'
     ],
     workflowSteps: [
-      { title: 'Single Sign-On', desc: 'Centralized directory syncing and automated provisioning' },
-      { title: 'Department Policy', desc: 'Enforce workflow gates before deal stage progression' },
-      { title: 'Global Reporting', desc: 'Cross-subsidiary rollup dashboards for board review' }
+      { title: 'Invite a member', desc: 'Add a team member to the organization.' },
+      { title: 'Set a role', desc: 'Choose an available organization role.' },
+      { title: 'Review activity', desc: 'Use audit logs in settings.' }
     ],
     metrics: [
-      { label: 'Audit Readiness', value: 'Immediate' },
-      { label: 'API Throughput', value: 'High' }
+      { label: 'Organization roles', value: 'Available' },
+      { label: 'Audit logs', value: 'Available' }
     ]
   }
 ];
