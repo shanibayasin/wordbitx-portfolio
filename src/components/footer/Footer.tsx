@@ -1,24 +1,23 @@
 import React from 'react';
-import { ExternalLink, ShieldCheck, Heart } from 'lucide-react';
 import { useNavigation } from '../../context/NavigationContext';
 
-const CRM_APP_URL = 'https://wordbitx-iota.vercel.app/';
+const linkClass = 'text-slate-400 transition-colors hover:text-emerald-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400';
+const comingSoonClass = 'text-slate-500';
 
 export const Footer: React.FC = () => {
-  const { navigate, openExploreDemo } = useNavigation();
+  const { navigate } = useNavigation();
 
   return (
-    <footer className="bg-[#0b1f1b] text-slate-300 border-t border-[#183932] text-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
-          {/* Brand info */}
+    <footer className="border-t border-[#183932] bg-[#0b1f1b] text-sm text-slate-300">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-5 lg:gap-12">
           <div className="col-span-2 space-y-4">
             <div className="flex items-center gap-2.5">
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-emerald-500 text-base font-black text-[#071714] shadow-sm">
                 W
               </span>
               <span className="flex flex-col leading-none">
-                <span className="block text-base font-bold tracking-tight text-white leading-tight">
+                <span className="block text-base font-bold leading-tight tracking-tight text-white">
                   Wordbit<span className="text-emerald-400">X</span>
                 </span>
                 <span className="mt-1 block text-[9px] font-bold uppercase tracking-[0.18em] text-emerald-400">
@@ -26,165 +25,66 @@ export const Footer: React.FC = () => {
                 </span>
               </span>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              The unified CRM and business operations platform for modern sales pipelines, customer 360° histories, call center operations, intelligent automations, and team performance.
+            <p className="max-w-sm text-xs leading-relaxed text-slate-400">
+              Manage leads, deals, customer records, call logs, tasks, reports, workflows, and team roles in organization workspaces.
             </p>
-            <div className="flex flex-wrap items-center gap-3 text-xs pt-1">
-              <button
-                onClick={openExploreDemo}
-                className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 hover:underline font-bold cursor-pointer"
-              >
-                <span>Live CRM Dashboard</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </button>
-              <span className="text-[#183932]">•</span>
-              <div className="flex items-center gap-1.5 text-slate-400">
-                <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-                <span>Operational</span>
-              </div>
-            </div>
+            <button
+              onClick={() => navigate('/demo')}
+              className={`${linkClass} cursor-pointer text-xs font-bold`}
+            >
+              Request a demo
+            </button>
           </div>
 
-          {/* Product */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3.5">
-              Product
-            </h4>
+            <h4 className="mb-3.5 text-xs font-bold uppercase tracking-wider text-white">Product</h4>
             <ul className="space-y-2.5 text-xs">
-              <li>
-                <button onClick={() => navigate('/features')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  All Features
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/#sales-pipeline')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Sales Pipeline
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/#call-center')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Call Center
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/#customer-support')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Customer Support
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/#automation')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Workflow Engine
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/#ai-crm')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  AI CRM Assistant
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/integrations')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Integrations Directory
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/pricing')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Pricing Plans
-                </button>
-              </li>
+              <li><button onClick={() => navigate('/features')} className={`${linkClass} cursor-pointer`}>All features</button></li>
+              <li><button onClick={() => navigate('/#lead-management')} className={`${linkClass} cursor-pointer`}>Lead management</button></li>
+              <li><button onClick={() => navigate('/#deal-pipeline')} className={`${linkClass} cursor-pointer`}>Deal pipeline</button></li>
+              <li><button onClick={() => navigate('/#call-logging')} className={`${linkClass} cursor-pointer`}>Call logging</button></li>
+              <li><button onClick={() => navigate('/#tasks-follow-ups')} className={`${linkClass} cursor-pointer`}>Tasks &amp; follow-ups</button></li>
+              <li><button onClick={() => navigate('/app/customers')} className={`${linkClass} cursor-pointer`}>Customers &amp; companies</button></li>
+              <li><button onClick={() => navigate('/app/reports')} className={`${linkClass} cursor-pointer`}>Reports</button></li>
+              <li><button onClick={() => navigate('/app/workflows')} className={`${linkClass} cursor-pointer`}>Workflow rules</button></li>
+              <li><button onClick={() => navigate('/integrations')} className={`${linkClass} cursor-pointer`}>Integrations</button></li>
+              <li><button onClick={() => navigate('/pricing')} className={`${linkClass} cursor-pointer`}>Demo pricing</button></li>
+              <li><span aria-disabled="true" className={comingSoonClass}>Customer support · Coming soon</span></li>
+              <li><span aria-disabled="true" className={comingSoonClass}>AI assistant · Coming soon</span></li>
             </ul>
           </div>
 
-          {/* Solutions & Resources */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3.5">
-              Solutions
-            </h4>
+            <h4 className="mb-3.5 text-xs font-bold uppercase tracking-wider text-white">Solutions</h4>
             <ul className="space-y-2.5 text-xs">
-              <li>
-                <button onClick={() => navigate('/solutions#sales-teams')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Sales Teams
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/solutions#call-centers')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Call Centers
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/solutions#customer-support')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Support Desks
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/solutions#agencies')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Digital Agencies
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/solutions#real-estate')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Real Estate
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/solutions#enterprise')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Enterprise
-                </button>
-              </li>
+              <li><button onClick={() => navigate('/#deal-pipeline')} className={`${linkClass} cursor-pointer`}>Sales teams</button></li>
+              <li><button onClick={() => navigate('/#call-logging')} className={`${linkClass} cursor-pointer`}>Call-center operations</button></li>
+              <li><button onClick={() => navigate('/#security')} className={`${linkClass} cursor-pointer`}>Multi-workspace teams</button></li>
+              <li><button onClick={() => navigate('/solutions')} className={`${linkClass} cursor-pointer`}>All solutions</button></li>
+              <li><span aria-disabled="true" className={comingSoonClass}>Support desk · Coming soon</span></li>
             </ul>
           </div>
 
-          {/* Company & Legal */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3.5">
-              Company
-            </h4>
+            <h4 className="mb-3.5 text-xs font-bold uppercase tracking-wider text-white">Company</h4>
             <ul className="space-y-2.5 text-xs">
-              <li>
-                <button onClick={() => navigate('/about')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  About Us
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/resources')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Guides & Playbooks
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/contact')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Contact Team
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/demo')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Book a Demo
-                </button>
-              </li>
-              <li>
-                <button onClick={() => navigate('/login')} className="hover:text-emerald-400 transition-colors cursor-pointer text-slate-400">
-                  Client Sign In
-                </button>
-              </li>
+              <li><button onClick={() => navigate('/about')} className={`${linkClass} cursor-pointer`}>About WordbitX</button></li>
+              <li><button onClick={() => navigate('/resources')} className={`${linkClass} cursor-pointer`}>Guides &amp; playbooks</button></li>
+              <li><button onClick={() => navigate('/contact')} className={`${linkClass} cursor-pointer`}>Contact</button></li>
+              <li><button onClick={() => navigate('/demo')} className={`${linkClass} cursor-pointer`}>Request a demo</button></li>
+              <li><button onClick={() => navigate('/login')} className={`${linkClass} cursor-pointer`}>Sign in</button></li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-[#183932] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <div>
-            © {new Date().getFullYear()} WordbitX Inc. All rights reserved. Built for modern high-performance revenue operations.
-          </div>
-          <div className="flex items-center gap-5">
-            <span className="hover:text-emerald-400 cursor-pointer">
-              Privacy Policy
-            </span>
-            <span>•</span>
-            <span className="hover:text-emerald-400 cursor-pointer">
-              Terms of Service
-            </span>
-            <span>•</span>
-            <span className="hover:text-emerald-400 cursor-pointer">
-              Security Governance
-            </span>
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#183932] pt-8 text-xs text-slate-400 sm:flex-row">
+          <div>© {new Date().getFullYear()} WordbitX. All rights reserved.</div>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <button onClick={() => navigate('/privacy')} className={linkClass}>Privacy</button>
+            <span aria-hidden="true">•</span>
+            <button onClick={() => navigate('/terms')} className={linkClass}>Terms</button>
+            <span aria-hidden="true">•</span>
+            <button onClick={() => navigate('/#security')} className={linkClass}>Security</button>
           </div>
         </div>
       </div>

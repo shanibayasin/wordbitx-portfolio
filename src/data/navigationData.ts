@@ -14,19 +14,20 @@ export const PRODUCT_MENU: MegaMenuCategory[] = [
   {
     title: 'Core CRM & Sales',
     items: [
-      { name: 'CRM Overview', href: '/#crm-overview', description: 'Centralized visibility for deals, teams & activities' },
-      { name: 'Lead Management', href: '/#lead-management', description: 'Capture, score, assign and nurture inbound leads' },
-      { name: 'Sales Pipeline', href: '/#sales-pipeline', description: 'Visual Kanban pipeline with stage conversion metrics' },
-      { name: 'Customer Management', href: '/#customer-management', description: '360° timeline of calls, emails and touchpoints' }
+      { name: 'CRM Overview', href: '/#customer-operations-title', description: 'Leads, deals, call logs, tasks, team, and reports' },
+      { name: 'Lead Management', href: '/#lead-management', description: 'Track lead sources, assign leads, and convert records' },
+      { name: 'Deal Pipeline', href: '/#deal-pipeline', description: 'Move deals through Kanban stages and track values' },
+      { name: 'Customers & Companies', href: '/app/customers', description: 'Manage customer and company records' }
     ]
   },
   {
-    title: 'Operations & Intelligence',
+    title: 'Team & Operations',
     items: [
-      { name: 'Call Center', href: '/#call-center', description: 'Real-time queues, agent performance & telephony stack' },
-      { name: 'Customer Support', href: '/#customer-support', description: 'Context-rich ticket tracking with SLA management' },
-      { name: 'Workflow Automation', href: '/#automation', description: 'Trigger actions, assignment rules & auto follow-ups' },
-      { name: 'AI CRM Assistant', href: '/#ai-crm', description: 'Lead summaries, smart follow-up & predictive scoring' }
+      { name: 'Call Logging', href: '/#call-logging', description: 'Log calls against leads and customers' },
+      { name: 'Tasks & Follow-ups', href: '/#tasks-follow-ups', description: 'Create and track follow-up tasks' },
+      { name: 'Workflow Automation', href: '/app/workflows', description: 'Create automation rules and toggle them' },
+      { name: 'Customer Support', href: '/', description: 'Support desk features are coming soon', badge: 'Coming soon' },
+      { name: 'AI CRM Assistant', href: '/', description: 'AI features are not available yet', badge: 'Coming soon' }
     ]
   }
 ];
@@ -35,19 +36,19 @@ export const SOLUTIONS_MENU: MegaMenuCategory[] = [
   {
     title: 'By Team',
     items: [
-      { name: 'Sales Teams', href: '/solutions#sales-teams', description: 'Close deals faster with unified pipeline management' },
-      { name: 'Call Centers', href: '/solutions#call-centers', description: 'Empower agents with customer history on incoming calls' },
-      { name: 'Customer Support', href: '/solutions#customer-support', description: 'Resolve complex tickets without bouncing between apps' },
-      { name: 'Agencies', href: '/solutions#agencies', description: 'Manage multiple client pipelines and retainers smoothly' }
+      { name: 'Sales Teams', href: '/#deal-pipeline', description: 'Organize leads and deals in a Kanban pipeline' },
+      { name: 'Call-Center Operations', href: '/#call-logging', description: 'Keep call logs with lead and customer records' },
+      { name: 'Support Desk', href: '/', description: 'Support desk features are coming soon', badge: 'Coming soon' },
+      { name: 'Agencies', href: '/#security', description: 'Switch between separate organization workspaces' }
     ]
   },
   {
     title: 'By Industry & Scale',
     items: [
-      { name: 'Real Estate', href: '/solutions#real-estate', description: 'Track property buyers, viewings and commission milestones' },
-      { name: 'E-commerce & Retail', href: '/solutions#ecommerce', description: 'Connect orders, high-value shoppers and repeat campaigns' },
-      { name: 'Growing Businesses', href: '/solutions#growing-businesses', description: 'Replace disconnected spreadsheets with one operating system' },
-      { name: 'Enterprise Operations', href: '/solutions#enterprise', description: 'Multi-workspace segregation, custom RBAC & audit logs' }
+      { name: 'Real Estate', href: '/solutions', description: 'Organize leads, customers, and deal stages' },
+      { name: 'E-commerce & Retail', href: '/solutions', description: 'Organize customer and company records' },
+      { name: 'Growing Businesses', href: '/solutions', description: 'Keep leads, deals, tasks, and reports together' },
+      { name: 'Enterprise Operations', href: '/#security', description: 'Use organization workspaces, roles, and audit logs' }
     ]
   }
 ];

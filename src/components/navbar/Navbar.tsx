@@ -85,7 +85,7 @@ export const Navbar: React.FC = () => {
           <button
             onClick={() => navigate('/')}
             aria-label="WordbitX CRM home"
-            className="group flex items-center gap-2 text-left focus-visible:outline-none"
+            className="group flex items-center gap-2 text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
           >
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-emerald-500 text-base font-black text-[#071714] shadow-sm transition-transform group-hover:scale-105">
               W
@@ -132,19 +132,27 @@ export const Navbar: React.FC = () => {
                     <div className="text-[11px] font-bold uppercase tracking-wider text-indigo-800 dark:text-indigo-400 px-2 py-1">
                       {col.title}
                     </div>
-                    {col.items.map((item) => (
+                    {col.items.map((item) => item.badge ? (
+                      <div key={item.name} aria-disabled="true" className="block w-full rounded-xl p-2 text-left">
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{item.name}</span>
+                          <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[9px] font-bold text-slate-600 dark:bg-white/10 dark:text-zinc-300">{item.badge}</span>
+                        </div>
+                        <div className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">{item.description}</div>
+                      </div>
+                    ) : (
                       <button
                         key={item.name}
                         onClick={() => {
                           closeDropdown();
                           navigate(item.href);
                         }}
-                        className="w-full text-left p-2 rounded-xl hover:bg-indigo-50/70 dark:hover:bg-[#252542] transition-colors group block cursor-pointer"
+                        className="group block w-full cursor-pointer rounded-xl p-2 text-left transition-colors hover:bg-indigo-50/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:hover:bg-[#252542]"
                       >
-                        <div className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors">
+                        <div className="text-sm font-semibold text-slate-900 transition-colors group-hover:text-indigo-700 dark:text-white dark:group-hover:text-indigo-300">
                           {item.name}
                         </div>
-                        <div className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 mt-0.5">
+                        <div className="mt-0.5 line-clamp-1 text-xs text-slate-500 dark:text-slate-400">
                           {item.description}
                         </div>
                       </button>
@@ -184,19 +192,27 @@ export const Navbar: React.FC = () => {
                     <div className="text-[11px] font-bold uppercase tracking-wider text-indigo-800 dark:text-indigo-400 px-2 py-1">
                       {col.title}
                     </div>
-                    {col.items.map((item) => (
+                    {col.items.map((item) => item.badge ? (
+                      <div key={item.name} aria-disabled="true" className="block w-full rounded-xl p-2 text-left">
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{item.name}</span>
+                          <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[9px] font-bold text-slate-600 dark:bg-white/10 dark:text-zinc-300">{item.badge}</span>
+                        </div>
+                        <div className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">{item.description}</div>
+                      </div>
+                    ) : (
                       <button
                         key={item.name}
                         onClick={() => {
                           closeDropdown();
                           navigate(item.href);
                         }}
-                        className="w-full text-left p-2 rounded-xl hover:bg-indigo-50/70 dark:hover:bg-[#252542] transition-colors group block cursor-pointer"
+                        className="group block w-full cursor-pointer rounded-xl p-2 text-left transition-colors hover:bg-indigo-50/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 dark:hover:bg-[#252542]"
                       >
-                        <div className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors">
+                        <div className="text-sm font-semibold text-slate-900 transition-colors group-hover:text-indigo-700 dark:text-white dark:group-hover:text-indigo-300">
                           {item.name}
                         </div>
-                        <div className="text-xs text-slate-500 dark:text-slate-400 line-clamp-1 mt-0.5">
+                        <div className="mt-0.5 line-clamp-1 text-xs text-slate-500 dark:text-slate-400">
                           {item.description}
                         </div>
                       </button>
@@ -248,14 +264,14 @@ export const Navbar: React.FC = () => {
             onClick={() => handleGo('/signup')}
             className="hidden sm:inline-flex border-[#123c32] bg-[#123c32] text-white hover:border-[#1c5547] hover:bg-[#1c5547] dark:border-emerald-400 dark:bg-emerald-400 dark:text-[#10231e]"
           >
-            Get Started
+            Get started
           </Button>
 
           {/* Mobile hamburger */}
           <button
             ref={mobileMenuToggleRef}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-800 dark:hover:text-white hover:bg-indigo-50 dark:hover:bg-[#20203a] transition-colors cursor-pointer"
+            className="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-800 dark:hover:text-white hover:bg-indigo-50 dark:hover:bg-[#20203a] transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
             aria-label="Toggle mobile menu"
             aria-expanded={mobileMenuOpen}
             aria-controls="public-mobile-navigation"
@@ -291,7 +307,7 @@ export const Navbar: React.FC = () => {
                   ? 'Guides & Playbooks'
                   : path === '/about'
                   ? 'About WordbitX'
-                  : 'Contact Sales & Support';
+                  : 'Contact';
               return (
                 <button
                   key={path}
@@ -317,7 +333,7 @@ export const Navbar: React.FC = () => {
               }}
               className="w-full justify-center"
             >
-              Book a Demo
+              Request a demo
             </Button>
             <Button
               variant="primary"
@@ -328,7 +344,7 @@ export const Navbar: React.FC = () => {
               }}
               className="w-full justify-center border-[#123c32] bg-[#123c32] text-white hover:border-[#1c5547] hover:bg-[#1c5547] dark:border-emerald-400 dark:bg-emerald-400 dark:text-[#10231e]"
             >
-              Start Free Trial
+              Get started
             </Button>
           </div>
         </div>
