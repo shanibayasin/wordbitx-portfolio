@@ -36,10 +36,10 @@ export const HeroSection: React.FC = () => {
             transition={enter(0.06)}
             className="text-balance font-display text-[clamp(2.35rem,4.5vw,3.65rem)] font-bold leading-[0.99] tracking-[-0.045em] text-[#172a3e] dark:text-white"
           >
-            Every customer
-            <br className="hidden lg:block" /> conversation,
+            One CRM for your
+            <br className="hidden lg:block" /> leads, deals and
             <br />
-            connected.
+            customer calls.
           </motion.h1>
 
           <motion.p
@@ -48,7 +48,7 @@ export const HeroSection: React.FC = () => {
             transition={enter(0.12)}
             className="mx-auto mt-4 max-w-[470px] text-pretty text-[13px] leading-[1.7] text-slate-600 dark:text-slate-300 sm:text-sm lg:mx-0"
           >
-            WordbitX CRM brings your leads, client management, call-center operations, and team workflows together in one connected workspace.
+            Track leads, move deals through a Kanban pipeline, log calls and manage your team, in separate secure workspaces.
           </motion.p>
 
           <motion.div
@@ -60,19 +60,19 @@ export const HeroSection: React.FC = () => {
             <Button
               variant="primary"
               size="md"
-              onClick={() => navigate('/features')}
+              onClick={() => navigate('/demo')}
               className="w-full border-[#123c32] bg-[#123c32] text-white shadow-sm hover:border-[#1c5547] hover:bg-[#1c5547] dark:border-emerald-400 dark:bg-emerald-400 dark:text-[#10231e] sm:w-auto"
               iconRight={<ArrowRight className="h-4 w-4" />}
             >
-              Explore Platform
+              Try the live demo
             </Button>
             <Button
               variant="outline"
               size="md"
-              onClick={() => navigate('/demo')}
+              onClick={() => navigate('/features')}
               className="w-full border-slate-300 bg-white text-slate-700 hover:border-[#9ac8b9] hover:text-[#176d5b] dark:border-[#3c514a] dark:bg-[#18231f] dark:text-slate-200 sm:w-auto"
             >
-              Book a Demo
+              See features
             </Button>
           </motion.div>
 
@@ -84,15 +84,15 @@ export const HeroSection: React.FC = () => {
           >
             <span className="inline-flex items-center gap-1.5">
               <Check aria-hidden="true" className="h-3 w-3 text-[#23836b]" />
-              Sales pipeline
+              Leads and deals
             </span>
             <span className="inline-flex items-center gap-1.5">
               <UsersRound aria-hidden="true" className="h-3 w-3 text-[#23836b]" />
-              Team collaboration
+              Call logging
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Headphones aria-hidden="true" className="h-3 w-3 text-[#23836b]" />
-              Customer support
+              Team and workspaces
             </span>
           </motion.div>
         </div>

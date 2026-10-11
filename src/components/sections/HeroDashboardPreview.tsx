@@ -117,7 +117,7 @@ export const HeroDashboardPreview: React.FC = () => {
         <div className="mb-2 flex items-center gap-1.5 text-[8px] font-medium text-slate-400 sm:text-[9px]">
           <span className="rounded border border-slate-200 bg-white px-1.5 py-1 dark:border-[#323250] dark:bg-[#20203a]">This month</span>
           <ArrowDown className="h-2.5 w-2.5" />
-          <span className="ml-auto rounded bg-[#fff5dd] px-1.5 py-0.5 font-semibold text-[#9a6a13]">Sample data</span>
+          <span className="ml-auto rounded bg-[#fff5dd] px-1.5 py-0.5 font-semibold text-[#9a6a13]">Demo data</span>
         </div>
 
         <div className="grid grid-cols-2 gap-2 xl:grid-cols-4">
