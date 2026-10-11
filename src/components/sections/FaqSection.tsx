@@ -37,7 +37,7 @@ export const FaqSection: React.FC = () => {
               >
                 <button
                   onClick={() => toggle(item.id)}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer focus-visible:outline-none"
+                  className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-emerald-600"
                 >
                   <span className="font-bold text-sm text-slate-900 dark:text-white">
                     {item.question}
