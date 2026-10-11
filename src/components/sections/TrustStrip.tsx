@@ -101,7 +101,7 @@ export const TrustStrip: React.FC = () => (
   >
     <div className="mb-5 text-center">
       <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400 dark:text-zinc-500 sm:text-[10px]">
-        Trusted by forward-thinking businesses
+        Sample brands shown for demo purposes
       </span>
     </div>
 
