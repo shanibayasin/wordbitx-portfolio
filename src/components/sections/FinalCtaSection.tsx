@@ -18,21 +18,20 @@ export const FinalCtaSection: React.FC = () => {
             Get started today
           </span>
           <h2 className="text-balance font-display text-xl font-bold leading-[1.12] tracking-tight text-white sm:text-2xl lg:text-[1.75rem]">
-            Bring your entire customer operation into focus.
+            Bring leads, deals, and customer calls into one view.
           </h2>
           <p className="mt-2 max-w-xl text-[10px] leading-relaxed text-emerald-100/75 sm:text-xs">
-            Streamline your workflow, boost team productivity, and deliver exceptional customer
-            experiences with WordbitX CRM.
+            Track lead sources, move deals through Kanban stages, log calls, and manage follow-ups with your team.
           </p>
         </div>
 
         <div className="relative w-full shrink-0 sm:w-auto">
           <button
             type="button"
-            onClick={() => navigate('/features')}
+            onClick={() => navigate('/demo')}
             className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-emerald-500 px-4 py-2.5 text-[10px] font-bold text-[#071714] shadow-lg shadow-emerald-950/30 transition hover:bg-emerald-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300 sm:w-auto sm:min-w-36 sm:px-5 sm:text-xs"
           >
-            Explore the platform
+            Try the live demo
             <ArrowRight aria-hidden="true" className="h-3.5 w-3.5" />
           </button>
         </div>
